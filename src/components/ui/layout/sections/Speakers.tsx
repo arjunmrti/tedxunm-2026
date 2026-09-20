@@ -1,24 +1,34 @@
+import { motion } from "motion/react";
+import { cardReveal, sectionReveal, staggerParent } from "../../../../motion/variants";
 import { speakers } from '../../../../constants/speakers'
 import type { Speaker } from '../../../../types/Speaker'
 import SpeakerCard from './SpeakerCard'
 
 export default function Speakers({ onSelectSpeaker }: { onSelectSpeaker: (speaker: Speaker) => void }) {
   return (
-    <section aria-labelledby="speakers-heading" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-gray-200" id="speakers">
-      <div className="text-center max-w-3xl mx-auto mb-16">
+    <motion.section
+      aria-labelledby="speakers-heading"
+      className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-gray-200"
+      id="speakers"
+      variants={sectionReveal}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.12 }}
+    >
+      <motion.div variants={cardReveal} className="text-center max-w-3xl mx-auto mb-16">
         <span className="inline-block bg-[#F4EEFD] text-ted-purple text-xs font-bold px-3 py-1 rounded-full mb-3">Curated Lineup</span>
         <h2 className="text-3xl sm:text-5xl font-extrabold text-gray-900 tracking-tight" id="speakers-heading">Voices of Resonance</h2>
         <p className="text-base text-gray-600 mt-4 leading-relaxed">Six distinct minds exploring how vocal frequencies, coded structures, and unspoken signs shape our collective destiny.</p>
-      </div>
+      </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+      <motion.div variants={staggerParent} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
         {speakers.map((speaker) => (
           <SpeakerCard key={speaker.name} speaker={speaker} onClick={onSelectSpeaker} />
         ))}
-      </div>
+      </motion.div>
 
       {/* Full-Width Secret Keynote Card */}
-      <div className="bg-white border border-[#E5E5E5] rounded-3xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-[0_8px_24px_-4px_rgba(17,17,17,0.06)] hover:shadow-md transition-shadow relative overflow-hidden">
+      <motion.div variants={cardReveal} className="bg-white border border-[#E5E5E5] rounded-3xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-[0_8px_24px_-4px_rgba(17,17,17,0.06)] hover:shadow-md transition-shadow relative overflow-hidden">
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 w-full md:w-auto">
           <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-[#111111] text-white flex flex-col items-center justify-center shrink-0 shadow-inner relative overflow-hidden">
             <svg className="w-7 h-7 mb-1.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -58,7 +68,7 @@ export default function Speakers({ onSelectSpeaker }: { onSelectSpeaker: (speake
             <span>Revealing Soon</span>
           </button>
         </div>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   )
 }
