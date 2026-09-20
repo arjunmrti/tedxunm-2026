@@ -83,7 +83,7 @@ export default function RegistrationModal({ ticket, onClose }: { ticket: Ticket 
               Register for Your TEDxUNM 2026 Seat
             </h3>
             <p className="text-xs text-gray-400 mt-1">
-              Fill in your credential details to secure your Phinisi Hall pass.
+              Fill in your attendee details to secure your TEDxUNM 2026 ticket.
             </p>
           </div>
           <button
@@ -182,34 +182,34 @@ export default function RegistrationModal({ ticket, onClose }: { ticket: Ticket 
             </div>
 
             <div className="pt-1">
-              <div className="text-sm font-bold text-white mb-2">Syarat dan Ketentuan</div>
+              <div className="text-sm font-bold text-white mb-2">Terms and Conditions</div>
               <div
                 className="bg-[#121215] border border-white/10 rounded-xl p-3.5 h-[150px] overflow-y-auto text-xs text-gray-300 leading-relaxed space-y-2.5"
                 style={{ scrollbarWidth: 'thin', scrollbarColor: '#E10600 #1f1f23' }}
               >
                 <p className="flex items-start gap-2">
                   <span className="text-[#E10600] font-bold shrink-0">•</span>
-                  <span><strong className="text-white font-semibold">Kebijakan Refund:</strong> Tiket bersifat personal dan tidak dapat diuangkan kembali (non-refundable).</span>
+                  <span><strong className="text-white font-semibold">Refund Policy:</strong> Tickets are personal and non-refundable.</span>
                 </p>
                 <p className="flex items-start gap-2">
                   <span className="text-[#E10600] font-bold shrink-0">•</span>
-                  <span><strong className="text-white font-semibold">Pindah Tangan Tiket:</strong> Jika nama pembeli berbeda dengan yang hadir, tiket dapat dipindahtangankan. Wajib melakukan konfirmasi kepada panitia maksimal H-1 sebelum acara.</span>
+                  <span><strong className="text-white font-semibold">Ticket Transfer:</strong> Tickets can be transferred to another person by confirming with the committee no later than H-1 before the event.</span>
                 </p>
                 <p className="flex items-start gap-2">
                   <span className="text-[#E10600] font-bold shrink-0">•</span>
-                  <span><strong className="text-white font-semibold">Syarat Pengganti:</strong> Peserta pengganti wajib membawa identitas asli untuk keperluan verifikasi saat acara.</span>
+                  <span><strong className="text-white font-semibold">Replacement Attendee:</strong> Replacement attendees must bring the required identification for verification.</span>
                 </p>
                 <p className="flex items-start gap-2">
                   <span className="text-[#E10600] font-bold shrink-0">•</span>
-                  <span><strong className="text-white font-semibold">Proses Check-in:</strong> Peserta wajib menunjukkan bukti tiket atau registrasi saat melakukan check-in.</span>
+                  <span><strong className="text-white font-semibold">Check-in:</strong> Attendees must show proof of their ticket or registration at check-in.</span>
                 </p>
                 <p className="flex items-start gap-2">
                   <span className="text-[#E10600] font-bold shrink-0">•</span>
-                  <span><strong className="text-white font-semibold">Persetujuan Dokumentasi:</strong> Dengan memasuki area acara, peserta dianggap telah memberikan persetujuan untuk didokumentasikan dalam bentuk foto dan/atau video selama acara berlangsung.</span>
+                  <span><strong className="text-white font-semibold">Documentation Consent:</strong> By entering the event area, attendees consent to being documented through photos and/or video during the event.</span>
                 </p>
                 <p className="flex items-start gap-2">
                   <span className="text-[#E10600] font-bold shrink-0">•</span>
-                  <span><strong className="text-white font-semibold">Kehadiran & Tata Tertib:</strong> Peserta diharapkan hadir, mengikuti seluruh rangkaian acara hingga selesai, serta wajib mematuhi ketentuan dan tata tertib yang berlaku.</span>
+                  <span><strong className="text-white font-semibold">Attendance & Conduct:</strong> Attendees are expected to attend the full event and follow all applicable rules and regulations.</span>
                 </p>
               </div>
 
@@ -221,13 +221,13 @@ export default function RegistrationModal({ ticket, onClose }: { ticket: Ticket 
                   onChange={(e) => setAgreed(e.target.checked)}
                   className="mt-0.5 rounded bg-[#121215] border-white/20 text-[#E10600] focus:ring-[#E10600] focus:ring-offset-0 shrink-0 cursor-pointer"
                 />
-                <span>Saya telah membaca dan menyetujui seluruh Syarat dan Ketentuan di atas.</span>
+                <span>I have read and agree to the Terms and Conditions above.</span>
               </label>
             </div>
 
             {status === 'error' && (
               <p className="text-xs text-red-400 text-center">
-                Gagal mengirim registrasi. Coba lagi, atau hubungi panitia kalau masih gagal.
+                Registration could not be submitted. Please try again or contact the committee.
               </p>
             )}
 
@@ -236,7 +236,7 @@ export default function RegistrationModal({ ticket, onClose }: { ticket: Ticket 
               disabled={isLoading || !agreed}
               className="mt-5 w-full py-3.5 px-6 bg-[#E10600] hover:bg-[#b80500] disabled:bg-[#E10600]/50 disabled:cursor-not-allowed text-white font-bold text-sm sm:text-base rounded-full shadow-lg shadow-red-900/30 transition-all cursor-pointer text-center"
             >
-              {isLoading ? 'Mengirim...' : 'Submit Registration'}
+              {isLoading ? 'Submitting...' : 'Submit Registration'}
             </button>
             <p className="text-center text-xs text-gray-400 mt-2.5">
               By submitting, you agree to our Terms and Conditions and Privacy Policy.
