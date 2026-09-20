@@ -1,10 +1,16 @@
+import { motion } from "motion/react";
+import { buttonTap, cardHover, cardReveal, imageHover } from "../../../../motion/variants";
+
 import type { Speaker } from '../../../../types/Speaker'
 
 export default function SpeakerCard({ speaker, onClick }: { speaker: Speaker; onClick: (speaker: Speaker) => void }) {
   const { name, role, talk, category, cardImage, colors } = speaker
 
   return (
-    <article
+    <motion.article
+      variants={cardReveal}
+      whileHover={cardHover}
+      whileTap={buttonTap}
       onClick={() => onClick(speaker)}
       className={`cursor-pointer ${colors.cardBg} border ${colors.cardBorder} rounded-3xl p-5 flex flex-col justify-between shadow-sm hover:shadow-md ${colors.cardHoverBorder} transition-all duration-300 group`}
     >
@@ -27,7 +33,13 @@ export default function SpeakerCard({ speaker, onClick }: { speaker: Speaker; on
       </div>
 
       <div className="relative rounded-2xl overflow-hidden bg-gray-100 h-80">
-        <img alt={name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src={cardImage} />
+        <motion.img
+          alt={name}
+          className="w-full h-full object-cover"
+          src={cardImage}
+          whileHover={imageHover}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
         <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between backdrop-blur-md bg-white/90 border border-white/40 rounded-full px-4 py-2 text-gray-900 shadow-sm">
           <span className="text-xs font-semibold tracking-wide">Explore Talk</span>
@@ -38,6 +50,6 @@ export default function SpeakerCard({ speaker, onClick }: { speaker: Speaker; on
           </div>
         </div>
       </div>
-    </article>
+    </motion.article>
   )
 }
