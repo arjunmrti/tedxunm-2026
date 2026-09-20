@@ -1,3 +1,5 @@
+import { motion } from "motion/react";
+import { cardReveal, sectionReveal, staggerParent } from "../../../../motion/variants";
 import { footerContent } from "../../../../constants/footer";
 
 export default function Footer() {
@@ -8,11 +10,17 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-ted-dark text-white border-t border-gray-800 pt-16 pb-12 px-4 sm:px-6 lg:px-8">
+    <motion.footer
+      className="bg-ted-dark text-white border-t border-gray-800 pt-16 pb-12 px-4 sm:px-6 lg:px-8"
+      variants={sectionReveal}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.08 }}
+    >
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-gray-800/80">
+        <motion.div variants={staggerParent} className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-gray-800/80">
           {/* Brand / Disclaimer Column */}
-          <div className="md:col-span-5">
+          <motion.div variants={cardReveal} className="md:col-span-5">
             <a
               aria-label={`${footerContent.brand.prefix}${footerContent.brand.suffix} Home`}
               className="inline-flex items-center gap-2 mb-4"
@@ -34,7 +42,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="md:col-span-2 col-span-6">
+          <motion.div variants={cardReveal} className="md:col-span-2 col-span-6">
             <h4 className="text-xs font-bold uppercase tracking-wider text-gray-300 mb-4">
               Navigation
             </h4>
@@ -71,14 +79,14 @@ export default function Footer() {
           </div>
 
           {/* Newsletter Subscription Column */}
-          <div className="md:col-span-3">
+          <motion.div variants={cardReveal} className="md:col-span-3">
             <h4 className="text-xs font-bold uppercase tracking-wider text-gray-300 mb-2">
               {footerContent.newsletter.title}
             </h4>
             <p className="text-xs text-gray-400 mb-4">
               {footerContent.newsletter.description}
             </p>
-            <form className="flex items-center gap-2" onSubmit={handleSubscribe}>
+            <motion.form whileFocusWithin={{ y: -1 }} className="flex items-center gap-2" onSubmit={handleSubscribe}>
               <input
                 className="w-full text-xs px-3.5 py-2.5 rounded-full bg-gray-900 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-ted-red"
                 placeholder={footerContent.newsletter.placeholder}
@@ -92,12 +100,12 @@ export default function Footer() {
               >
                 {footerContent.newsletter.buttonText}
               </button>
-            </form>
+            </motion.form>
           </div>
-        </div>
+        </motion.div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-400 gap-4">
+        <motion.div variants={cardReveal} className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-400 gap-4">
           <p>{footerContent.bottomBar.copyright}</p>
           <p>
             {footerContent.bottomBar.themeLabel}{" "}
