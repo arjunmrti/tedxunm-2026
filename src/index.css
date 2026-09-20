@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  /* === Colors === */
+  --color-ted-red: #E10600;
+  --color-ted-red-dark: #C00500;
+  --color-ted-dark: #111111;
+  --color-ted-purple: #7B3FE4;
+  --color-charcoal: #111111;
+  --color-charcoal-hover: #2A2A2A;
+  --color-purple: #7B3FE4;
+  --color-green: #2ECF7A;
+  --color-orange: #FFA800;
+  --color-canvas: #F7F7F7;
+  --color-ted-hover: #C00500;
+  --color-border: #E5E5E5;
+
+  /* Badge colors */
+  --color-badge-red-bg: #FFEBEB;
+  --color-badge-red-text: #E10600;
+  --color-badge-purple-bg: #F1EBFC;
+  --color-badge-purple-text: #7B3FE4;
+  --color-badge-orange-bg: #FFF6E5;
+  --color-badge-orange-text: #C97800;
+  --color-badge-green-bg: #E8FAF0;
+  --color-badge-green-text: #188D4E;
+
+  /* === Fonts === */
+  --font-display: "Space Grotesk", sans-serif;
+  --font-sans: "Inter", sans-serif;
+
+  /* === Typography scale === */
+  --text-display-hero: 64px;
+  --text-display-hero--line-height: 72px;
+  --text-display-hero-mobile: 38px;
+  --text-display-hero-mobile--line-height: 44px;
+
+  --text-headline-lg: 44px;
+  --text-headline-lg--line-height: 52px;
+  --text-headline-lg-mobile: 30px;
+  --text-headline-lg-mobile--line-height: 38px;
+
+  --text-headline-md: 32px;
+  --text-headline-md--line-height: 40px;
+
+  --text-headline-sm: 22px;
+  --text-headline-sm--line-height: 28px;
+
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 28px;
+  --text-body-md: 15px;
+  --text-body-md--line-height: 24px;
+  --text-body-sm: 13px;
+  --text-body-sm--line-height: 20px;
+
+  --text-label-pill: 12px;
+  --text-label-pill--line-height: 16px;
+  --text-label-btn: 15px;
+  --text-label-btn--line-height: 20px;
+
+  /* === Radius === */
+  --radius-sm: 0.25rem;
+  --radius: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+
+  /* === Spacing === */
+  --spacing-gutter: 1.5rem;
+  --spacing-gutter-mobile: 1rem;
+  --spacing-margin: 2rem;
+  --spacing-margin-mobile: 1rem;
+}
+
+body {
+  background-color: var(--color-canvas);
+  color: var(--color-charcoal);
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
