@@ -78,7 +78,7 @@ const FAQ = () => {
           >
             Send Email Inquiry →
           </a>
-        </motion.div>
+        </div>
       </motion.div>
     </motion.section>
   );
