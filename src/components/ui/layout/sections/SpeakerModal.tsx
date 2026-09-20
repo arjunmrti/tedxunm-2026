@@ -26,7 +26,8 @@ export default function SpeakerModal({
     >
       <motion.div
         variants={modalPanel}
-        className="rounded-3xl p-6 sm:p-10 relative max-w-2xl w-full bg-[#FFF0ED] text-[#222222] shadow-2xl overflow-visible border border-red-100">
+        className={`relative w-full max-w-xl rounded-3xl p-6 sm:p-8 shadow-2xl overflow-visible border ${speaker.colors.cardBg} ${speaker.colors.cardBorder} text-[#222222]`}
+      >
 
         {/* Close Button */}
         <button
@@ -49,7 +50,7 @@ export default function SpeakerModal({
           </svg>
         </button>
 
-        <div className="hidden sm:block absolute -top-8 -right-4 sm:-right-6 w-44 sm:w-52 bg-white p-3 pb-8 rounded-sm shadow-2xl rotate-3 border border-gray-200/60 z-10">
+        <div className="hidden sm:block absolute -top-7 -right-4 w-40 bg-white p-2.5 pb-7 rounded-sm shadow-xl rotate-3 border border-gray-200/60 z-10">
           <div className="aspect-[4/5] bg-gray-100 overflow-hidden rounded-sm">
             <img
               alt={`${speaker.name} Portrait`}
@@ -59,79 +60,57 @@ export default function SpeakerModal({
           </div>
         </div>
 
-        <div className="sm:max-w-md">
+        <div className="sm:max-w-[24rem]">
 
-          <div className="text-xs font-mono font-bold tracking-widest text-[#D45B3F] uppercase mb-4">
+          <div className={`text-[11px] font-mono font-bold tracking-widest uppercase mb-3 ${speaker.colors.badgeText}`}>
             {speaker.tag}
           </div>
 
-          <div className="mb-6">
+          <div className="mb-5 pr-2">
+            <h3 className="font-display font-extrabold text-3xl sm:text-4xl text-[#111111] tracking-tight leading-none mb-2">
+              {speaker.name}
+            </h3>
 
-            <div className="flex items-baseline gap-8 text-[11px] font-mono tracking-wider text-gray-500 uppercase font-semibold mb-1">
-              <span>NAME</span>
-              <span>ROLE</span>
-            </div>
-
-            <div className="flex items-baseline gap-8">
-
-              <h3 className="font-display font-extrabold text-3xl sm:text-4xl text-[#111111] tracking-tight">
-                {speaker.name}
-              </h3>
-
-              <span className="font-display font-bold text-2xl sm:text-3xl text-[#111111]">
-                {speaker.age}
-              </span>
-
-            </div>
+            <p className={`text-sm sm:text-[15px] font-medium leading-snug ${speaker.colors.badgeText}`}>
+              {speaker.role}
+            </p>
           </div>
 
-          <div className="mb-6">
+          <div className="mb-5">
 
-            <div className="text-[11px] font-mono tracking-wider text-[#D45B3F] font-bold uppercase mb-2">
+            <div className={`text-[11px] font-mono tracking-wider font-bold uppercase mb-2 ${speaker.colors.badgeText}`}>
               BIO
             </div>
 
-            <ul className="space-y-2 text-xs sm:text-sm text-[#444444] leading-relaxed">
-              {speaker.behavior.map((item, i) => (
-                <li key={i} className="flex items-start gap-2">
-                  • <span>{item}</span>
-                </li>
-              ))}
-            </ul>
+            <p className="text-xs sm:text-sm text-[#444444] leading-relaxed">
+              {speaker.behavior.join(' ')}
+            </p>
 
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 pt-4 border-t border-red-200/60">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 pt-4 border-t border-black/10">
 
             <div>
 
-              <div className="text-[11px] font-mono tracking-wider text-[#D45B3F] font-bold uppercase mb-2">
+              <div className={`text-[11px] font-mono tracking-wider font-bold uppercase mb-2 ${speaker.colors.badgeText}`}>
                 TOPIC
               </div>
 
-              <ul className="space-y-1.5 text-xs text-[#555555] leading-relaxed">
-                {speaker.painPoint.map((item, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    • <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
+              <p className="text-xs text-[#555555] leading-relaxed">
+                {speaker.painPoint.join(' ')}
+              </p>
 
             </div>
 
             <div>
 
-              <div className="text-[11px] font-mono tracking-wider text-[#D45B3F] font-bold uppercase mb-2">
+              <div className={`text-[11px] font-mono tracking-wider font-bold uppercase mb-2 ${speaker.colors.badgeText}`}>
                 KEY MESSAGE
               </div>
 
-              <ul className="space-y-1.5 text-xs text-[#555555] leading-relaxed">
-                {speaker.needs.map((item, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    • <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
+              <p className="text-xs text-[#555555] leading-relaxed">
+                {speaker.needs.join(' ')}
+              </p>
 
             </div>
 
