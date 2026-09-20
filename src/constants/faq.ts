@@ -7,26 +7,26 @@ export const faqData: FAQItem[] = [
   {
     question: "Who can join this event?",
     answer:
-      "TEDxUNM 2026 is open to everyone! Students, lecturers, professionals, creators, and any curious individual interested in the human dimension of language, technology, culture, and interdisciplinary ideas are warmly welcomed.",
+      "TEDxUNM is open to students, the general public, and anyone interested in inspiring ideas and broadening their horizons.",
   },
   {
-    question: "How do I register and complete ticket payment?",
+    question: "How do I register as a participant?",
     answer:
-      'Simply click the "Get Your Spot" button, choose your desired tier (Regular or Bundling), fill in your attendee details, and settle the payment via QRIS, Virtual Account, or E-wallet through our official ticketing system.',
+      'You can register through the official TEDxUNM ticket or registration link, then follow the payment process to receive your official access.',
   },
   {
-    question: "Where will the event be held physically?",
+    question: "Is there a refund if you are unable to attend?",
     answer:
-      "The main stage event takes place inside the iconic Phinisi Hall (Ballroom), Menara Phinisi Universitas Negeri Makassar, located on Jl. A. P. Pettarani, Makassar, Sulawesi Selatan.",
+      "Tickets are non-refundable. However, tickets can be transferred to another person by confirming with the committee no later than H-1 before the event.",
   },
   {
-    question: "Is there a refund or ticket transfer policy?",
+    question: "Where will the event be held?",
     answer:
-      "Tickets are strictly non-refundable. However, tickets may be transferred to another individual up to 7 days before the event date by contacting the official ticketing desk via WhatsApp (+62 82357837337).",
+      "The event venue details will be announced through the official TEDxUNM channels and participant updates.",
   },
   {
-    question: "When is TEDxUNM 2026 happening?",
+    question: "When is the date and time of the event?",
     answer:
-      "TEDxUNM 2026 is scheduled for October 2026. Detailed time slots, registration desk opening, and side lounge schedules will be shared via our official Instagram @tedxunm and delegate email blasts.",
+      "The date and time of TEDxUNM 2026 will be announced through the official TEDxUNM channels and participant updates.",
   },
 ];
