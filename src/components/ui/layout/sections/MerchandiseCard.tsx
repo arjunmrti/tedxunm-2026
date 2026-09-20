@@ -47,8 +47,6 @@ const cardStyles: Record<MerchandiseVariant, MerchandiseCardStyle> = {
       'mt-6 w-full py-3 bg-gray-900 hover:bg-black text-white text-xs font-semibold rounded-full shadow-sm hover:shadow transition-all',
     backGradient:
       'radial-gradient(120% 90% at 50% -10%, rgba(225,6,0,0.45) 0%, rgba(20,17,17,0.92) 48%, #141111 100%)',
-    backGradient:
-      'radial-gradient(120% 90% at 50% -10%, rgba(255,168,0,0.4) 0%, rgba(20,17,17,0.92) 48%, #141111 100%)',
   },
   popular: {
     frame:
@@ -68,6 +66,8 @@ const cardStyles: Record<MerchandiseVariant, MerchandiseCardStyle> = {
     price: 'text-3xl font-display font-extrabold text-gray-900 mt-0.5',
     button:
       'mt-6 w-full py-3 bg-gray-900 hover:bg-black text-white text-xs font-semibold rounded-full shadow-sm hover:shadow transition-all',
+    backGradient:
+      'radial-gradient(120% 90% at 50% -10%, rgba(255,168,0,0.4) 0%, rgba(20,17,17,0.92) 48%, #141111 100%)',
   },
   featured: {
     frame:
