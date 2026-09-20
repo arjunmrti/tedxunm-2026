@@ -86,7 +86,7 @@ export default function Footer() {
             <p className="text-xs text-gray-400 mb-4">
               {footerContent.newsletter.description}
             </p>
-            <motion.form whileFocusWithin={{ y: -1 }} className="flex items-center gap-2" onSubmit={handleSubscribe}>
+            <motion.form className="flex items-center gap-2" onSubmit={handleSubscribe}>
               <input
                 className="w-full text-xs px-3.5 py-2.5 rounded-full bg-gray-900 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-ted-red"
                 placeholder={footerContent.newsletter.placeholder}
