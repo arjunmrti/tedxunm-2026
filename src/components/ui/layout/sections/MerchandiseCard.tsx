@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 // src/components/ui/layout/sections/MerchandiseCard.tsx
 import type { MerchandiseBundle, MerchandiseVariant } from '../../../../types/Merchandise';
 
@@ -99,7 +100,11 @@ const MerchandiseCard = ({ bundle, onSelect }: MerchandiseCardProps) => {
   const s = cardStyles[bundle.variant];
 
   return (
-    <div className={s.wrapper}>
+    <motion.div
+      whileHover={{ y: -8, scale: 1.02, transition: { type: "spring", stiffness: 320, damping: 24 } }}
+      whileTap={{ scale: 0.985 }}
+      className={s.wrapper}
+    >
       <div className={s.ribbonWrapper}>
         {s.ribbonIcon === 'sparkle' && (
           <>
@@ -129,10 +134,16 @@ const MerchandiseCard = ({ bundle, onSelect }: MerchandiseCardProps) => {
         </div>
       </div>
 
-      <button className={s.button} onClick={() => onSelect?.(bundle.id)}>
+      <motion.button
+        whileHover={{ y: -2, scale: 1.015 }}
+        whileTap={{ scale: 0.97 }}
+        transition={{ type: "spring", stiffness: 400, damping: 22 }}
+        className={s.button}
+        onClick={() => onSelect?.(bundle.id)}
+      >
         {bundle.ctaText}
-      </button>
-    </div>
+      </motion.button>
+    </motion.div>
   );
 };
 
