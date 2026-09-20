@@ -58,7 +58,7 @@ export default function Footer() {
           </motion.div>
 
           {/* Contacts & Socials */}
-          <div className="md:col-span-2 col-span-6">
+          <motion.div variants={cardReveal} className="md:col-span-2 col-span-6">
             <h4 className="text-xs font-bold uppercase tracking-wider text-gray-300 mb-4">
               Channels
             </h4>
