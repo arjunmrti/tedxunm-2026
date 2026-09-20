@@ -1,18 +1,29 @@
+import { motion } from "motion/react";
+import { cardReveal, sectionReveal, staggerParent } from "../../../../motion/variants";
+
 export default function About() {
   return (
-    <section aria-labelledby="about-heading" className="py-20 px-4 sm:px-6 lg:px-8 bg-[#F7F7F7] border-t border-gray-200" id="about">
+    <motion.section
+      aria-labelledby="about-heading"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-[#F7F7F7] border-t border-gray-200"
+      id="about"
+      variants={sectionReveal}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.12 }}
+    >
       <div className="max-w-7xl mx-auto">
 
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <motion.div variants={cardReveal} className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-flex items-center justify-center bg-[#E10600]/10 text-[#E10600] text-xs font-semibold uppercase tracking-wider px-4 py-1.5 rounded-full">Why TEDxUNM</span>
           <h2 className="text-4xl lg:text-5xl font-extrabold font-display text-[#111111] tracking-tight my-4" id="about-heading">Where Ideas Find Their Voice</h2>
           <p className="text-base sm:text-lg text-[#5e3f3a] font-normal leading-relaxed max-w-2xl mx-auto mb-12">An independently organized TEDx event bringing together thinkers, researchers, innovators, creators, and agents of change on Makassar's most dynamic stage.</p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <motion.div variants={staggerParent} className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
           {/* Card 1: Fresh Perspectives */}
-          <div className="bg-white rounded-3xl border border-[#E5E5E5] p-6 sm:p-7 shadow-[0_8px_24px_-4px_rgba(17,17,17,0.06)] hover:shadow-md transition-shadow flex flex-col justify-between">
+          <motion.div variants={cardReveal} className="bg-white rounded-3xl border border-[#E5E5E5] p-6 sm:p-7 shadow-[0_8px_24px_-4px_rgba(17,17,17,0.06)] hover:shadow-md transition-shadow flex flex-col justify-between">
             <div>
               <div className="w-full h-40 rounded-2xl bg-[#7B3FE4]/10 flex items-center justify-center mb-6">
                 <svg className="w-10 h-10 text-[#7B3FE4]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -30,7 +41,7 @@ export default function About() {
           </div>
 
           {/* Card 2: Meaningful Connections */}
-          <div className="bg-white rounded-3xl border border-[#E5E5E5] p-6 sm:p-7 shadow-[0_8px_24px_-4px_rgba(17,17,17,0.06)] hover:shadow-md transition-shadow flex flex-col justify-between">
+          <motion.div variants={cardReveal} className="bg-white rounded-3xl border border-[#E5E5E5] p-6 sm:p-7 shadow-[0_8px_24px_-4px_rgba(17,17,17,0.06)] hover:shadow-md transition-shadow flex flex-col justify-between">
             <div>
               <div className="w-full h-40 rounded-2xl bg-[#2ECF7A]/10 flex items-center justify-center mb-6">
                 <svg className="w-10 h-10 text-[#2ECF7A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -48,7 +59,7 @@ export default function About() {
           </div>
 
           {/* Card 3: Action Beyond Inspiration */}
-          <div className="bg-white rounded-3xl border border-[#E5E5E5] p-6 sm:p-7 shadow-[0_8px_24px_-4px_rgba(17,17,17,0.06)] hover:shadow-md transition-shadow flex flex-col justify-between">
+          <motion.div variants={cardReveal} className="bg-white rounded-3xl border border-[#E5E5E5] p-6 sm:p-7 shadow-[0_8px_24px_-4px_rgba(17,17,17,0.06)] hover:shadow-md transition-shadow flex flex-col justify-between">
             <div>
               <div className="w-full h-40 rounded-2xl bg-[#FFA800]/10 flex items-center justify-center mb-6">
                 <svg className="w-10 h-10 text-[#FFA800]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -64,36 +75,36 @@ export default function About() {
               <span>03</span>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Core Pillars Row */}
         <div className="border-t border-[#EAEAEA] pt-12 mt-12">
           <h4 className="text-xs font-semibold uppercase tracking-[0.08em] text-gray-400 mb-8 text-center">Core Pillars of TEDxUNM</h4>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          <motion.div variants={staggerParent} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
 
             {/* Pillar 01 */}
-            <div className="bg-white p-5 rounded-2xl border border-[#E5E5E5] shadow-[0_8px_24px_-4px_rgba(17,17,17,0.06)]">
+            <motion.div variants={cardReveal} className="bg-white p-5 rounded-2xl border border-[#E5E5E5] shadow-[0_8px_24px_-4px_rgba(17,17,17,0.06)]">
               <div className="w-8 h-8 rounded-full bg-[#E10600]/10 text-[#E10600] flex items-center justify-center font-mono font-bold text-xs mb-3">01</div>
               <div className="font-display font-semibold text-base text-[#111111] mb-1.5">Curiosity</div>
               <div className="text-xs text-[#5e3f3a] leading-relaxed">Relentless pursuit of unexplored inquiries.</div>
             </div>
 
             {/* Pillar 02 */}
-            <div className="bg-white p-5 rounded-2xl border border-[#E5E5E5] shadow-[0_8px_24px_-4px_rgba(17,17,17,0.06)]">
+            <motion.div variants={cardReveal} className="bg-white p-5 rounded-2xl border border-[#E5E5E5] shadow-[0_8px_24px_-4px_rgba(17,17,17,0.06)]">
               <div className="w-8 h-8 rounded-full bg-[#7B3FE4]/10 text-[#7B3FE4] flex items-center justify-center font-mono font-bold text-xs mb-3">02</div>
               <div className="font-display font-semibold text-base text-[#111111] mb-1.5">Openness</div>
               <div className="text-xs text-[#5e3f3a] leading-relaxed">Embracing nuances across diverse voices.</div>
             </div>
 
             {/* Pillar 03 */}
-            <div className="bg-white p-5 rounded-2xl border border-[#E5E5E5] shadow-[0_8px_24px_-4px_rgba(17,17,17,0.06)]">
+            <motion.div variants={cardReveal} className="bg-white p-5 rounded-2xl border border-[#E5E5E5] shadow-[0_8px_24px_-4px_rgba(17,17,17,0.06)]">
               <div className="w-8 h-8 rounded-full bg-[#FFA800]/10 text-[#FFA800] flex items-center justify-center font-mono font-bold text-xs mb-3">03</div>
               <div className="font-display font-semibold text-base text-[#111111] mb-1.5">Authenticity</div>
               <div className="text-xs text-[#5e3f3a] leading-relaxed">Honest narratives rooted in experience.</div>
             </div>
 
             {/* Pillar 04 */}
-            <div className="bg-white p-5 rounded-2xl border border-[#E5E5E5] shadow-[0_8px_24px_-4px_rgba(17,17,17,0.06)]">
+            <motion.div variants={cardReveal} className="bg-white p-5 rounded-2xl border border-[#E5E5E5] shadow-[0_8px_24px_-4px_rgba(17,17,17,0.06)]">
               <div className="w-8 h-8 rounded-full bg-[#2ECF7A]/10 text-[#2ECF7A] flex items-center justify-center font-mono font-bold text-xs mb-3">04</div>
               <div className="font-display font-semibold text-base text-[#111111] mb-1.5">Collaboration</div>
               <div className="text-xs text-[#5e3f3a] leading-relaxed">Collective intelligence over isolation.</div>
@@ -105,9 +116,9 @@ export default function About() {
               <div className="font-display font-semibold text-base text-[#111111] mb-1.5">Impact</div>
               <div className="text-xs text-[#5e3f3a] leading-relaxed">Catalyzing shift in regional mindset.</div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   )
 }
