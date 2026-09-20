@@ -34,7 +34,7 @@ export default function Speakers({ onSelectSpeaker }: { onSelectSpeaker: (speake
             <svg className="w-7 h-7 mb-1.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path>
             </svg>
-            <span className="text-[10px] font-mono tracking-widest uppercase font-bold text-gray-400">SECRET #07</span>
+            <span className="text-[10px] font-mono tracking-widest uppercase font-bold text-gray-400">LINEUP</span>
           </div>
 
           <div>
