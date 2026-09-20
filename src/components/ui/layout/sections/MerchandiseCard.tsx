@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { cardReveal } from "../../../../motion/variants";
 // src/components/ui/layout/sections/MerchandiseCard.tsx
 import type { MerchandiseBundle, MerchandiseVariant } from '../../../../types/Merchandise';
 
@@ -101,6 +102,7 @@ const MerchandiseCard = ({ bundle, onSelect }: MerchandiseCardProps) => {
 
   return (
     <motion.div
+      variants={cardReveal}
       whileHover={{ y: -8, scale: 1.02, transition: { type: "spring", stiffness: 320, damping: 24 } }}
       whileTap={{ scale: 0.985 }}
       className={s.wrapper}
