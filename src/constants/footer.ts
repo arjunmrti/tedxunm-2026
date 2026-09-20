@@ -30,23 +30,24 @@ export interface FooterContent {
 }
 
 export const footerContent: FooterContent = {
-brand: {
-  prefix: "TEDx",
-  suffix: "UNM",
-  logoUrl:
-    "https://res.cloudinary.com/c4wbxcmp/image/upload/f_auto,q_auto/TED_LOGO_B",
-  disclaimer:
-    "This independent TEDx event is operated under license from TED. Bringing world-class idea dissemination to Universitas Negeri Makassar and Eastern Indonesia.",
-  venue: "Menara Phinisi, Universitas Negeri Makassar",
-  address:
-    "Jl. A. P. Pettarani, Tidung, Kec. Rappocini, Kota Makassar, Sulawesi Selatan 90222",
-},
+  brand: {
+    prefix: "TEDx",
+    suffix: "UNM",
+    logoUrl:
+      "https://res.cloudinary.com/c4wbxcmp/image/upload/f_auto,q_auto/TED_LOGO_B",
+    disclaimer:
+      "An independent, TED-licensed event bringing together ideas, people, and perspectives through the theme The Art of Human Language.",
+    venue: "Universitas Negeri Makassar",
+    address:
+      "Jl. A. P. Pettarani, Tidung, Kec. Rappocini, Kota Makassar, Sulawesi Selatan.",
+  },
   navigation: [
     { label: "Home", href: "#" },
     { label: "About TEDxUNM", href: "#about" },
-    { label: "Speakers Roster", href: "#speakers" },
-    { label: "Past Journey", href: "#journey" },
+    { label: "Speakers", href: "#speakers" },
+    { label: "Journey", href: "#journey" },
     { label: "Merchandise", href: "#merchandise" },
+    { label: "Tickets", href: "#tickets" },
     { label: "FAQ", href: "#faq" },
   ],
   channels: [
@@ -60,7 +61,15 @@ brand: {
       href: "https://tiktok.com/@tedxunm",
       external: true,
     },
-    { label: "tedxunm@gmail.com", href: "mailto:tedxunm@gmail.com" },
+    {
+      label: "YouTube: ted.com/watch/tedx-talks",
+      href: "https://www.ted.com/watch/tedx-talks",
+      external: true,
+    },
+    {
+      label: "tedxunm@gmail.com",
+      href: "mailto:tedxunm@gmail.com",
+    },
     {
       label: "+62 82357837337",
       href: "https://wa.me/6282357837337",
@@ -68,12 +77,12 @@ brand: {
     },
   ],
   newsletter: {
-    title: "Stay Updated",
+    title: "Join the Conversation",
     description:
-      "Receive speaker release announcements and agenda timetables.",
-    placeholder: "Enter your email",
-    buttonText: "Subscribe",
-    successMessage: "Thank you for subscribing to TEDxUNM updates!",
+      "Every idea has the potential to inspire someone. Every conversation has the potential to spark change.",
+    placeholder: "Your email",
+    buttonText: "Join",
+    successMessage: "Thank you for joining the TEDxUNM conversation.",
   },
   bottomBar: {
     copyright: "© 2026 TEDxUNM. All rights reserved.",
