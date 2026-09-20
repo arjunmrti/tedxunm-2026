@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { motion } from "motion/react";
 import { cardReveal } from "../../../../motion/variants";
 // src/components/ui/layout/sections/MerchandiseCard.tsx
@@ -99,112 +98,53 @@ const cardStyles: Record<MerchandiseVariant, MerchandiseCardStyle> = {
 };
 
 const MerchandiseCard = ({ bundle, onSelect }: MerchandiseCardProps) => {
-  const [isFlipped, setIsFlipped] = useState(false);
   const s = cardStyles[bundle.variant];
 
   return (
     <motion.div
       variants={cardReveal}
+      whileHover={{ y: -8, scale: 1.02, transition: { type: "spring", stiffness: 320, damping: 24 } }}
       whileTap={{ scale: 0.985 }}
-      onMouseEnter={() => setIsFlipped(true)}
-      onMouseLeave={() => setIsFlipped(false)}
-      className={`${s.wrapper} [perspective:1200px]`}
+      className={s.wrapper}
     >
-      <motion.div
-        className="relative w-full"
-        animate={{ rotateY: isFlipped ? 180 : 0 }}
-        transition={{ type: "spring", stiffness: 260, damping: 24 }}
-        style={{ transformStyle: "preserve-3d" }}
+      <div className={s.ribbonWrapper}>
+        {s.ribbonIcon === 'sparkle' && (
+          <>
+            <span>✦</span> {bundle.ribbonLabel}
+          </>
+        )}
+        {s.ribbonIcon === 'pulse' && (
+          <>
+            <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+            {bundle.ribbonLabel}
+          </>
+        )}
+        {!s.ribbonIcon && bundle.ribbonLabel}
+      </div>
+
+      <div className="pt-2">
+        <div className="flex items-center justify-between mb-4">
+          <span className={s.tierBadge}>{bundle.tierLabel}</span>
+          <span className={s.skuLabel}>{bundle.skuLabel}</span>
+        </div>
+        <h4 className={s.title}>{bundle.title}</h4>
+        <div className={s.accentBar}></div>
+        <p className={s.itemsText}>{bundle.items}</p>
+        <div className={s.priceBlockWrapper}>
+          <div className={s.priceLabel}>{bundle.priceLabel}</div>
+          <div className={s.price}>{bundle.price}</div>
+        </div>
+      </div>
+
+      <motion.button
+        whileHover={{ y: -2, scale: 1.015 }}
+        whileTap={{ scale: 0.97 }}
+        transition={{ type: "spring", stiffness: 400, damping: 22 }}
+        className={s.button}
+        onClick={() => onSelect?.(bundle.id)}
       >
-        <div
-          className="relative"
-          style={{ backfaceVisibility: "hidden" }}
-        >
-          <div className="pt-2">
-            <div className="flex items-center justify-between mb-4">
-              <span className={s.tierBadge}>{bundle.tierLabel}</span>
-              <span className={s.skuLabel}>{bundle.skuLabel}</span>
-            </div>
-            <div className="text-left">
-              <div className={s.ribbonWrapper}>
-                {s.ribbonIcon === 'sparkle' && (
-                  <>
-                    <span>✦</span> {bundle.ribbonLabel}
-                  </>
-                )}
-                {s.ribbonIcon === 'pulse' && (
-                  <>
-                    <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
-                    {bundle.ribbonLabel}
-                  </>
-                )}
-                {!s.ribbonIcon && bundle.ribbonLabel}
-              </div>
-              <h4 className={s.title}>{bundle.title}</h4>
-              <div className={s.accentBar}></div>
-              <p className={s.itemsText}>{bundle.items}</p>
-              <div className={s.priceBlockWrapper}>
-                <div className={s.priceLabel}>{bundle.priceLabel}</div>
-                <div className={s.price}>{bundle.price}</div>
-              </div>
-            </div>
-          </div>
-
-          <motion.button
-            whileHover={{ y: -2, scale: 1.015 }}
-            whileTap={{ scale: 0.97 }}
-            transition={{ type: "spring", stiffness: 400, damping: 22 }}
-            type="button"
-            className={s.button}
-            onClick={() => onSelect?.(bundle.id)}
-          >
-            {bundle.ctaText}
-          </motion.button>
-        </div>
-
-        <div
-          className="absolute inset-0 overflow-hidden rounded-[inherit] text-white"
-          style={{
-            transform: "rotateY(180deg)",
-            backfaceVisibility: "hidden",
-            background: `linear-gradient(to bottom, ${bundle.themeColor} 0%, ${bundle.themeColor}DD 48%, ${bundle.themeColor}99 100%)`,
-          }}
-        >
-          {bundle.imageUrl ? (
-            <img
-              src={bundle.imageUrl}
-              alt={bundle.title}
-              className="absolute inset-x-4 top-4 h-40 w-[calc(100%-2rem)] rounded-2xl object-cover shadow-lg"
-            />
-          ) : (
-            <div className="absolute inset-x-4 top-4 h-40 rounded-2xl border border-white/30 bg-white/15 flex items-center justify-center">
-              <div className="text-center px-6">
-                <div className="text-[10px] font-mono uppercase tracking-[0.24em] opacity-80">
-                  TEDxUNM 2026
-                </div>
-                <div className="mt-2 text-lg font-bold tracking-tight">
-                  Merchandise
-                </div>
-                <div className="mt-1 text-[11px] opacity-80">
-                  Bundle preview
-                </div>
-              </div>
-            </div>
-          )}
-
-          <div className="absolute inset-x-4 bottom-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 p-4">
-            <div className="text-[10px] font-mono uppercase tracking-[0.2em] opacity-80">
-              {bundle.tierLabel}
-            </div>
-            <h4 className="mt-1 text-lg font-display font-bold leading-tight">
-              {bundle.title}
-            </h4>
-            <p className="mt-2 text-xs leading-relaxed text-white/90">
-              {bundle.items}
-            </p>
-          </div>
-        </div>
-      </motion.div>
+        {bundle.ctaText}
+      </motion.button>
     </motion.div>
   );
 };
