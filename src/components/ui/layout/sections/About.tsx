@@ -117,7 +117,7 @@ export default function About() {
               <div className="text-xs text-[#5e3f3a] leading-relaxed">Catalyzing shift in regional mindset.</div>
             </motion.div>
           </motion.div>
-        </motion.div>
+        </div>
       </div>
     </motion.section>
   )
