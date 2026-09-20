@@ -13,6 +13,8 @@ export interface MerchandiseBundle {
   priceLabel: string; // "Official Bundle", "Curator's Top Pick", dst.
   price: string; // "Rp75.000"
   ctaText: string; // teks tombol, mis. "Select Bundle"
+  themeColor: string; // dynamic theme color used by the flip back gradient
+  imageUrl?: string; // optional merchandise image for the back face
 }
 
 export interface MerchandiseSectionContent {
