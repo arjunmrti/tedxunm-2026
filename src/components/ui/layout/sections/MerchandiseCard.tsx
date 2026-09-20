@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "motion/react";
 import { cardReveal } from "../../../../motion/variants";
 // src/components/ui/layout/sections/MerchandiseCard.tsx
@@ -6,8 +7,6 @@ import type { MerchandiseBundle, MerchandiseVariant } from '../../../../types/Me
 export interface MerchandiseCardProps {
   bundle: MerchandiseBundle;
   onSelect?: (bundleId: string) => void;
-  isFlipped?: boolean;
-  onFlip?: (bundleId: string) => void;
 }
 
 interface MerchandiseCardStyle {
@@ -127,12 +126,8 @@ const cardStyles: Record<MerchandiseVariant, MerchandiseCardStyle> = {
   },
 };
 
-const MerchandiseCard = ({
-  bundle,
-  onSelect,
-  isFlipped = false,
-  onFlip,
-}: MerchandiseCardProps) => {
+const MerchandiseCard = ({ bundle, onSelect }: MerchandiseCardProps) => {
+  const [isFlipped, setIsFlipped] = useState(false);
   const s = cardStyles[bundle.variant];
 
   const itemTypeCount = bundle.items.split('+').length;
@@ -147,6 +142,10 @@ const MerchandiseCard = ({
       variants={cardReveal}
       whileHover={{ y: -8, scale: 1.02, transition: { type: "spring", stiffness: 320, damping: 24 } }}
       whileTap={{ scale: 0.985 }}
+      onMouseEnter={() => setIsFlipped(true)}
+      onMouseLeave={() => setIsFlipped(false)}
+      onFocus={() => setIsFlipped(true)}
+      onBlur={() => setIsFlipped(false)}
       className={`${s.frame} [perspective:1200px]`}
       tabIndex={0}
     >
@@ -191,10 +190,7 @@ const MerchandiseCard = ({
             transition={{ type: "spring", stiffness: 400, damping: 22 }}
             type="button"
             className={s.button}
-            onClick={() => {
-              onFlip?.(bundle.id);
-              onSelect?.(bundle.id);
-            }}
+            onClick={() => onSelect?.(bundle.id)}
           >
             {bundle.ctaText}
           </motion.button>
