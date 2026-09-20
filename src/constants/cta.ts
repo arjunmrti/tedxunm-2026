@@ -60,7 +60,7 @@ export const ctaContent: CTAContent = {
   passCards: [
     {
       position: "left",
-      badgeLabel: "PASS",
+      badgeLabel: "TEDxUNM",
       badgeClassName: "bg-ted-red/10 text-ted-red",
       indicator: "bar",
       eyebrow: "Ideas Worth Spreading",
@@ -83,7 +83,7 @@ export const ctaContent: CTAContent = {
     },
     {
       position: "right",
-      badgeLabel: "VIP 2026",
+      badgeLabel: "VOICE",
       badgeClassName: "bg-[#111111] text-white",
       indicator: "dot",
       eyebrow: "Join the Conversation",
