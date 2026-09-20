@@ -62,7 +62,7 @@ export default function Hero() {
           className="w-full sm:w-auto inline-flex items-center justify-center bg-ted-red hover:bg-ted-hover text-white font-medium text-sm sm:text-base px-8 py-3.5 rounded-full shadow-lg shadow-ted-red/20"
         >
           Get Your Spot
-        </a>
+        </motion.a>
         <motion.a
           href="#speakers"
           whileHover={{ y: -3, scale: 1.01 }}
@@ -71,7 +71,7 @@ export default function Hero() {
           className="w-full sm:w-auto inline-flex items-center justify-center bg-white hover:bg-gray-50 border border-gray-300 text-gray-800 font-medium text-sm sm:text-base px-8 py-3.5 rounded-full"
         >
           See the Lineup
-        </a>
+        </motion.a>
       </motion.div>
 
       {/* Hero Dashboard / Interactive Stage Showcase Card */}
@@ -233,7 +233,7 @@ export default function Hero() {
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path d="M7 17L17 7M17 7H7M17 7V17" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5"></path>
                   </svg>
-                </a>
+                </motion.a>
               </div>
               <p className="text-xs text-gray-600 leading-relaxed mb-6">Unscripted dialogues, interactive experience lounges, networking banquets, and collaborative live installations.</p>
             </div>
@@ -255,7 +255,7 @@ export default function Hero() {
                 <span className="text-ted-red font-bold">100 Seats</span>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </motion.div>
 
