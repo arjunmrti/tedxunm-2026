@@ -1,3 +1,5 @@
+import { motion } from "motion/react";
+import { cardReveal, sectionReveal } from "../../../../motion/variants";
 import { ctaContent } from "../../../../constants/cta";
 import type { PassCardData } from "../../../../constants/cta";
 
@@ -95,11 +97,15 @@ function PassCard({ data }: { data: PassCardData }) {
 
 const FinalCTA = () => {
   return (
-    <section
+    <motion.section
       aria-labelledby="cta-heading"
       className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
+      variants={sectionReveal}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.14 }}
     >
-      <div className="relative overflow-hidden rounded-[32px] sm:rounded-4xl border border-ted-red/30 text-white text-center shadow-2xl p-8 sm:p-14 lg:p-20 transition-all bg-gradient-to-b from-[#111111] via-[#1a0505] to-[#700603]">
+      <motion.div variants={cardReveal} className="relative overflow-hidden rounded-[32px] sm:rounded-4xl border border-ted-red/30 text-white text-center shadow-2xl p-8 sm:p-14 lg:p-20 transition-all bg-gradient-to-b from-[#111111] via-[#1a0505] to-[#700603]">
         {/* Radial lighting glows */}
         <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-ted-red/25 rounded-full blur-3xl pointer-events-none z-0" />
         <div className="absolute -bottom-24 left-1/2 -translate-x-1/2 w-[750px] h-[300px] bg-[#E10600]/40 rounded-full blur-3xl pointer-events-none z-0" />
@@ -111,7 +117,7 @@ const FinalCTA = () => {
         ))}
 
         {/* Central content stack */}
-        <div className="relative z-20 max-w-2xl sm:max-w-3xl mx-auto flex flex-col items-center">
+        <motion.div variants={cardReveal} className="relative z-20 max-w-2xl sm:max-w-3xl mx-auto flex flex-col items-center">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-white/95 text-xs font-semibold px-4 py-1.5 rounded-full mb-6 shadow-sm">
             <span className="w-1.5 h-1.5 rounded-full bg-ted-red animate-pulse" />
             <span>{ctaContent.badgeText}</span>
@@ -134,8 +140,11 @@ const FinalCTA = () => {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
             {ctaContent.buttons.map((button) => (
-              <a
+              <motion.a
                 key={button.label}
+                whileHover={{ y: -3, scale: 1.02 }}
+                whileTap={{ scale: 0.985 }}
+                transition={{ type: "spring", stiffness: 400, damping: 22 }}
                 href={button.href}
                 target={button.external ? "_blank" : undefined}
                 rel={button.external ? "noopener noreferrer" : undefined}
@@ -149,12 +158,12 @@ const FinalCTA = () => {
                 {button.icon && (
                   <span className="text-base leading-none">{button.icon}</span>
                 )}
-              </a>
+              </motion.a>
             ))}
           </div>
-        </div>
-      </div>
-    </section>
+        </motion.div>
+      </motion.div>
+    </motion.section>
   );
 };
 
