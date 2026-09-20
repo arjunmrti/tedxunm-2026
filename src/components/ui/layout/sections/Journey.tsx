@@ -1,3 +1,6 @@
+import { motion } from "motion/react";
+import { cardReveal, sectionReveal, staggerParent } from "../../../../motion/variants";
+
 // src/components/ui/layout/sections/Journey.tsx
 
 export interface JourneyStat {
@@ -144,12 +147,16 @@ const Journey = ({
   quote = defaultQuote,
 }: JourneyProps) => {
   return (
-    <section
+    <motion.section
       aria-labelledby="journey-heading"
       className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-gray-200"
       id="journey"
+      variants={sectionReveal}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.12 }}
     >
-      <div className="text-center max-w-3xl mx-auto mb-16">
+      <motion.div variants={cardReveal} className="text-center max-w-3xl mx-auto mb-16">
         <div className="inline-flex items-center gap-2 bg-[#FFF1F0] border border-red-100 text-ted-red text-xs font-bold px-3.5 py-1 rounded-full mb-3 shadow-sm">
           <span className="w-1.5 h-1.5 rounded-full bg-ted-red"></span>
           <span>{badgeLabel}</span>
@@ -165,11 +172,11 @@ const Journey = ({
         <p className="text-base text-gray-600 mt-4 leading-relaxed max-w-2xl mx-auto">
           {description}
         </p>
-      </div>
+      </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
+      <motion.div variants={staggerParent} className="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
         {/* 2025 Feature */}
-        <div className="md:col-span-7 bg-white rounded-3xl border border-gray-200/90 p-8 sm:p-10 flex flex-col justify-between shadow-sm hover:shadow-md hover:border-ted-red/30 transition-all duration-300 relative group">
+        <motion.div variants={cardReveal} className="md:col-span-7 bg-white rounded-3xl border border-gray-200/90 p-8 sm:p-10 flex flex-col justify-between shadow-sm hover:shadow-md hover:border-ted-red/30 transition-all duration-300 relative group">
           <div>
             <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
               <div className="flex items-center gap-2">
@@ -206,10 +213,10 @@ const Journey = ({
             </div>
             <span className="font-medium text-gray-700">{edition2025.footerTag}</span>
           </div>
-        </div>
+        </motion.div>
 
         {/* 2026 Feature */}
-        <div className="md:col-span-5 bg-gradient-to-b from-[#111111] to-[#1e1e1e] text-white rounded-3xl border border-gray-800 p-8 sm:p-10 flex flex-col justify-between shadow-xl relative group overflow-hidden">
+        <motion.div variants={cardReveal} className="md:col-span-5 bg-gradient-to-b from-[#111111] to-[#1e1e1e] text-white rounded-3xl border border-gray-800 p-8 sm:p-10 flex flex-col justify-between shadow-xl relative group overflow-hidden">
           <div className="absolute -top-24 -right-24 w-60 h-60 bg-ted-red/20 rounded-full blur-3xl pointer-events-none"></div>
           <div className="relative z-10">
             <div className="flex items-center justify-between gap-2 mb-6">
@@ -247,12 +254,13 @@ const Journey = ({
               <ArrowUpRightIcon className="w-3.5 h-3.5" strokeWidth={2.5} />
             </a>
           </div>
-        </div>
+        </motion.div>
 
         {/* Stat Cards */}
         {stats.map((stat) => (
-          <div
+          <motion.div
             key={stat.id}
+            variants={cardReveal}
             className="md:col-span-3 bg-white rounded-3xl border border-gray-200/90 p-6 flex flex-col justify-between shadow-sm hover:shadow-md hover:border-ted-red/30 transition-all"
           >
             <div
@@ -274,11 +282,11 @@ const Journey = ({
               <div className="text-sm font-bold text-gray-900 mb-1.5">{stat.title}</div>
               <p className="text-xs text-gray-500 leading-relaxed">{stat.description}</p>
             </div>
-          </div>
+          </motion.div>
         ))}
 
         {/* Quote Card */}
-        <div className="md:col-span-3 bg-[#FFF8F7] border border-red-100 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-sm hover:shadow-md hover:border-ted-red/30 transition-all">
+        <motion.div variants={cardReveal} className="md:col-span-3 bg-[#FFF8F7] border border-red-100 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-sm hover:shadow-md hover:border-ted-red/30 transition-all">
           <div className="text-4xl font-serif text-ted-red leading-none mb-3">“</div>
           <p className="text-xs sm:text-sm italic font-medium text-gray-800 leading-relaxed mb-4">
             {quote.text}
@@ -287,9 +295,9 @@ const Journey = ({
             <span>{quote.source}</span>
             <span className="text-ted-red font-bold">{quote.year}</span>
           </div>
-        </div>
-      </div>
-    </section>
+        </motion.div>
+      </motion.div>
+    </motion.section>
   );
 };
 
