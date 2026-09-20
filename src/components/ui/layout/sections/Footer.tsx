@@ -39,7 +39,7 @@ export default function Footer() {
               <p className="font-semibold text-gray-200">{footerContent.brand.venue}</p>
               <p>{footerContent.brand.address}</p>
             </div>
-          </div>
+          </motion.div>
 
           {/* Quick Links */}
           <motion.div variants={cardReveal} className="md:col-span-2 col-span-6">
@@ -55,7 +55,7 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
 
           {/* Contacts & Socials */}
           <div className="md:col-span-2 col-span-6">
@@ -101,7 +101,7 @@ export default function Footer() {
                 {footerContent.newsletter.buttonText}
               </button>
             </motion.form>
-          </div>
+          </motion.div>
         </motion.div>
 
         {/* Bottom Bar */}
