@@ -264,13 +264,13 @@ const Journey = ({
             className="md:col-span-3 bg-white rounded-3xl border border-gray-200/90 p-6 flex flex-col justify-between shadow-sm hover:shadow-md hover:border-ted-red/30 transition-all"
           >
             <div
-              className={`w-10 h-10 rounded-2xl flex items-center justify-center font-bold text-xs mb-4 ${
+              className={`w-10 h-10 rounded-2xl flex items-center justify-center font-bold text-xs ${
                 stat.accent ? 'bg-[#FFF1F0] text-ted-red' : 'bg-gray-100 text-gray-900'
               }`}
             >
               {stat.number}
             </div>
-            <div>
+            <div className="mt-14">
               <div
                 className={`text-4xl sm:text-5xl font-extrabold font-display tracking-tight leading-none mb-2 ${
                   stat.hasDot ? 'flex items-baseline' : ''
@@ -287,10 +287,12 @@ const Journey = ({
 
         {/* Quote Card */}
         <motion.div variants={cardReveal} className="md:col-span-3 bg-[#FFF8F7] border border-red-100 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-sm hover:shadow-md hover:border-ted-red/30 transition-all">
-          <div className="text-4xl font-serif text-ted-red leading-none mb-3">“</div>
-          <p className="text-xs sm:text-sm italic font-medium text-gray-800 leading-relaxed mb-4">
-            {quote.text}
-          </p>
+          <div className="pt-14">
+            <div className="text-4xl font-serif text-ted-red leading-none mb-3">“</div>
+            <p className="text-xs sm:text-sm italic font-medium text-gray-800 leading-relaxed mb-4">
+              {quote.text}
+            </p>
+          </div>
           <div className="pt-3 border-t border-red-200/60 flex items-center justify-between text-[11px] font-semibold text-gray-500">
             <span>{quote.source}</span>
             <span className="text-ted-red font-bold">{quote.year}</span>
