@@ -99,7 +99,7 @@ const defaultStats: JourneyStat[] = [
     hasDot: true,
     title: 'Previous Theme',
     description:
-      'Lens of Reality',
+      'Lens of Reality explored how experiences, culture, knowledge, and life journeys shape the way we see the world.',
   },
   {
     id: 'stat-3',
@@ -261,7 +261,7 @@ const Journey = ({
           <motion.div
             key={stat.id}
             variants={cardReveal}
-            className="md:col-span-3 bg-white rounded-3xl border border-gray-200/90 p-6 flex flex-col justify-between shadow-sm hover:shadow-md hover:border-ted-red/30 transition-all"
+            className="md:col-span-3 bg-white rounded-3xl border border-gray-200/90 p-6 flex flex-col shadow-sm hover:shadow-md hover:border-ted-red/30 transition-all"
           >
             <div
               className={`w-10 h-10 rounded-2xl flex items-center justify-center font-bold text-xs mb-4 ${
@@ -270,7 +270,7 @@ const Journey = ({
             >
               {stat.number}
             </div>
-            <div>
+            <div className="mt-24">
               <div
                 className={`text-4xl sm:text-5xl font-extrabold font-display tracking-tight leading-none mb-2 ${
                   stat.hasDot ? 'flex items-baseline' : ''
