@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 // src/components/ui/layout/sections/Countdown.tsx
 import { useEffect, useState } from 'react';
 
@@ -51,12 +52,18 @@ const Countdown = ({
   }, [targetTime]);
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: -8, scale: 0.98 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{ duration: 0.55, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
       className="fixed inset-x-0 z-40 px-4 sm:px-8 pointer-events-none"
       style={{ top: offsetTop }}
     >
       <div className="max-w-7xl mx-auto pt-1 flex justify-end items-center pointer-events-auto">
-        <div className="inline-flex items-center gap-2.5 bg-white/95 backdrop-blur-md border border-gray-200/90 rounded-full px-3.5 py-1 shadow-sm text-xs text-gray-800">
+        <motion.div
+          whileHover={{ y: -1, scale: 1.01 }}
+          transition={{ type: "spring", stiffness: 350, damping: 24 }}
+          className="inline-flex items-center gap-2.5 bg-white/95 backdrop-blur-md border border-gray-200/90 rounded-full px-3.5 py-1 shadow-sm text-xs text-gray-800">
           {/* Live Indicator + Label */}
           <div className="flex items-center gap-1.5">
             <span className="relative flex h-2 w-2">
@@ -99,15 +106,18 @@ const Countdown = ({
           </div>
 
           {/* CTA */}
-          <a
+          <motion.a
+            whileHover={{ x: 2 }}
+            whileTap={{ scale: 0.97 }}
+            transition={{ type: "spring", stiffness: 400, damping: 22 }}
             href={ctaHref}
             className="hidden sm:inline-flex items-center text-[10px] font-semibold text-ted-red hover:underline ml-1"
           >
             {ctaText}
-          </a>
-        </div>
+          </motion.a>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
