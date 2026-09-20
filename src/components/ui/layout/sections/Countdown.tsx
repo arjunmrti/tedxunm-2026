@@ -36,7 +36,7 @@ function getTimeLeft(targetTime: number): TimeLeft {
 const Countdown = ({
   targetDate,
   label = 'TEDxUNM 2026 IN',
-  ctaText = 'Reserve →',
+  ctaText = 'Get Your Spot',
   ctaHref = '#tickets',
   offsetTop = 96,
 }: CountdownProps) => {
