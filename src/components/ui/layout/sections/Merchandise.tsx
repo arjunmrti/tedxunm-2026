@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { motion } from "motion/react";
 import { cardReveal, sectionReveal, staggerParent } from "../../../../motion/variants";
 // src/components/ui/layout/sections/Merchandise.tsx
@@ -17,12 +16,6 @@ const Merchandise = ({
   bundles = merchandiseBundles,
   onSelectBundle,
 }: MerchandiseProps) => {
-  const [activeBundleId, setActiveBundleId] = useState<string | null>(null);
-
-  const handleFlip = (bundleId: string) => {
-    setActiveBundleId((current) => (current === bundleId ? null : bundleId));
-  };
-
   return (
     <motion.section
       aria-labelledby="merch-heading"
@@ -60,8 +53,6 @@ const Merchandise = ({
               key={bundle.id}
               bundle={bundle}
               onSelect={onSelectBundle}
-              isFlipped={activeBundleId === bundle.id}
-              onFlip={handleFlip}
             />
           ))}
         </motion.div>
