@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { AnimatePresence } from 'motion/react'
 import Navbar from './components/ui/layout/sections/Navbar'
 import Hero from './components/ui/layout/sections/Hero'
 import About from './components/ui/layout/sections/About'
@@ -54,8 +55,14 @@ function App() {
 
       <Footer />
 
-      <SpeakerModal speaker={selectedSpeaker} onClose={() => setSelectedSpeaker(null)} />
-      <RegistrationModal ticket={selectedTicket} onClose={() => setSelectedTicket(null)} />
+      <AnimatePresence mode="wait">
+        {selectedSpeaker && (
+          <SpeakerModal speaker={selectedSpeaker} onClose={() => setSelectedSpeaker(null)} />
+        )}
+        {selectedTicket && (
+          <RegistrationModal ticket={selectedTicket} onClose={() => setSelectedTicket(null)} />
+        )}
+      </AnimatePresence>
     </>
   )
 }
