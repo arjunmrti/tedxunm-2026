@@ -36,16 +36,16 @@ brand: {
   logoUrl:
     "https://res.cloudinary.com/c4wbxcmp/image/upload/f_auto,q_auto/TED_LOGO_B",
   disclaimer:
-    "This independent TEDx event is operated under license from TED. Bringing world-class idea dissemination to Universitas Negeri Makassar and Eastern Indonesia.",
-  venue: "Menara Phinisi, Universitas Negeri Makassar",
+    "TEDxUNM is an independently organized TED-licensed event where ideas, people, and perspectives come together to spark meaningful change.",
+  venue: "Universitas Negeri Makassar",
   address:
-    "Jl. A. P. Pettarani, Tidung, Kec. Rappocini, Kota Makassar, Sulawesi Selatan 90222",
+    "Jl. A. P. Pettarani, Tidung, Kec. Rappocini, Kota Makassar, Sulawesi Selatan.",
 },
   navigation: [
     { label: "Home", href: "#" },
     { label: "About TEDxUNM", href: "#about" },
-    { label: "Speakers Roster", href: "#speakers" },
-    { label: "Past Journey", href: "#journey" },
+    { label: "Speakers", href: "#speakers" },
+    { label: "Journey", href: "#journey" },
     { label: "Merchandise", href: "#merchandise" },
     { label: "FAQ", href: "#faq" },
   ],
@@ -70,10 +70,10 @@ brand: {
   newsletter: {
     title: "Stay Updated",
     description:
-      "Receive speaker release announcements and agenda timetables.",
+      "Stay connected with TEDxUNM 2026 updates, speakers, and the conversation around ideas worth spreading.",
     placeholder: "Enter your email",
     buttonText: "Subscribe",
-    successMessage: "Thank you for subscribing to TEDxUNM updates!",
+    successMessage: "Thank you for joining the TEDxUNM conversation!",
   },
   bottomBar: {
     copyright: "© 2026 TEDxUNM. All rights reserved.",
