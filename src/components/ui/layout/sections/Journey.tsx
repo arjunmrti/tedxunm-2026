@@ -187,13 +187,12 @@ const Journey = ({
                   {edition2025.statusBadge}
                 </span>
               </div>
-              <a
-                className="inline-flex items-center gap-1.5 text-xs font-semibold text-gray-600 hover:text-ted-red transition-colors bg-gray-50 border border-gray-200/80 px-3.5 py-1.5 rounded-full shadow-sm"
-                href={edition2025.archiveLinkHref}
+              <span
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-gray-600 bg-gray-50 border border-gray-200/80 px-3.5 py-1.5 rounded-full shadow-sm"
               >
                 <span>{edition2025.archiveLinkText}</span>
                 <ArrowUpRightIcon className="w-3.5 h-3.5 text-ted-red" strokeWidth={2} />
-              </a>
+              </span>
             </div>
             <span className="text-xs font-mono tracking-wider uppercase text-ted-red font-semibold">
               {edition2025.yearLabel}
