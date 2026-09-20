@@ -15,9 +15,9 @@ export default function About() {
       <div className="max-w-7xl mx-auto">
 
         <motion.div variants={cardReveal} className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-flex items-center justify-center bg-[#E10600]/10 text-[#E10600] text-xs font-semibold uppercase tracking-wider px-4 py-1.5 rounded-full">Why TEDxUNM</span>
+          <span className="inline-flex items-center justify-center bg-[#E10600]/10 text-[#E10600] text-xs font-semibold uppercase tracking-wider px-4 py-1.5 rounded-full">About TEDxUNM</span>
           <h2 className="text-4xl lg:text-5xl font-extrabold font-display text-[#111111] tracking-tight my-4" id="about-heading">Where Ideas Find Their Voice</h2>
-          <p className="text-base sm:text-lg text-[#5e3f3a] font-normal leading-relaxed max-w-2xl mx-auto mb-12">An independently organized TEDx event bringing together thinkers, researchers, innovators, creators, and agents of change on Makassar's most dynamic stage.</p>
+          <p className="text-base sm:text-lg text-[#5e3f3a] font-normal leading-relaxed max-w-2xl mx-auto mb-12">An independent, TED-licensed event bringing together thinkers, researchers, innovators, creators, professionals, and agents of change to share ideas worth spreading.</p>
         </motion.div>
 
         <motion.div variants={staggerParent} className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -30,12 +30,12 @@ export default function About() {
                   <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path>
                 </svg>
               </div>
-              <span className="text-xs font-semibold uppercase tracking-wider text-[#7B3FE4] block mb-2">Cognitive & Cultural</span>
+              <span className="text-xs font-semibold uppercase tracking-wider text-[#7B3FE4] block mb-2">01 / Fresh Perspectives</span>
               <h3 className="text-2xl font-bold font-display text-[#111111] mb-2.5">Fresh Perspectives</h3>
-              <p className="text-sm text-[#5e3f3a] leading-relaxed">Challenging conventional narratives through linguistic anthropology, cognitive psychology, and the raw mechanics of storytelling.</p>
+              <p className="text-sm text-[#5e3f3a] leading-relaxed">Challenge the way you see the world and uncover new possibilities in the everyday.</p>
             </div>
             <div className="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-gray-400 font-mono">
-              <span>Interdisciplinary Dialogues</span>
+              <span>Ideas Worth Spreading</span>
               <span>01</span>
             </div>
           </motion.div>
@@ -48,12 +48,12 @@ export default function About() {
                   <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path>
                 </svg>
               </div>
-              <span className="text-xs font-semibold uppercase tracking-wider text-[#2ECF7A] block mb-2">Collaborative Synergy</span>
+              <span className="text-xs font-semibold uppercase tracking-wider text-[#2ECF7A] block mb-2">02 / Meaningful Connections</span>
               <h3 className="text-2xl font-bold font-display text-[#111111] mb-2.5">Meaningful Connections</h3>
-              <p className="text-sm text-[#5e3f3a] leading-relaxed">Fostering unscripted dialogues among students, academics, tech builders, and cultural custodians across South Sulawesi and Eastern Indonesia.</p>
+              <p className="text-sm text-[#5e3f3a] leading-relaxed">Connect with a community of curious minds who believe ideas can shape a better future.</p>
             </div>
             <div className="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-gray-400 font-mono">
-              <span>Community Cross-Pollination</span>
+              <span>Community & Dialogue</span>
               <span>02</span>
             </div>
           </motion.div>
@@ -66,12 +66,12 @@ export default function About() {
                   <path d="M13 10V3L4 14h7v7l9-11h-7z" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path>
                 </svg>
               </div>
-              <span className="text-xs font-semibold uppercase tracking-wider text-[#FFA800] block mb-2">Impact Ecosystem</span>
+              <span className="text-xs font-semibold uppercase tracking-wider text-[#FFA800] block mb-2">03 / Action Beyond Inspiration</span>
               <h3 className="text-2xl font-bold font-display text-[#111111] mb-2.5">Action Beyond Inspiration</h3>
-              <p className="text-sm text-[#5e3f3a] leading-relaxed">Turning spoken ideas into tangible community actions, youth initiatives, open research workshops, and published anthologies.</p>
+              <p className="text-sm text-[#5e3f3a] leading-relaxed">Walk away with more than inspiration, leave empowered to turn ideas into meaningful action.</p>
             </div>
             <div className="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-gray-400 font-mono">
-              <span>Sustainable Legacy</span>
+              <span>From Ideas to Action</span>
               <span>03</span>
             </div>
           </motion.div>
@@ -79,42 +79,42 @@ export default function About() {
 
         {/* Core Pillars Row */}
         <div className="border-t border-[#EAEAEA] pt-12 mt-12">
-          <h4 className="text-xs font-semibold uppercase tracking-[0.08em] text-gray-400 mb-8 text-center">Core Pillars of TEDxUNM</h4>
+          <h4 className="text-xs font-semibold uppercase tracking-[0.08em] text-gray-400 mb-8 text-center">Core Values of TEDxUNM</h4>
           <motion.div variants={staggerParent} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
 
             {/* Pillar 01 */}
             <motion.div variants={cardReveal} className="bg-white p-5 rounded-2xl border border-[#E5E5E5] shadow-[0_8px_24px_-4px_rgba(17,17,17,0.06)]">
               <div className="w-8 h-8 rounded-full bg-[#E10600]/10 text-[#E10600] flex items-center justify-center font-mono font-bold text-xs mb-3">01</div>
               <div className="font-display font-semibold text-base text-[#111111] mb-1.5">Curiosity</div>
-              <div className="text-xs text-[#5e3f3a] leading-relaxed">Relentless pursuit of unexplored inquiries.</div>
+              <div className="text-xs text-[#5e3f3a] leading-relaxed">Every question can open the way to new knowledge and understanding.</div>
             </motion.div>
 
             {/* Pillar 02 */}
             <motion.div variants={cardReveal} className="bg-white p-5 rounded-2xl border border-[#E5E5E5] shadow-[0_8px_24px_-4px_rgba(17,17,17,0.06)]">
               <div className="w-8 h-8 rounded-full bg-[#7B3FE4]/10 text-[#7B3FE4] flex items-center justify-center font-mono font-bold text-xs mb-3">02</div>
               <div className="font-display font-semibold text-base text-[#111111] mb-1.5">Openness</div>
-              <div className="text-xs text-[#5e3f3a] leading-relaxed">Embracing nuances across diverse voices.</div>
+              <div className="text-xs text-[#5e3f3a] leading-relaxed">We value diversity of thought, experience, and background, and learn through open dialogue.</div>
             </motion.div>
 
             {/* Pillar 03 */}
             <motion.div variants={cardReveal} className="bg-white p-5 rounded-2xl border border-[#E5E5E5] shadow-[0_8px_24px_-4px_rgba(17,17,17,0.06)]">
               <div className="w-8 h-8 rounded-full bg-[#FFA800]/10 text-[#FFA800] flex items-center justify-center font-mono font-bold text-xs mb-3">03</div>
               <div className="font-display font-semibold text-base text-[#111111] mb-1.5">Authenticity</div>
-              <div className="text-xs text-[#5e3f3a] leading-relaxed">Honest narratives rooted in experience.</div>
+              <div className="text-xs text-[#5e3f3a] leading-relaxed">Ideas born from experience, research, and honest reflection make every story meaningful.</div>
             </motion.div>
 
             {/* Pillar 04 */}
             <motion.div variants={cardReveal} className="bg-white p-5 rounded-2xl border border-[#E5E5E5] shadow-[0_8px_24px_-4px_rgba(17,17,17,0.06)]">
               <div className="w-8 h-8 rounded-full bg-[#2ECF7A]/10 text-[#2ECF7A] flex items-center justify-center font-mono font-bold text-xs mb-3">04</div>
               <div className="font-display font-semibold text-base text-[#111111] mb-1.5">Collaboration</div>
-              <div className="text-xs text-[#5e3f3a] leading-relaxed">Collective intelligence over isolation.</div>
+              <div className="text-xs text-[#5e3f3a] leading-relaxed">Ideas thrive when they meet other ideas, creating connections that foster innovation and change.</div>
             </motion.div>
 
             {/* Pillar 05 */}
             <motion.div variants={cardReveal} className="bg-white p-5 rounded-2xl border border-[#E5E5E5] shadow-[0_8px_24px_-4px_rgba(17,17,17,0.06)] col-span-1 sm:col-span-2 lg:col-span-1">
               <div className="w-8 h-8 rounded-full bg-[#111111]/10 text-[#111111] flex items-center justify-center font-mono font-bold text-xs mb-3">05</div>
               <div className="font-display font-semibold text-base text-[#111111] mb-1.5">Impact</div>
-              <div className="text-xs text-[#5e3f3a] leading-relaxed">Catalyzing shift in regional mindset.</div>
+              <div className="text-xs text-[#5e3f3a] leading-relaxed">An idea becomes meaningful when it can be translated into action and lasting impact.</div>
             </motion.div>
           </motion.div>
         </div>
