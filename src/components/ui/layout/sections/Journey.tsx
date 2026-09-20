@@ -76,7 +76,7 @@ const defaultEdition2026: Journey2026Data = {
   titlePrefix: 'The Art of ',
   titleHighlight: 'Human Language',
   description:
-    'The way you speak shapes who you are, what you believe, and how you see the world.'
+    'The way you speak shapes who you are, what you believe, and how you see the world.',
   statusLabel: 'The Art of Human Language',
   ctaText: 'See the Lineup',
   ctaHref: '#speakers',
