@@ -16,9 +16,9 @@ export default function Speakers({ onSelectSpeaker }: { onSelectSpeaker: (speake
       viewport={{ once: true, amount: 0.12 }}
     >
       <motion.div variants={cardReveal} className="text-center max-w-3xl mx-auto mb-16">
-        <span className="inline-block bg-[#F4EEFD] text-ted-purple text-xs font-bold px-3 py-1 rounded-full mb-3">Curated Lineup</span>
-        <h2 className="text-3xl sm:text-5xl font-extrabold text-gray-900 tracking-tight" id="speakers-heading">Voices of Resonance</h2>
-        <p className="text-base text-gray-600 mt-4 leading-relaxed">Six distinct minds exploring how vocal frequencies, coded structures, and unspoken signs shape our collective destiny.</p>
+        <span className="inline-block bg-[#F4EEFD] text-ted-purple text-xs font-bold px-3 py-1 rounded-full mb-3">The Speakers</span>
+        <h2 className="text-3xl sm:text-5xl font-extrabold text-gray-900 tracking-tight" id="speakers-heading">Meet the Voices</h2>
+        <p className="text-base text-gray-600 mt-4 leading-relaxed">Six voices, six perspectives, brought together around the power of human language.</p>
       </motion.div>
 
       <motion.div variants={staggerParent} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
@@ -34,28 +34,28 @@ export default function Speakers({ onSelectSpeaker }: { onSelectSpeaker: (speake
             <svg className="w-7 h-7 mb-1.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path>
             </svg>
-            <span className="text-[10px] font-mono tracking-widest uppercase font-bold text-gray-400">SECRET #07</span>
+            <span className="text-[10px] font-mono tracking-widest uppercase font-bold text-gray-400">LINEUP</span>
           </div>
 
           <div>
             <div className="flex flex-wrap items-center gap-2 mb-2">
               <span className="bg-ted-purple/10 text-ted-purple text-[11px] font-mono font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-                + SECRET KEYNOTE
+                MORE VOICES
               </span>
               <span className="bg-gray-100 text-gray-600 text-[11px] font-mono font-semibold px-2.5 py-0.5 rounded-full">
-                Curated Reveal
+                Coming Soon
               </span>
             </div>
             <h3 className="font-display font-bold text-2xl sm:text-3xl text-[#111111] tracking-tight leading-tight mb-1">
-              To Be Revealed
+              More Speakers Coming Soon
             </h3>
-            <p className="text-xs font-semibold text-gray-500 mb-2">Diplomatic Discourse & Global Perspective</p>
+            <p className="text-xs font-semibold text-gray-500 mb-2">Additional voices will be announced as the lineup develops.</p>
             <p className="text-xs text-gray-600 leading-relaxed max-w-xl mb-3">
-              A special honorary speaker will be unveiled 14 days prior to Phinisi stage day. An international statesman navigating cross-border treaties through linguistic nuance.
+              The speaker lineup will be updated as additional voices are finalized.
             </p>
             <div className="flex items-center gap-2 text-xs text-gray-500 font-mono">
               <span className="w-2 h-2 rounded-full bg-ted-purple animate-pulse"></span>
-              <span>Official Lineup Unveil Soon</span>
+              <span>Lineup Update Soon</span>
             </div>
           </div>
         </div>
@@ -65,7 +65,7 @@ export default function Speakers({ onSelectSpeaker }: { onSelectSpeaker: (speake
             <svg className="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path>
             </svg>
-            <span>Revealing Soon</span>
+            <span>See What's Coming</span>
           </button>
         </div>
       </motion.div>
