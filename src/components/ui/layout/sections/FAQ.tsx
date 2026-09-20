@@ -1,13 +1,19 @@
+import { motion } from "motion/react";
+import { cardReveal, sectionReveal, staggerParent } from "../../../../motion/variants";
 import { faqData } from "../../../../constants/faq";
 
 const FAQ = () => {
   return (
-    <section
+    <motion.section
       aria-labelledby="faq-heading"
       className="py-24 px-4 sm:px-6 bg-[#F7F7F7] border-t border-gray-200"
       id="faq"
+      variants={sectionReveal}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.12 }}
     >
-      <div className="max-w-3xl mx-auto">
+      <motion.div variants={cardReveal} className="max-w-3xl mx-auto">
         <div className="text-center mb-3">
           <span className="text-xs uppercase tracking-widest text-neutral-500 font-semibold font-sans">
             Got Questions?
@@ -26,10 +32,11 @@ const FAQ = () => {
           We're here to support your journey.
         </p>
 
-        <div className="flex flex-col gap-3 sm:gap-4">
+        <motion.div variants={staggerParent} className="flex flex-col gap-3 sm:gap-4">
           {faqData.map((item, index) => (
-            <details
+            <motion.details
               key={item.question}
+              variants={cardReveal}
               open={index === 0}
               className="group bg-[#EEEEEE] open:bg-white border border-transparent open:border-[#E5E5E5] open:shadow-sm rounded-2xl px-6 py-4 open:p-6 transition-all duration-300 [&_summary::-webkit-details-marker]:hidden"
             >
@@ -52,9 +59,9 @@ const FAQ = () => {
               <div className="mt-3 pt-3 text-sm text-neutral-600 font-sans leading-relaxed border-t border-neutral-100">
                 {item.answer}
               </div>
-            </details>
+            </motion.details>
           ))}
-        </div>
+        </motion.div>
 
         <div className="mt-10 text-center text-xs sm:text-sm text-neutral-500 font-sans">
           Still have unanswered questions? Contact our hospitality committee at{" "}
@@ -71,9 +78,9 @@ const FAQ = () => {
           >
             Send Email Inquiry →
           </a>
-        </div>
-      </div>
-    </section>
+        </motion.div>
+      </motion.div>
+    </motion.section>
   );
 };
 
