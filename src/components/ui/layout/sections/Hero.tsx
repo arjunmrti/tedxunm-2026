@@ -200,8 +200,8 @@ export default function Hero() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
               <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between backdrop-blur-md bg-white/90 border border-white/30 rounded-full px-3.5 py-1.5 text-[11px] text-gray-900 font-medium shadow-sm">
-                <span className="font-medium">Main Stage Keynotes</span>
-                <span className="text-ted-red font-bold">18 Min Format</span>
+                <span className="font-medium">Meaningful Connections</span>
+                <span className="text-ted-red font-bold">See Details</span>
               </div>
             </div>
           </motion.div>
@@ -221,8 +221,8 @@ export default function Hero() {
             <div>
               <div className="flex items-start justify-between gap-3 mb-6">
                 <div>
-                  <span className="text-[11px] font-mono tracking-wider uppercase text-gray-500 font-semibold">03 / Action Beyond Inspiration October 2026</span>
-                  <h3 className="font-display font-bold text-2xl sm:text-3xl text-gray-900 mt-1 leading-tight tracking-tight">Human <span className="text-ted-red">Connection</span></h3>
+                  <span className="text-[11px] font-mono tracking-wider uppercase text-gray-500 font-semibold">03 / Action Beyond Inspiration</span>
+                  <h3 className="font-display font-bold text-2xl sm:text-3xl text-gray-900 mt-1 leading-tight tracking-tight">Action Beyond <span className="text-ted-red">Inspiration</span></h3>
                 </div>
                 <motion.a
                   className="w-11 h-11 rounded-full bg-gray-50 hover:bg-ted-red hover:text-white border border-gray-200 flex items-center justify-center text-gray-700 shrink-0 shadow-sm"
@@ -235,7 +235,7 @@ export default function Hero() {
                   </svg>
                 </motion.a>
               </div>
-              <p className="text-xs text-gray-600 leading-relaxed mb-6">Unscripted dialogues, interactive experience lounges, networking banquets, and collaborative live installations.</p>
+              <p className="text-xs text-gray-600 leading-relaxed mb-6">Walk away with more than inspiration, leave empowered to turn ideas into meaningful action.</p>
             </div>
 
             <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-gray-100 border border-gray-200/80">
@@ -251,8 +251,8 @@ export default function Hero() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
               <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between backdrop-blur-md bg-white/90 border border-white/40 rounded-full px-3.5 py-1.5 text-[11px] text-gray-900 font-medium shadow-sm">
-                <span className="flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-ted-red"></span>Auditorium & Lounge</span>
-                <span className="text-ted-red font-bold">100 Seats</span>
+                <span className="flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-ted-red"></span>Action Into Impact</span>
+                <span className="text-ted-red font-bold">See Details</span>
               </div>
             </div>
           </motion.div>
@@ -264,13 +264,13 @@ export default function Hero() {
         variants={heroItem}
         className="mt-16 pt-8 border-t border-gray-200"
       >
-        <p className="text-xs uppercase tracking-widest text-gray-400 font-semibold mb-6">Supported By & Institutional Affiliates</p>
+        <p className="text-xs uppercase tracking-widest text-gray-400 font-semibold mb-6">Community & Support</p>
         <div className="flex flex-wrap items-center justify-center gap-8 md:gap-14 opacity-75 grayscale hover:grayscale-0 transition-all duration-300">
           <span className="font-display font-bold text-lg text-gray-800 tracking-tight">UNIVERSITAS NEGERI MAKASSAR</span>
-          <span className="font-display font-bold text-lg text-gray-800 tracking-tight">KEMENDIKBUDRISTEK</span>
-          <span className="font-display font-bold text-lg text-gray-800 tracking-tight">MAKASSAR CREATIVE HUB</span>
-          <span className="font-display font-bold text-lg text-gray-800 tracking-tight">KALLA FOUNDATION</span>
-          <span className="font-display font-bold text-lg text-gray-800 tracking-tight">RADIO SONORA MAKASSAR</span>
+          <span className="font-display font-bold text-lg text-gray-800 tracking-tight">Official Sponsor</span>
+          <span className="font-display font-bold text-lg text-gray-800 tracking-tight">Media Partner @mnd</span>
+          <span className="font-display font-bold text-lg text-gray-800 tracking-tight">Community Partner @mager.gamedev</span>
+          <span className="font-display font-bold text-lg text-gray-800 tracking-tight">Universitas Negeri Makassar</span>
         </div>
       </motion.div>
     </motion.section>
