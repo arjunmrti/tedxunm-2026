@@ -90,7 +90,7 @@ const defaultStats: JourneyStat[] = [
     accent: true,
     title: '2025 Speakers',
     description:
-      'Six speakers shaped the 2025 conversation from climate and culture to psychology, peace, and women empowerment.'
+      'Six speakers shaped the 2025 conversation from climate and culture to psychology, peace, and women empowerment.',
   },
   {
     id: 'stat-2',
@@ -99,7 +99,7 @@ const defaultStats: JourneyStat[] = [
     hasDot: true,
     title: 'Previous Theme',
     description:
-      'Lens of Reality'
+      'Lens of Reality',
   },
   {
     id: 'stat-3',
@@ -107,7 +107,7 @@ const defaultStats: JourneyStat[] = [
     value: '01',
     title: 'D-DAY Archive',
     description:
-      'Explore the documentation of TEDxUNM 2025 through the D-DAY archive.'
+      'Explore the documentation of TEDxUNM 2025 through the D-DAY archive.',
   },
 ];
 
