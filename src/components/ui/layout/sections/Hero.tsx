@@ -21,9 +21,9 @@ export default function Hero() {
         className="inline-flex items-center gap-2.5 bg-white border border-gray-200/90 rounded-full px-4 py-1.5 shadow-sm mb-6 text-xs sm:text-sm font-medium text-gray-800"
       >
         <span className="flex h-2 w-2 rounded-full bg-ted-red animate-pulse"></span>
-        <span className="text-gray-500">October 2026 • Live at Phinisi Hall</span>
+        <span className="text-gray-500">TEDxUNM 2026 • The Art of Human Language</span>
         <span className="text-gray-300">|</span>
-        <span className="font-semibold text-ted-red">100+ Attendees</span>
+        <span className="font-semibold text-ted-red">Every voice, a language of its own.</span>
       </motion.div>
 
       {/* Main Headline with Floating Visual Tags */}
@@ -32,7 +32,7 @@ export default function Hero() {
         className="relative max-w-4xl mx-auto mb-6"
       >
         <span className="hidden lg:inline-block absolute -left-12 top-2 -rotate-12 bg-[#FFF4D9] text-[#8C5D00] border border-[#FFE7A8] text-xs font-bold px-3 py-1 rounded-full shadow-sm">TEDxUNM 2026</span>
-        <span className="hidden lg:inline-block absolute -right-8 bottom-3 rotate-6 bg-[#E8F8F0] text-[#127943] border border-[#BDEFD4] text-xs font-bold px-3 py-1 rounded-full shadow-sm">Every voice matters</span>
+        <span className="hidden lg:inline-block absolute -right-8 bottom-3 rotate-6 bg-[#E8F8F0] text-[#127943] border border-[#BDEFD4] text-xs font-bold px-3 py-1 rounded-full shadow-sm">Where ideas find their voice</span>
 
         <h1 className="font-display text-4xl sm:text-6xl md:text-7xl font-extrabold text-ted-dark tracking-tight leading-[1.08]" id="hero-heading">
           The Art of <br className="hidden sm:inline" />
@@ -83,11 +83,11 @@ export default function Hero() {
           <svg className="w-5 h-5 text-gray-400 rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path d="M14 5l7 7m0 0l-7 7m7-7H3" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path>
           </svg>
-          <span>Main Auditorium Stage</span>
+          <span>The Art of Human Language</span>
         </div>
 
         <div className="hidden md:flex items-center gap-2 absolute -top-8 right-8 text-xs font-medium text-gray-500">
-          <span>Live Acoustic Visualizer</span>
+          <span>Ideas Worth Spreading</span>
           <svg className="w-5 h-5 text-gray-400 -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path d="M10 19l-7-7m0 0l7-7m-7 7h18" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path>
           </svg>
@@ -110,8 +110,8 @@ export default function Hero() {
             <div>
               <div className="flex items-start justify-between gap-3 mb-6">
                 <div>
-                  <span className="text-[11px] font-mono tracking-wider uppercase text-gray-500 font-semibold">01 / Phinisi Ballroom</span>
-                  <h3 className="font-display font-bold text-2xl sm:text-3xl text-gray-900 mt-1 leading-tight tracking-tight">Voices of <span className="text-ted-red">Resonance</span></h3>
+                  <span className="text-[11px] font-mono tracking-wider uppercase text-gray-500 font-semibold">01 / Fresh Perspectives</span>
+                  <h3 className="font-display font-bold text-2xl sm:text-3xl text-gray-900 mt-1 leading-tight tracking-tight">Fresh <span className="text-ted-red">Perspectives</span></h3>
                 </div>
                 <motion.a
                   className="w-11 h-11 rounded-full bg-gray-50 hover:bg-ted-red hover:text-white border border-gray-200 flex items-center justify-center text-gray-700 shrink-0 shadow-sm"
@@ -124,7 +124,7 @@ export default function Hero() {
                   </svg>
                 </motion.a>
               </div>
-              <p className="text-xs text-gray-600 leading-relaxed mb-6">Join 500+ educators, creators, and thinkers exploring dialectal heritage, cognitive grammar, and digital semantics.</p>
+              <p className="text-xs text-gray-600 leading-relaxed mb-6">Challenge the way you see the world and uncover new possibilities in the everyday.</p>
             </div>
 
             <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-gray-100 border border-gray-200/80">
@@ -140,8 +140,8 @@ export default function Hero() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
               <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between backdrop-blur-md bg-white/90 border border-white/40 rounded-full px-3.5 py-1.5 text-[11px] text-gray-900 font-medium shadow-sm">
-                <span className="flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-ted-red"></span>Cultural Semantics</span>
-                <span className="text-ted-red font-bold">Live Talk</span>
+                <span className="flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-ted-red"></span>Fresh Perspectives</span>
+                <span className="text-ted-red font-bold">See Details</span>
               </div>
             </div>
           </motion.div>
@@ -170,8 +170,8 @@ export default function Hero() {
             <div>
               <div className="flex items-start justify-between gap-3 mb-6">
                 <div>
-                  <span className="inline-block bg-white/20 backdrop-blur-sm border border-white/30 text-white text-[10px] font-mono tracking-wider uppercase font-bold px-2.5 py-0.5 rounded-full mb-2">02 / 6 Curated Talks</span>
-                  <h3 className="font-display font-bold text-2xl sm:text-3xl text-white mt-1 leading-tight tracking-tight">Syntax of<br />The Mind</h3>
+                  <span className="inline-block bg-white/20 backdrop-blur-sm border border-white/30 text-white text-[10px] font-mono tracking-wider uppercase font-bold px-2.5 py-0.5 rounded-full mb-2">02 / Meaningful Connections</span>
+                  <h3 className="font-display font-bold text-2xl sm:text-3xl text-white mt-1 leading-tight tracking-tight">Meaningful<br />Connections</h3>
                 </div>
                 <motion.a
                   className="w-11 h-11 rounded-full bg-white hover:bg-gray-100 border border-white flex items-center justify-center text-ted-red shrink-0 shadow-md"
@@ -184,7 +184,7 @@ export default function Hero() {
                   </svg>
                 </motion.a>
               </div>
-              <p className="text-xs text-white/90 leading-relaxed mb-6 font-normal">Unraveling cognitive grammar, algorithmic vernaculars, and Toraja-Bugis oral traditions in rapid 18-minute keynotes.</p>
+              <p className="text-xs text-white/90 leading-relaxed mb-6 font-normal">Connect with a community of curious minds who believe ideas can shape a better future.</p>
             </div>
 
             <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-black/20 border border-white/20 flex items-center justify-center p-2">
@@ -221,7 +221,7 @@ export default function Hero() {
             <div>
               <div className="flex items-start justify-between gap-3 mb-6">
                 <div>
-                  <span className="text-[11px] font-mono tracking-wider uppercase text-gray-500 font-semibold">03 / October 2026</span>
+                  <span className="text-[11px] font-mono tracking-wider uppercase text-gray-500 font-semibold">03 / Action Beyond Inspiration October 2026</span>
                   <h3 className="font-display font-bold text-2xl sm:text-3xl text-gray-900 mt-1 leading-tight tracking-tight">Human <span className="text-ted-red">Connection</span></h3>
                 </div>
                 <motion.a
