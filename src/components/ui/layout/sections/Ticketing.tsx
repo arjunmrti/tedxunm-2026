@@ -17,13 +17,13 @@ export default function Ticketing({ onSelectTicket }: { onSelectTicket: (ticket:
     >
       <motion.div variants={cardReveal} className="text-center max-w-3xl mx-auto mb-14">
         <span className="inline-block bg-[#FBEBEB] text-ted-red text-xs font-bold px-3 py-1 rounded-full mb-3">
-          Join In Person
+          Join the Conversation
         </span>
         <h2 className="text-3xl sm:text-5xl font-extrabold text-gray-900 tracking-tight" id="pricing-heading">
-          Reserve Your Seat at Phinisi Hall
+          Get Your TEDxUNM 2026 Ticket
         </h2>
         <p className="text-base text-gray-600 mt-4 leading-relaxed">
-          Every ticket grants full-day access to all 6 visionary talks, official delegate kit, lunch, interactive lounge exhibitions, and verifiable digital certificate.
+          Choose your ticket, join the conversation, and experience TEDxUNM 2026 through ideas worth spreading.
         </p>
       </motion.div>
 
