@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { motion } from "motion/react";
 import { cardReveal } from "../../../../motion/variants";
 // src/components/ui/layout/sections/MerchandiseCard.tsx
@@ -7,6 +6,8 @@ import type { MerchandiseBundle, MerchandiseVariant } from '../../../../types/Me
 export interface MerchandiseCardProps {
   bundle: MerchandiseBundle;
   onSelect?: (bundleId: string) => void;
+  isFlipped?: boolean;
+  onFlip?: (bundleId: string) => void;
 }
 
 interface MerchandiseCardStyle {
@@ -25,6 +26,7 @@ interface MerchandiseCardStyle {
   button: string;
   backGradient: string;
   backImage: string;
+  backTone: 'light' | 'dark';
 }
 
 const cardStyles: Record<MerchandiseVariant, MerchandiseCardStyle> = {
@@ -48,7 +50,8 @@ const cardStyles: Record<MerchandiseVariant, MerchandiseCardStyle> = {
     backGradient:
       'radial-gradient(120% 90% at 50% -10%, rgba(225,6,0,0.45) 0%, rgba(20,17,17,0.92) 48%, #141111 100%)',
     backImage:
-      'mx-4 mt-4 h-[45%] min-h-0 overflow-hidden rounded-[1.15rem] border border-white/15 bg-white/10',
+      'mx-4 mt-4 h-[45%] min-h-0 overflow-hidden rounded-[1.15rem] border border-black/10 bg-black/5',
+    backTone: 'light',
   },
   popular: {
     frame:
@@ -71,7 +74,8 @@ const cardStyles: Record<MerchandiseVariant, MerchandiseCardStyle> = {
     backGradient:
       'radial-gradient(120% 90% at 50% -10%, rgba(255,168,0,0.4) 0%, rgba(20,17,17,0.92) 48%, #141111 100%)',
     backImage:
-      'mx-4 mt-4 h-[45%] min-h-0 overflow-hidden rounded-[1.15rem] border border-white/15 bg-white/10',
+      'mx-4 mt-4 h-[45%] min-h-0 overflow-hidden rounded-[1.15rem] border border-black/10 bg-black/5',
+    backTone: 'light',
   },
   featured: {
     frame:
@@ -95,7 +99,8 @@ const cardStyles: Record<MerchandiseVariant, MerchandiseCardStyle> = {
     backGradient:
       'radial-gradient(120% 90% at 50% -10%, rgba(225,6,0,0.65) 0%, rgba(17,17,17,0.94) 46%, #0d0d0d 100%)',
     backImage:
-      'mx-2.5 mt-2.5 h-[56%] min-h-0 overflow-hidden rounded-[1.15rem] border border-white/15 bg-white/10',
+      'mx-2.5 mt-2.5 h-[56%] min-h-0 overflow-hidden rounded-[1.15rem] border border-black/10 bg-black/5',
+    backTone: 'light',
   },
   collector: {
     frame:
@@ -118,11 +123,16 @@ const cardStyles: Record<MerchandiseVariant, MerchandiseCardStyle> = {
       'radial-gradient(120% 90% at 50% -10%, rgba(225,6,0,0.5) 0%, rgba(0,0,0,0.94) 46%, #000000 100%)',
     backImage:
       'mx-2.5 mt-2.5 h-[56%] min-h-0 overflow-hidden rounded-[1.15rem] border border-white/15 bg-white/10',
+    backTone: 'dark',
   },
 };
 
-const MerchandiseCard = ({ bundle, onSelect }: MerchandiseCardProps) => {
-  const [isFlipped, setIsFlipped] = useState(false);
+const MerchandiseCard = ({
+  bundle,
+  onSelect,
+  isFlipped = false,
+  onFlip,
+}: MerchandiseCardProps) => {
   const s = cardStyles[bundle.variant];
 
   const itemTypeCount = bundle.items.split('+').length;
@@ -137,10 +147,6 @@ const MerchandiseCard = ({ bundle, onSelect }: MerchandiseCardProps) => {
       variants={cardReveal}
       whileHover={{ y: -8, scale: 1.02, transition: { type: "spring", stiffness: 320, damping: 24 } }}
       whileTap={{ scale: 0.985 }}
-      onMouseEnter={() => setIsFlipped(true)}
-      onMouseLeave={() => setIsFlipped(false)}
-      onFocus={() => setIsFlipped(true)}
-      onBlur={() => setIsFlipped(false)}
       className={`${s.frame} [perspective:1200px]`}
       tabIndex={0}
     >
@@ -185,15 +191,23 @@ const MerchandiseCard = ({ bundle, onSelect }: MerchandiseCardProps) => {
             transition={{ type: "spring", stiffness: 400, damping: 22 }}
             type="button"
             className={s.button}
-            onClick={() => onSelect?.(bundle.id)}
+            onClick={() => {
+              onFlip?.(bundle.id);
+              onSelect?.(bundle.id);
+            }}
           >
             {bundle.ctaText}
           </motion.button>
         </div>
 
         <div
-          className="absolute inset-0 overflow-hidden rounded-3xl [transform:rotateY(180deg)] [backface-visibility:hidden] [transform-style:preserve-3d] isolate text-white"
-          style={{ background: s.backGradient }}
+          className={`absolute inset-0 overflow-hidden rounded-3xl [transform:rotateY(180deg)] [backface-visibility:hidden] [transform-style:preserve-3d] isolate ${s.backTone === 'dark' ? 'text-white' : 'text-gray-900'}`}
+          style={{
+            background:
+              s.backTone === 'dark'
+                ? s.backGradient
+                : 'linear-gradient(180deg, #ffffff 0%, #f7f7f5 100%)',
+          }}
           aria-hidden={!isFlipped}
         >
           <div className={`relative z-0 ${s.backImage}`}>
@@ -212,33 +226,33 @@ const MerchandiseCard = ({ bundle, onSelect }: MerchandiseCardProps) => {
                 <span>🎁</span>
               </div>
             )}
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[48%] bg-gradient-to-b from-transparent to-black/60" />
+            <div className={`pointer-events-none absolute inset-x-0 bottom-0 h-[48%] bg-gradient-to-b from-transparent ${s.backTone === 'dark' ? 'to-black/60' : 'to-black/10'}`} />
           </div>
 
           <div className="absolute inset-x-0 bottom-0 z-10 bg-gradient-to-b from-transparent to-black/10 px-[1.15rem] pb-[1.15rem] pt-4">
-            <span className="mb-1.5 block font-mono text-[0.6rem] font-extrabold uppercase tracking-[0.16em] text-white/75">
+            <span className={`mb-1.5 block font-mono text-[0.6rem] font-extrabold uppercase tracking-[0.16em] ${s.backTone === 'dark' ? 'text-white/75' : 'text-gray-500'}`}>
               {bundle.tierLabel} Bundle
             </span>
 
             <h5 className="m-0 text-[1.1rem] leading-[1.02] tracking-[-0.025em]">
               {titleLastWord ? (
                 <>
-                  <span className="block font-extrabold text-white">{titleLead}</span>
-                  <span className="block font-normal text-white/75">{titleLastWord}</span>
+                  <span className={`block font-extrabold ${s.backTone === 'dark' ? 'text-white' : 'text-gray-900'}`}>{titleLead}</span>
+                  <span className={`block font-normal ${s.backTone === 'dark' ? 'text-white/75' : 'text-gray-500'}`}>{titleLastWord}</span>
                 </>
               ) : (
-                <span className="block font-extrabold text-white">{bundle.title}</span>
+                <span className={`block font-extrabold ${s.backTone === 'dark' ? 'text-white' : 'text-gray-900'}`}>{bundle.title}</span>
               )}
             </h5>
 
-            <p className="mt-2.5 max-w-[30rem] text-[0.72rem] leading-[1.5] text-white/85">
+            <p className={`mt-2.5 max-w-[30rem] text-[0.72rem] leading-[1.5] ${s.backTone === 'dark' ? 'text-white/85' : 'text-gray-600'}`}>
               {bundle.backDescription ?? bundle.items}
             </p>
 
-            <div className="mt-3.5 flex items-center gap-2.5 font-bold text-[0.58rem] uppercase tracking-[0.1em] text-white/70">
+            <div className={`mt-3.5 flex items-center gap-2.5 font-bold text-[0.58rem] uppercase tracking-[0.1em] ${s.backTone === 'dark' ? 'text-white/70' : 'text-gray-500'}`}>
               <span>Includes {itemCountLabel} item types</span>
-              <span className="h-px w-6 bg-white/30" aria-hidden="true" />
-              <span className="ml-auto text-[0.9rem] text-white/95" aria-hidden="true">→</span>
+              <span className={`h-px w-6 ${s.backTone === 'dark' ? 'bg-white/30' : 'bg-gray-300'}`} aria-hidden="true" />
+              <span className={`ml-auto text-[0.9rem] ${s.backTone === 'dark' ? 'text-white/95' : 'text-gray-700'}`} aria-hidden="true">→</span>
             </div>
           </div>
         </div>
