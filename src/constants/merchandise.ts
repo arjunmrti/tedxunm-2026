@@ -21,6 +21,8 @@ export const merchandiseBundles: MerchandiseBundle[] = [
     priceLabel: 'Choose your pieces',
     price: 'Rp15.000',
     ctaText: 'See Details',
+    imageSrc: '/merch/spark-pack.png',
+    backDescription: 'A pocket-sized starter kit for anyone new to the community — badge on, stickers ready.',
   },
   {
     id: 'ideas-in-motion',
@@ -33,6 +35,8 @@ export const merchandiseBundles: MerchandiseBundle[] = [
     priceLabel: 'Carry the conversation',
     price: 'Rp30.000',
     ctaText: 'See Details',
+    imageSrc: '/merch/ideas-in-motion.png',
+    backDescription: 'Everyday carry for idea-chasers — a keychain, badge, and sticker made to move with you.',
   },
   {
     id: 'tedx-essentials',
@@ -45,6 +49,8 @@ export const merchandiseBundles: MerchandiseBundle[] = [
     priceLabel: 'TEDxUNM 2026',
     price: 'Rp40.000',
     ctaText: 'See Details',
+    imageSrc: '/merch/tedx-essentials.png',
+    backDescription: 'The core TEDxUNM 2026 set — everything you need to represent the ideas worth spreading.',
   },
   {
     id: 'collectors-edition',
@@ -57,5 +63,7 @@ export const merchandiseBundles: MerchandiseBundle[] = [
     priceLabel: 'Keep the ideas spreading',
     price: 'Rp45.000',
     ctaText: 'See Details',
+    imageSrc: '/merch/collectors-edition.png',
+    backDescription: 'Designed for creators, thinkers, and doers — the full set for those who keep every piece.',
   },
 ];
