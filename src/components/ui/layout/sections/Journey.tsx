@@ -57,9 +57,9 @@ export interface JourneyProps {
 
 const defaultEdition2025: Journey2025Data = {
   archiveLabel: 'Historical Archive',
-  statusBadge: 'Nov 2025 • 100% Sold Out',
-  archiveLinkText: 'Archived Talks Available',
-  archiveLinkHref: '#speakers',
+  statusBadge: '2025 Edition',
+  archiveLinkText: 'D-DAY',
+  archiveLinkHref: 'https://drive.google.com/drive/folders/1--NTmJKpyO1imqEijyum0s34GP9U7Mu8',
   yearLabel: '2025 Edition',
   titlePrefix: 'TEDxUNM 2025: ',
   titleHighlight: 'Lens of Reality',
@@ -86,7 +86,7 @@ const defaultStats: JourneyStat[] = [
   {
     id: 'stat-1',
     number: '01',
-    value: '450+',
+    value: '2',
     accent: true,
     title: 'Engaged Delegates',
     description:
