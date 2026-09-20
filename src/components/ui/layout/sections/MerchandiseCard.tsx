@@ -1,7 +1,9 @@
+import { useState } from "react";
 import { motion } from "motion/react";
 import { cardReveal } from "../../../../motion/variants";
 // src/components/ui/layout/sections/MerchandiseCard.tsx
 import type { MerchandiseBundle, MerchandiseVariant } from '../../../../types/Merchandise';
+import './MerchandiseCard.css';
 
 export interface MerchandiseCardProps {
   bundle: MerchandiseBundle;
@@ -9,7 +11,8 @@ export interface MerchandiseCardProps {
 }
 
 interface MerchandiseCardStyle {
-  wrapper: string;
+  frame: string;
+  frontInner: string;
   ribbonWrapper: string;
   ribbonIcon?: 'sparkle' | 'pulse';
   tierBadge: string;
@@ -21,12 +24,14 @@ interface MerchandiseCardStyle {
   priceLabel: string;
   price: string;
   button: string;
+  backGradient: string;
 }
 
 const cardStyles: Record<MerchandiseVariant, MerchandiseCardStyle> = {
   starter: {
-    wrapper:
-      'w-full sm:w-80 lg:w-[275px] bg-[#FFFFFF] border-2 border-gray-200/90 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xl relative transition-all duration-300 hover:scale-105 hover:z-30 lg:-rotate-3 lg:translate-y-4 group',
+    frame:
+      'w-full sm:w-80 lg:w-[275px] bg-[#FFFFFF] border-2 border-gray-200/90 rounded-3xl shadow-xl relative transition-all duration-300 hover:scale-105 hover:z-30 lg:-rotate-3 lg:translate-y-4 group',
+    frontInner: 'p-6 sm:p-7 flex flex-col justify-between',
     ribbonWrapper:
       'absolute -top-3.5 left-8 bg-[#F3F3F3] text-gray-700 border border-gray-300 px-3.5 py-0.5 rounded-sm text-[10px] font-mono tracking-wider shadow-sm uppercase -rotate-2',
     tierBadge:
@@ -40,10 +45,15 @@ const cardStyles: Record<MerchandiseVariant, MerchandiseCardStyle> = {
     price: 'text-3xl font-display font-extrabold text-gray-900 mt-0.5',
     button:
       'mt-6 w-full py-3 bg-gray-900 hover:bg-black text-white text-xs font-semibold rounded-full shadow-sm hover:shadow transition-all',
+    backGradient:
+      'radial-gradient(120% 90% at 50% -10%, rgba(255,168,0,0.4) 0%, rgba(20,17,17,0.92) 48%, #141111 100%)',
+    backGradient:
+      'radial-gradient(120% 90% at 50% -10%, rgba(225,6,0,0.45) 0%, rgba(20,17,17,0.92) 48%, #141111 100%)',
   },
   popular: {
-    wrapper:
-      'w-full sm:w-80 lg:w-[280px] bg-[#FAF9F6] border-2 border-gray-200 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xl relative transition-all duration-300 hover:scale-105 hover:z-30 lg:rotate-1 lg:-translate-y-2 group z-10',
+    frame:
+      'w-full sm:w-80 lg:w-[280px] bg-[#FAF9F6] border-2 border-gray-200 rounded-3xl shadow-xl relative transition-all duration-300 hover:scale-105 hover:z-30 lg:rotate-1 lg:-translate-y-2 group z-10',
+    frontInner: 'p-6 sm:p-7 flex flex-col justify-between',
     ribbonWrapper:
       'absolute -top-4 right-6 bg-[#FFF4D9] text-[#8C5D00] border border-[#FFE7A8] px-3 py-1 rounded-full text-[10px] font-black tracking-wide shadow-sm rotate-6 flex items-center gap-1',
     ribbonIcon: 'sparkle',
@@ -60,8 +70,9 @@ const cardStyles: Record<MerchandiseVariant, MerchandiseCardStyle> = {
       'mt-6 w-full py-3 bg-gray-900 hover:bg-black text-white text-xs font-semibold rounded-full shadow-sm hover:shadow transition-all',
   },
   featured: {
-    wrapper:
-      'w-full sm:w-84 lg:w-[305px] bg-[#FFFFFF] border-2 border-ted-red rounded-3xl p-7 sm:p-8 flex flex-col justify-between shadow-2xl relative transition-all duration-300 hover:scale-105 hover:z-40 lg:-translate-y-6 group z-20',
+    frame:
+      'w-full sm:w-84 lg:w-[305px] bg-[#FFFFFF] border-2 border-ted-red rounded-3xl shadow-2xl relative transition-all duration-300 hover:scale-105 hover:z-40 lg:-translate-y-6 group z-20',
+    frontInner: 'p-7 sm:p-8 flex flex-col justify-between',
     ribbonWrapper:
       'absolute -top-4 left-1/2 -translate-x-1/2 bg-ted-red text-white text-[10px] font-black px-4 py-1 rounded-full uppercase tracking-wider shadow-md flex items-center gap-1.5',
     ribbonIcon: 'pulse',
@@ -77,10 +88,13 @@ const cardStyles: Record<MerchandiseVariant, MerchandiseCardStyle> = {
     price: 'text-3xl font-display font-black text-ted-red mt-0.5',
     button:
       'mt-6 w-full py-3.5 bg-ted-red hover:bg-ted-hover text-white text-xs font-bold rounded-full shadow-lg shadow-ted-red/25 transition-all',
+    backGradient:
+      'radial-gradient(120% 90% at 50% -10%, rgba(225,6,0,0.65) 0%, rgba(17,17,17,0.94) 46%, #0d0d0d 100%)',
   },
   collector: {
-    wrapper:
-      'w-full sm:w-80 lg:w-[285px] bg-[#111111] text-white border-2 border-gray-800 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-2xl relative transition-all duration-300 hover:scale-105 hover:z-30 lg:rotate-3 lg:translate-y-3 group z-10',
+    frame:
+      'w-full sm:w-80 lg:w-[285px] bg-[#111111] text-white border-2 border-gray-800 rounded-3xl shadow-2xl relative transition-all duration-300 hover:scale-105 hover:z-30 lg:rotate-3 lg:translate-y-3 group z-10',
+    frontInner: 'p-6 sm:p-7 flex flex-col justify-between',
     ribbonWrapper:
       'absolute -top-3.5 right-8 bg-ted-red text-white border border-white/20 px-3 py-0.5 rounded-sm text-[10px] font-mono tracking-wider shadow-md uppercase rotate-3',
     tierBadge:
@@ -94,57 +108,126 @@ const cardStyles: Record<MerchandiseVariant, MerchandiseCardStyle> = {
     price: 'text-3xl font-display font-extrabold text-white mt-0.5',
     button:
       'mt-6 w-full py-3 bg-ted-red hover:bg-ted-hover text-white text-xs font-bold rounded-full shadow-md transition-all',
+    backGradient:
+      'radial-gradient(120% 90% at 50% -10%, rgba(225,6,0,0.5) 0%, rgba(0,0,0,0.94) 46%, #000000 100%)',
   },
 };
 
 const MerchandiseCard = ({ bundle, onSelect }: MerchandiseCardProps) => {
+  const [isFlipped, setIsFlipped] = useState(false);
   const s = cardStyles[bundle.variant];
+
+  const itemTypeCount = bundle.items.split('+').length;
+  const itemCountLabel = String(itemTypeCount).padStart(2, '0');
+
+  const titleWords = bundle.title.trim().split(' ');
+  const titleLastWord = titleWords.length > 1 ? titleWords.pop() : undefined;
+  const titleLead = titleWords.join(' ');
+
+  const setFlipped = (value: boolean) => setIsFlipped(value);
 
   return (
     <motion.div
       variants={cardReveal}
       whileHover={{ y: -8, scale: 1.02, transition: { type: "spring", stiffness: 320, damping: 24 } }}
       whileTap={{ scale: 0.985 }}
-      className={s.wrapper}
+      onMouseEnter={() => setFlipped(true)}
+      onMouseLeave={() => setFlipped(false)}
+      onFocus={() => setFlipped(true)}
+      onBlur={() => setFlipped(false)}
+      className={`${s.frame} merch-flip-perspective`}
+      tabIndex={0}
     >
-      <div className={s.ribbonWrapper}>
-        {s.ribbonIcon === 'sparkle' && (
-          <>
-            <span>✦</span> {bundle.ribbonLabel}
-          </>
-        )}
-        {s.ribbonIcon === 'pulse' && (
-          <>
-            <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
-            {bundle.ribbonLabel}
-          </>
-        )}
-        {!s.ribbonIcon && bundle.ribbonLabel}
-      </div>
-
-      <div className="pt-2">
-        <div className="flex items-center justify-between mb-4">
-          <span className={s.tierBadge}>{bundle.tierLabel}</span>
-          <span className={s.skuLabel}>{bundle.skuLabel}</span>
-        </div>
-        <h4 className={s.title}>{bundle.title}</h4>
-        <div className={s.accentBar}></div>
-        <p className={s.itemsText}>{bundle.items}</p>
-        <div className={s.priceBlockWrapper}>
-          <div className={s.priceLabel}>{bundle.priceLabel}</div>
-          <div className={s.price}>{bundle.price}</div>
-        </div>
-      </div>
-
-      <motion.button
-        whileHover={{ y: -2, scale: 1.015 }}
-        whileTap={{ scale: 0.97 }}
-        transition={{ type: "spring", stiffness: 400, damping: 22 }}
-        className={s.button}
-        onClick={() => onSelect?.(bundle.id)}
+      <motion.div
+        className="merch-flip-inner"
+        animate={{ rotateY: isFlipped ? 180 : 0 }}
+        transition={{ type: "spring", stiffness: 280, damping: 24, mass: 0.7 }}
+        style={{ transformStyle: "preserve-3d" }}
       >
-        {bundle.ctaText}
-      </motion.button>
+        <div className={`merch-flip-front ${s.frontInner}`}>
+          <div className={s.ribbonWrapper}>
+            {s.ribbonIcon === 'sparkle' && (
+              <>
+                <span>✦</span> {bundle.ribbonLabel}
+              </>
+            )}
+            {s.ribbonIcon === 'pulse' && (
+              <>
+                <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+                {bundle.ribbonLabel}
+              </>
+            )}
+            {!s.ribbonIcon && bundle.ribbonLabel}
+          </div>
+
+          <div className="pt-2">
+            <div className="flex items-center justify-between mb-4">
+              <span className={s.tierBadge}>{bundle.tierLabel}</span>
+              <span className={s.skuLabel}>{bundle.skuLabel}</span>
+            </div>
+            <h4 className={s.title}>{bundle.title}</h4>
+            <div className={s.accentBar}></div>
+            <p className={s.itemsText}>{bundle.items}</p>
+            <div className={s.priceBlockWrapper}>
+              <div className={s.priceLabel}>{bundle.priceLabel}</div>
+              <div className={s.price}>{bundle.price}</div>
+            </div>
+          </div>
+
+          <motion.button
+            whileHover={{ y: -2, scale: 1.015 }}
+            whileTap={{ scale: 0.97 }}
+            transition={{ type: "spring", stiffness: 400, damping: 22 }}
+            className={s.button}
+            onClick={() => onSelect?.(bundle.id)}
+          >
+            {bundle.ctaText}
+          </motion.button>
+        </div>
+
+        <div
+          className="merch-flip-back"
+          style={{ background: s.backGradient }}
+          aria-hidden={!isFlipped}
+        >
+          <div className="merch-flip-back-image">
+            {bundle.imageSrc ? (
+              <img
+                src={bundle.imageSrc}
+                alt={`${bundle.title} merchandise bundle`}
+                loading="lazy"
+              />
+            ) : (
+              <div className="merch-flip-back-image-fallback" aria-hidden="true">
+                <span>🎁</span>
+              </div>
+            )}
+            <div className="merch-flip-back-fade" />
+          </div>
+
+          <div className="merch-flip-back-content">
+            <span className="merch-flip-back-eyebrow">{bundle.tierLabel} Bundle</span>
+            <h5 className="merch-flip-back-title">
+              {titleLastWord ? (
+                <>
+                  <span className="line-strong">{titleLead}</span>
+                  <span className="line-soft">{titleLastWord}</span>
+                </>
+              ) : (
+                <span className="line-strong">{bundle.title}</span>
+              )}
+            </h5>
+            <p className="merch-flip-back-desc">
+              {bundle.backDescription ?? bundle.items}
+            </p>
+            <div className="merch-flip-back-meta">
+              <span>Includes {itemCountLabel} item types</span>
+              <span className="divider" aria-hidden="true" />
+              <span className="arrow" aria-hidden="true">→</span>
+            </div>
+          </div>
+        </div>
+      </motion.div>
     </motion.div>
   );
 };
