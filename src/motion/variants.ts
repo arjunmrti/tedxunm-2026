@@ -46,6 +46,40 @@ export const staggerParentSlow: Variants = {
   },
 };
 
+export const sectionReveal: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 36,
+    filter: "blur(3px)",
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    filter: "blur(0px)",
+    transition: {
+      duration: 0.8,
+      ease: easeOut,
+    },
+  },
+};
+
+export const cardReveal: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 24,
+    scale: 0.985,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.65,
+      ease: easeOut,
+    },
+  },
+};
+
 export const heroContainer: Variants = {
   hidden: {},
   visible: {
