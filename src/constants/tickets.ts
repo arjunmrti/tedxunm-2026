@@ -2,19 +2,19 @@ import type { Ticket } from '../types/Ticket'
 
 export const tickets: Ticket[] = [
   {
-    variant: 'standard',
-    category: '14 Sep – 19 Sep 2026',
-    badge: 'LIMITED',
+    variant: 'soldout',
+    category: 'PRESALE PHASE',
+    badge: 'SOLD OUT',
     title: 'Early Bird',
-    description: 'Limited seat. Book early. Save more.',
+    description: 'Early Bird allocation is now fully booked.',
     price: 'Rp100.000',
-    priceNote: 'Early Bird',
+    priceNote: 'Allocation exhausted',
     features: [
       'TEDxUNM 2026 Event Access',
       'Join the Conversation',
       'Ideas Worth Spreading',
     ],
-    buttonText: 'Get Your Spot',
+    buttonText: 'Allocation Filled',
     ticketName: 'Early Bird',
     ticketPrice: 'Rp100.000',
   },
