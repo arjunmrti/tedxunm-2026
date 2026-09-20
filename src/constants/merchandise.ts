@@ -21,7 +21,6 @@ export const merchandiseBundles: MerchandiseBundle[] = [
     priceLabel: 'Choose your pieces',
     price: 'Rp15.000',
     ctaText: 'See Details',
-    themeColor: '#D8D8D8',
   },
   {
     id: 'ideas-in-motion',
@@ -34,7 +33,6 @@ export const merchandiseBundles: MerchandiseBundle[] = [
     priceLabel: 'Carry the conversation',
     price: 'Rp30.000',
     ctaText: 'See Details',
-    themeColor: '#E8C56A',
   },
   {
     id: 'tedx-essentials',
@@ -47,7 +45,6 @@ export const merchandiseBundles: MerchandiseBundle[] = [
     priceLabel: 'TEDxUNM 2026',
     price: 'Rp40.000',
     ctaText: 'See Details',
-    themeColor: '#E10600',
   },
   {
     id: 'collectors-edition',
@@ -60,6 +57,5 @@ export const merchandiseBundles: MerchandiseBundle[] = [
     priceLabel: 'Keep the ideas spreading',
     price: 'Rp45.000',
     ctaText: 'See Details',
-    themeColor: '#2A2A2A',
   },
 ];
