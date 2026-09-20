@@ -1,4 +1,4 @@
-import type { Variants } from "motion/react";
+import type { TargetAndTransition, Variants } from "motion/react";
 
 export const easeOut = [0.22, 1, 0.36, 1] as const;
 export const easeInOut = [0.65, 0, 0.35, 1] as const;
@@ -112,7 +112,7 @@ export const cardHover = {
     stiffness: 360,
     damping: 26,
   },
-};
+} satisfies TargetAndTransition;
 
 export const featuredCardHover = {
   y: -8,
@@ -122,7 +122,7 @@ export const featuredCardHover = {
     stiffness: 360,
     damping: 25,
   },
-};
+} satisfies TargetAndTransition;
 
 export const buttonHover = {
   y: -2,
@@ -132,7 +132,7 @@ export const buttonHover = {
     stiffness: 400,
     damping: 22,
   },
-};
+} satisfies TargetAndTransition;
 
 export const buttonTap = {
   scale: 0.985,
