@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "motion/react";
 import { cardReveal, sectionReveal, staggerParent } from "../../../../motion/variants";
 // src/components/ui/layout/sections/Merchandise.tsx
@@ -16,6 +17,12 @@ const Merchandise = ({
   bundles = merchandiseBundles,
   onSelectBundle,
 }: MerchandiseProps) => {
+  const [activeBundleId, setActiveBundleId] = useState<string | null>(null);
+
+  const handleFlip = (bundleId: string) => {
+    setActiveBundleId((current) => (current === bundleId ? null : bundleId));
+  };
+
   return (
     <motion.section
       aria-labelledby="merch-heading"
@@ -39,12 +46,23 @@ const Merchandise = ({
         <p className="text-base text-gray-600 mt-4 leading-relaxed">{content.description}</p>
       </motion.div>
 
-      <motion.h3 variants={cardReveal} className="text-xl font-bold text-gray-900 mb-6 text-center">{content.subheading}</motion.h3>
+      <motion.h3 variants={cardReveal} className="text-xl font-bold text-gray-900 mb-6 text-center">
+        {content.subheading}
+      </motion.h3>
 
       <div className="relative py-8 px-2 sm:px-6">
-        <motion.div variants={staggerParent} className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center lg:items-stretch justify-center gap-6 lg:gap-0 lg:-space-x-5 py-6">
+        <motion.div
+          variants={staggerParent}
+          className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center lg:items-stretch justify-center gap-6 lg:gap-0 lg:-space-x-5 py-6"
+        >
           {bundles.map((bundle) => (
-            <MerchandiseCard key={bundle.id} bundle={bundle} onSelect={onSelectBundle} />
+            <MerchandiseCard
+              key={bundle.id}
+              bundle={bundle}
+              onSelect={onSelectBundle}
+              isFlipped={activeBundleId === bundle.id}
+              onFlip={handleFlip}
+            />
           ))}
         </motion.div>
       </div>
