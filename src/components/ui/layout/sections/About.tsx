@@ -111,11 +111,11 @@ export default function About() {
             </div>
 
             {/* Pillar 05 */}
-            <div className="bg-white p-5 rounded-2xl border border-[#E5E5E5] shadow-[0_8px_24px_-4px_rgba(17,17,17,0.06)] col-span-1 sm:col-span-2 lg:col-span-1">
+            <motion.div variants={cardReveal} className="bg-white p-5 rounded-2xl border border-[#E5E5E5] shadow-[0_8px_24px_-4px_rgba(17,17,17,0.06)] col-span-1 sm:col-span-2 lg:col-span-1">
               <div className="w-8 h-8 rounded-full bg-[#111111]/10 text-[#111111] flex items-center justify-center font-mono font-bold text-xs mb-3">05</div>
               <div className="font-display font-semibold text-base text-[#111111] mb-1.5">Impact</div>
               <div className="text-xs text-[#5e3f3a] leading-relaxed">Catalyzing shift in regional mindset.</div>
-            </div>
+            </motion.div>
           </motion.div>
         </motion.div>
       </div>
