@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { AnimatePresence } from 'motion/react'
+import { AnimatePresence, MotionConfig } from 'motion/react'
 import Navbar from './components/ui/layout/sections/Navbar'
 import Hero from './components/ui/layout/sections/Hero'
 import About from './components/ui/layout/sections/About'
@@ -38,6 +38,7 @@ function App() {
   }, [selectedSpeaker, selectedTicket])
 
   return (
+    <MotionConfig reducedMotion="user">
     <>
       <Navbar isBlurred={!!selectedSpeaker} onHeightChange={setNavbarHeight} />
       <Countdown targetDate="2026-10-03T09:00:00+08:00" offsetTop={navbarHeight} />
@@ -64,6 +65,7 @@ function App() {
         )}
       </AnimatePresence>
     </>
+    </MotionConfig>
   )
 }
 
