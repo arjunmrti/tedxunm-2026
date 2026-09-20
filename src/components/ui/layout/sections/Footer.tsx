@@ -76,7 +76,7 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
 
           {/* Newsletter Subscription Column */}
           <motion.div variants={cardReveal} className="md:col-span-3">
