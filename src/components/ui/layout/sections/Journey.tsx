@@ -64,21 +64,21 @@ const defaultEdition2025: Journey2025Data = {
   titlePrefix: 'TEDxUNM 2025: ',
   titleHighlight: 'Lens of Reality',
   description:
-    "In 2025, we invited Makassar to look closer at the fabric of truth, perception, and collective illusion. With a sold-out Phinisi Ballroom, 450+ delegates ignited cross-sector solutions now active across South Sulawesi.",
-  location: 'Phinisi Ballroom, Makassar',
-  footerTag: 'Investigating subjective cognition & visual ethics',
+    'Every individual views the world through a different lens, shaped by their experiences, culture, knowledge, and life journey. Through the theme "Lens of Reality," TEDxUniversitas Negeri Makassar invites participants to see that no single perspective fully represents reality. Instead, from diverse perspectives, a more comprehensive understanding, more meaningful dialogue, and ideas capable of creating change emerge.',
+  location: 'TEDxUniversitas Negeri Makassar',
+  footerTag: 'Lens of Reality',
 };
 
 const defaultEdition2026: Journey2026Data = {
   badgeLabel: 'Current 2026 Edition',
-  dateLabel: 'Oct 2026',
+  dateLabel: '2026 Edition',
   chronologyLabel: 'Edition Chronology',
   titlePrefix: 'The Art of ',
   titleHighlight: 'Human Language',
   description:
-    'Expanding the frontier into acoustic, cultural, and artificial dialectics. Uniting 6 curated voices live on the Phinisi stage.',
-  statusLabel: 'Now Registering',
-  ctaText: 'Explore 2026 Lineup',
+    'Every word tells a story. Every conversation sparks connection. And every idea has the power to shape the future. Join TEDxUNM 2026 and experience ideas worth spreading through the power of language.',
+  statusLabel: 'Ideas Worth Spreading',
+  ctaText: 'See the Lineup',
   ctaHref: '#speakers',
 };
 
@@ -90,31 +90,31 @@ const defaultStats: JourneyStat[] = [
     accent: true,
     title: 'Engaged Delegates',
     description:
-      'Representing 14 Universities and 30+ Creative Collectives across Eastern Indonesia.',
+      'Nurul Habaib Al Mukarramah — Global Climate Crisis, Makassar, and How Youth Can Solve This; A. R. Daeng Rate — Sinrilik: A Bridge to the Past and the Unspoken.',
   },
   {
     id: 'stat-2',
     number: '02',
-    value: '8',
+    value: '2',
     hasDot: true,
-    title: 'Catalyst Keynotes',
+    title: 'Ideas & Wellbeing',
     description:
-      'Covering neurobiology, marine conservation, and visual ethics in rapid formats.',
+      'Resekiani Mas Bakar — Emotional Contagion: When You Smile, The World Smile At You; Therry Alghifary — The Simple Formula for a Peaceful Life.',
   },
   {
     id: 'stat-3',
     number: '03',
-    value: '1',
-    title: 'Shared Revelation',
+    value: '2',
+    title: 'Resilience & Empowerment',
     description:
-      'Leading to the founding of Makassar Youth Research Circle as a sustained civic legacy.',
+      'Rifli Mubarak — Lessons Learned from Being a Survivor of the Palu Earthquake; Pratiwi Hamdhana Am — Women Empowerment: Thriving Against the Odds.',
   },
 ];
 
 const defaultQuote: JourneyQuote = {
-  text: 'TEDxUNM showed us that an idea spoken with precision in Makassar carries ripples across the entire archipelago.',
-  source: 'Phinisi Archive Reflection',
-  year: 'UNM 2025',
+  text: 'Through a combination of personal stories, professional experiences, and action-based ideas, the speakers deliver inspiring conversations that are both relevant to the challenges facing society today.',
+  source: 'TEDxUNM 2025 Event Highlights',
+  year: '2025',
 };
 
 interface ArrowUpRightIconProps {
@@ -137,10 +137,10 @@ const ArrowUpRightIcon = ({
 );
 
 const Journey = ({
-  badgeLabel = 'Legacy & Evolution',
-  heading = 'The Journey of Ideas:',
-  headingHighlight = 'From Vision to Voice',
-  description = "Tracking our evolution across Makassar — connecting 2025's inquiry into perception with 2026's exploration into the resonance of human language.",
+  badgeLabel = 'Journey Through Ideas',
+  heading = 'TEDxUNM 2025:',
+  headingHighlight = 'Lens of Reality',
+  description = 'Every individual views the world through a different lens, shaped by their experiences, culture, knowledge, and life journey.',
   edition2025 = defaultEdition2025,
   edition2026 = defaultEdition2026,
   stats = defaultStats,
