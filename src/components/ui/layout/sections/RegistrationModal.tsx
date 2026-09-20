@@ -1,3 +1,5 @@
+import { motion } from "motion/react";
+import { modalBackdrop, modalPanel } from "../../../../motion/variants";
 import { useState, type FormEvent } from 'react'
 import type { Ticket } from '../../../../types/Ticket'
 
@@ -59,8 +61,12 @@ export default function RegistrationModal({ ticket, onClose }: { ticket: Ticket 
   }
 
   return (
-    <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 transition-all duration-300"
+    <motion.div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+      variants={modalBackdrop}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
       role="dialog"
       aria-modal="true"
       aria-labelledby="reg-modal-title"
@@ -68,7 +74,9 @@ export default function RegistrationModal({ ticket, onClose }: { ticket: Ticket 
         if (e.target === e.currentTarget) handleClose()
       }}
     >
-      <div className="relative max-w-lg w-full bg-[#18181b] border border-white/10 rounded-2xl p-6 sm:p-7 shadow-2xl text-white max-h-[90vh] overflow-y-auto scrollbar-hide">
+      <motion.div
+        variants={modalPanel}
+        className="relative max-w-lg w-full bg-[#18181b] border border-white/10 rounded-2xl p-6 sm:p-7 shadow-2xl text-white max-h-[90vh] overflow-y-auto scrollbar-hide">
         <div className="flex items-start justify-between gap-4 mb-4">
           <div>
             <h3 id="reg-modal-title" className="font-display font-bold text-xl sm:text-2xl text-white leading-tight tracking-tight">
@@ -235,7 +243,7 @@ export default function RegistrationModal({ ticket, onClose }: { ticket: Ticket 
             </p>
           </form>
         )}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   )
 }
