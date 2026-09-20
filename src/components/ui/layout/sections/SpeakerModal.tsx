@@ -69,7 +69,7 @@ export default function SpeakerModal({
 
             <div className="flex items-baseline gap-8 text-[11px] font-mono tracking-wider text-gray-500 uppercase font-semibold mb-1">
               <span>NAME</span>
-              <span>AGE</span>
+              <span>ROLE</span>
             </div>
 
             <div className="flex items-baseline gap-8">
@@ -88,7 +88,7 @@ export default function SpeakerModal({
           <div className="mb-6">
 
             <div className="text-[11px] font-mono tracking-wider text-[#D45B3F] font-bold uppercase mb-2">
-              BEHAVIOR
+              BIO
             </div>
 
             <ul className="space-y-2 text-xs sm:text-sm text-[#444444] leading-relaxed">
@@ -106,7 +106,7 @@ export default function SpeakerModal({
             <div>
 
               <div className="text-[11px] font-mono tracking-wider text-[#D45B3F] font-bold uppercase mb-2">
-                PAIN POINT
+                TOPIC
               </div>
 
               <ul className="space-y-1.5 text-xs text-[#555555] leading-relaxed">
@@ -122,7 +122,7 @@ export default function SpeakerModal({
             <div>
 
               <div className="text-[11px] font-mono tracking-wider text-[#D45B3F] font-bold uppercase mb-2">
-                NEEDS
+                KEY MESSAGE
               </div>
 
               <ul className="space-y-1.5 text-xs text-[#555555] leading-relaxed">
