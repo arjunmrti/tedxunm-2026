@@ -1,10 +1,12 @@
 import { motion } from "motion/react";
+import { cardReveal } from "../../../../motion/variants";
 import type { Ticket } from '../../../../types/Ticket'
 
 export default function TicketCard({ ticket, onSelect }: { ticket: Ticket; onSelect: (ticket: Ticket) => void }) {
   if (ticket.variant === 'featured') {
     return (
       <motion.div
+        variants={cardReveal}
         whileHover={{ y: -8, scale: 1.015, transition: { type: "spring", stiffness: 320, damping: 24 } }}
         className="bg-[#111111] text-white rounded-[24px] border border-white/10 p-6 sm:p-7 flex flex-col justify-between shadow-[0_20px_40px_-8px_rgba(17,17,17,0.25)] relative z-10 md:-translate-y-3 md:scale-[1.02] transition-all">
         <div>
@@ -53,6 +55,7 @@ export default function TicketCard({ ticket, onSelect }: { ticket: Ticket; onSel
   if (ticket.variant === 'soldout') {
     return (
       <motion.div
+      variants={cardReveal}
       whileHover={{ y: -6, transition: { type: "spring", stiffness: 320, damping: 24 } }}
       className="bg-[#FFFFFF] rounded-[20px] border border-[#E5E5E5] p-6 flex flex-col justify-between shadow-[0_8px_24px_-4px_rgba(17,17,17,0.06)] relative">
         <div>
@@ -90,6 +93,7 @@ export default function TicketCard({ ticket, onSelect }: { ticket: Ticket; onSel
 
   return (
     <motion.div
+    variants={cardReveal}
     whileHover={{ y: -6, transition: { type: "spring", stiffness: 320, damping: 24 } }}
     className="bg-[#FFFFFF] rounded-[20px] border border-[#E5E5E5] p-6 flex flex-col justify-between shadow-[0_8px_24px_-4px_rgba(17,17,17,0.06)] relative">
       <div>
