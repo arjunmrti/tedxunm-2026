@@ -37,12 +37,12 @@ export interface CTAContent {
 }
 
 export const ctaContent: CTAContent = {
-  badgeText: "Join The Conversation",
+  badgeText: "TEDxUNM 2026",
   headlinePrefix: "Curiosity is",
   headlineEmphasis: "the Beginning",
   headlineSuffix: "of Everything.",
   subtitle:
-    "Discover new perspectives, hear inspiring stories, and be part of a bigger conversation at TEDxUNM 2026.",
+    "Discover new perspectives, hear inspiring stories, and be part of a bigger conversation.",
   buttons: [
     {
       label: "Save Your Spot",
@@ -51,24 +51,23 @@ export const ctaContent: CTAContent = {
       icon: "↗",
     },
     {
-      label: "Follow @tedxunm",
-      href: "https://instagram.com/tedxunm",
+      label: "Be Part of This Story",
+      href: "#about",
       variant: "secondary",
-      external: true,
     },
   ],
   passCards: [
     {
       position: "left",
-      badgeLabel: "PASS",
+      badgeLabel: "TEDxUNM",
       badgeClassName: "bg-ted-red/10 text-ted-red",
       indicator: "bar",
-      eyebrow: "October 2026 // Access",
+      eyebrow: "2026 // Event Access",
       eyebrowClassName: "text-gray-400 font-semibold",
-      title: "Phinisi Main Stage",
-      subtitle: "The Art of Human Language",
-      footerLabel: "SEAT",
-      footerValue: "A-14",
+      title: "The Art of Human Language",
+      subtitle: "Every voice, a language of its own.",
+      footerLabel: "THEME",
+      footerValue: "2026",
       footerValueClassName: "text-gray-900",
       barcodeBars: [
         { width: "thin", height: 4 },
@@ -83,15 +82,15 @@ export const ctaContent: CTAContent = {
     },
     {
       position: "right",
-      badgeLabel: "VIP 2026",
+      badgeLabel: "VOICE",
       badgeClassName: "bg-[#111111] text-white",
       indicator: "dot",
-      eyebrow: "Official Delegate",
+      eyebrow: "Ideas Worth Spreading",
       eyebrowClassName: "text-ted-red font-bold",
-      title: "Voices of Resonance",
-      subtitle: "Interactive Lounge & Banquet",
-      footerLabel: "TIER",
-      footerValue: "DELEGATE",
+      title: "Join the Conversation",
+      subtitle: "New perspectives. Meaningful connections.",
+      footerLabel: "EVENT",
+      footerValue: "TEDxUNM",
       footerValueClassName: "text-ted-red",
       barcodeBars: [
         { width: "thick", height: 5 },
