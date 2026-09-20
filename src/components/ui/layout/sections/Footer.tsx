@@ -111,8 +111,8 @@ export default function Footer() {
             {footerContent.bottomBar.themeLabel}{" "}
             <span className="text-gray-300">{footerContent.bottomBar.themeValue}</span>
           </p>
-        </div>
+        </motion.div>
       </div>
-    </footer>
+    </motion.footer>
   );
 }
