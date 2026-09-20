@@ -16,7 +16,7 @@ const FAQ = () => {
       <motion.div variants={cardReveal} className="max-w-3xl mx-auto">
         <div className="text-center mb-3">
           <span className="text-xs uppercase tracking-widest text-neutral-500 font-semibold font-sans">
-            Got Questions?
+            Questions?
           </span>
         </div>
         <h2
@@ -28,8 +28,7 @@ const FAQ = () => {
           Asked Questions
         </h2>
         <p className="text-neutral-500 text-sm sm:text-base text-center max-w-lg mx-auto mb-12 font-sans">
-          Need clarification on attendee guidelines, tickets, or schedule?
-          We're here to support your journey.
+          Find the information you need about joining TEDxUNM 2026, tickets, and the event experience.
         </p>
 
         <motion.div variants={staggerParent} className="flex flex-col gap-3 sm:gap-4">
@@ -64,7 +63,7 @@ const FAQ = () => {
         </motion.div>
 
         <div className="mt-10 text-center text-xs sm:text-sm text-neutral-500 font-sans">
-          Still have unanswered questions? Contact our hospitality committee at{" "}
+          Still have questions? Contact TEDxUNM at{" "}
           <a
             href="mailto:tedxunm@gmail.com"
             className="text-neutral-800 font-medium hover:underline"
@@ -76,7 +75,7 @@ const FAQ = () => {
             href="mailto:tedxunm@gmail.com"
             className="text-[#E10600] font-semibold hover:underline inline-flex items-center gap-1 ml-1"
           >
-            Send Email Inquiry →
+            Email Us →
           </a>
         </div>
       </motion.div>
