@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import { useEffect, useRef } from 'react'
 
 export interface NavbarProps {
@@ -27,8 +28,11 @@ export default function Navbar({ isBlurred = false, onHeightChange }: NavbarProp
   }, [onHeightChange])
 
   return (
-    <header
+    <motion.header
       ref={headerRef}
+      initial={{ opacity: 0, y: -18 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
       className={`sticky top-0 z-50 px-4 sm:px-8 pt-4 pb-2 transition-all duration-300 ${
         isBlurred
           ? "blur-sm opacity-40 scale-[0.98] pointer-events-none"
@@ -99,15 +103,18 @@ export default function Navbar({ isBlurred = false, onHeightChange }: NavbarProp
 
         {/* Action Button */}
         <div className="flex items-center gap-3">
-          <a
+          <motion.a
+            whileHover={{ y: -2, scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            transition={{ type: "spring", stiffness: 400, damping: 22 }}
             className="inline-flex items-center justify-center bg-ted-red hover:bg-ted-hover text-white text-xs sm:text-sm font-medium px-5 py-2.5 rounded-full shadow-sm hover:shadow-md transition-all"
             href="#tickets"
           >
             Get Your Spot
-          </a>
+          </motion.a>
         </div>
 
       </div>
-    </header>
+    </motion.header>
   );
 }
