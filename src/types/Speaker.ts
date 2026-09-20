@@ -10,15 +10,12 @@ export interface SpeakerColors {
 }
 
 export interface Speaker {
-  tag: string
   name: string
-  age: string
   role: string
   talk: string
-  category: string
-  behavior: string[]
-  painPoint: string[]
-  needs: string[]
+  bio: string
+  keyMessage: string
+  social?: string
   cardImage: string
   modalImage: string
   colors: SpeakerColors
