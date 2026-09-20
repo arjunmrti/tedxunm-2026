@@ -1,3 +1,5 @@
+import { motion } from "motion/react";
+import { modalBackdrop, modalPanel } from "../../../../motion/variants";
 import type { Speaker } from '../../../../types/Speaker'
 
 export default function SpeakerModal({
@@ -10,21 +12,27 @@ export default function SpeakerModal({
   if (!speaker) return null
 
   return (
-    <div
-      className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 transition-all duration-300"
+    <motion.div
+      className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4"
+      variants={modalBackdrop}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
       role="dialog"
       aria-modal="true"
       onClick={(e) => {
         if (e.target === e.currentTarget) onClose()
       }}
     >
-      <div className="rounded-3xl p-6 sm:p-10 relative max-w-2xl w-full bg-[#FFF0ED] text-[#222222] shadow-2xl overflow-visible border border-red-100 transition-all scale-[0.95]">
+      <motion.div
+        variants={modalPanel}
+        className="rounded-3xl p-6 sm:p-10 relative max-w-2xl w-full bg-[#FFF0ED] text-[#222222] shadow-2xl overflow-visible border border-red-100">
 
-        {/* Close Button - Invisible */}
+        {/* Close Button */}
         <button
           aria-label="Close modal"
           onClick={onClose}
-          className="hidden"
+          className="absolute top-4 right-4 w-9 h-9 rounded-full bg-black/5 hover:bg-black/10 text-gray-600 flex items-center justify-center transition-colors z-20"
         >
           <svg
             className="w-4 h-4"
@@ -130,7 +138,7 @@ export default function SpeakerModal({
           </div>
 
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   )
 }
