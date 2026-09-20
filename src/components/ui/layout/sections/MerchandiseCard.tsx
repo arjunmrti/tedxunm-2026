@@ -3,7 +3,6 @@ import { motion } from "motion/react";
 import { cardReveal } from "../../../../motion/variants";
 // src/components/ui/layout/sections/MerchandiseCard.tsx
 import type { MerchandiseBundle, MerchandiseVariant } from '../../../../types/Merchandise';
-import './MerchandiseCard.css';
 
 export interface MerchandiseCardProps {
   bundle: MerchandiseBundle;
@@ -124,27 +123,24 @@ const MerchandiseCard = ({ bundle, onSelect }: MerchandiseCardProps) => {
   const titleLastWord = titleWords.length > 1 ? titleWords.pop() : undefined;
   const titleLead = titleWords.join(' ');
 
-  const setFlipped = (value: boolean) => setIsFlipped(value);
-
   return (
     <motion.div
       variants={cardReveal}
       whileHover={{ y: -8, scale: 1.02, transition: { type: "spring", stiffness: 320, damping: 24 } }}
       whileTap={{ scale: 0.985 }}
-      onMouseEnter={() => setFlipped(true)}
-      onMouseLeave={() => setFlipped(false)}
-      onFocus={() => setFlipped(true)}
-      onBlur={() => setFlipped(false)}
-      className={`${s.frame} merch-flip-perspective`}
+      onMouseEnter={() => setIsFlipped(true)}
+      onMouseLeave={() => setIsFlipped(false)}
+      onFocus={() => setIsFlipped(true)}
+      onBlur={() => setIsFlipped(false)}
+      className={`${s.frame} [perspective:1200px]`}
       tabIndex={0}
     >
       <motion.div
-        className="merch-flip-inner"
+        className="relative w-full [transform-style:preserve-3d] will-change-transform"
         animate={{ rotateY: isFlipped ? 180 : 0 }}
         transition={{ type: "spring", stiffness: 280, damping: 24, mass: 0.7 }}
-        style={{ transformStyle: "preserve-3d" }}
       >
-        <div className={`merch-flip-front ${s.frontInner}`}>
+        <div className={`relative w-full [backface-visibility:hidden] ${s.frontInner}`}>
           <div className={s.ribbonWrapper}>
             {s.ribbonIcon === 'sparkle' && (
               <>
@@ -178,6 +174,7 @@ const MerchandiseCard = ({ bundle, onSelect }: MerchandiseCardProps) => {
             whileHover={{ y: -2, scale: 1.015 }}
             whileTap={{ scale: 0.97 }}
             transition={{ type: "spring", stiffness: 400, damping: 22 }}
+            type="button"
             className={s.button}
             onClick={() => onSelect?.(bundle.id)}
           >
@@ -186,44 +183,53 @@ const MerchandiseCard = ({ bundle, onSelect }: MerchandiseCardProps) => {
         </div>
 
         <div
-          className="merch-flip-back"
+          className="absolute inset-0 overflow-hidden rounded-3xl [transform:rotateY(180deg)] [backface-visibility:hidden] [transform-style:preserve-3d] isolate text-white"
           style={{ background: s.backGradient }}
           aria-hidden={!isFlipped}
         >
-          <div className="merch-flip-back-image">
+          <div className="relative z-0 mx-2.5 mt-2.5 h-[56%] min-h-[170px] overflow-hidden rounded-[1.15rem] border border-white/15 bg-white/10">
             {bundle.imageSrc ? (
               <img
                 src={bundle.imageSrc}
                 alt={`${bundle.title} merchandise bundle`}
                 loading="lazy"
+                className="block h-full w-full object-cover"
               />
             ) : (
-              <div className="merch-flip-back-image-fallback" aria-hidden="true">
+              <div
+                className="grid h-full w-full place-items-center bg-[radial-gradient(circle_at_50%_30%,rgba(255,255,255,0.16),transparent_48%),rgba(255,255,255,0.06)] text-[2.5rem]"
+                aria-hidden="true"
+              >
                 <span>🎁</span>
               </div>
             )}
-            <div className="merch-flip-back-fade" />
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[48%] bg-gradient-to-b from-transparent to-black/60" />
           </div>
 
-          <div className="merch-flip-back-content">
-            <span className="merch-flip-back-eyebrow">{bundle.tierLabel} Bundle</span>
-            <h5 className="merch-flip-back-title">
+          <div className="absolute inset-x-0 bottom-0 z-10 bg-gradient-to-b from-transparent to-black/10 px-[1.15rem] pb-[1.15rem] pt-4">
+            <span className="mb-1.5 block font-mono text-[0.6rem] font-extrabold uppercase tracking-[0.16em] text-white/75">
+              {bundle.tierLabel} Bundle
+            </span>
+
+            <h5 className="m-0 text-[1.1rem] leading-[1.02] tracking-[-0.025em]">
               {titleLastWord ? (
                 <>
-                  <span className="line-strong">{titleLead}</span>
-                  <span className="line-soft">{titleLastWord}</span>
+                  <span className="block font-extrabold text-white">{titleLead}</span>
+                  <span className="block font-normal text-white/75">{titleLastWord}</span>
                 </>
               ) : (
-                <span className="line-strong">{bundle.title}</span>
+                <span className="block font-extrabold text-white">{bundle.title}</span>
               )}
             </h5>
-            <p className="merch-flip-back-desc">
+
+            <p className="mt-2.5 max-w-[30rem] text-[0.72rem] leading-[1.5] text-white/85">
               {bundle.backDescription ?? bundle.items}
             </p>
-            <div className="merch-flip-back-meta">
+
+            <div className="mt-3.5 flex items-center gap-2.5 font-bold text-[0.58rem] uppercase tracking-[0.1em] text-white/70">
               <span>Includes {itemCountLabel} item types</span>
-              <span className="divider" aria-hidden="true" />
-              <span className="arrow" aria-hidden="true">→</span>
+              <span className="h-px w-6 bg-white/30" aria-hidden="true" />
+              <span className="ml-auto text-[0.9rem] text-white/95" aria-hidden="true">→</span>
             </div>
           </div>
         </div>
