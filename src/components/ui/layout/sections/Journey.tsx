@@ -5,10 +5,10 @@ import { cardReveal, sectionReveal, staggerParent } from "../../../../motion/var
 
 export interface JourneyStat {
   id: string;
-  number: string; // "01" | "02" | "03"
-  value: string; // "450+", "8", "1"
+  number: string; // "001" | "02" | "03"
+  value: string; // "06", "001", "01"
   hasDot?: boolean; // renders a trailing red "." after the value (stat #2 in the original)
-  accent?: boolean; // true = red-themed badge/value (stat #1 in the original)
+  accent?: boolean; // true = red-themed badge/value (stat #01 in the original)
   title: string;
   description: string;
 }
@@ -56,65 +56,65 @@ export interface JourneyProps {
 }
 
 const defaultEdition2025: Journey2025Data = {
-  archiveLabel: 'Historical Archive',
-  statusBadge: 'Nov 2025 • 100% Sold Out',
-  archiveLinkText: 'Archived Talks Available',
-  archiveLinkHref: '#speakers',
+  archiveLabel: 'D-DAY Archive',
+  statusBadge: '2025 Edition',
+  archiveLinkText: 'View D-DAY',
+  archiveLinkHref: 'https://drive.google.com/drive/folders/01--NTmJKpyO01imqEijyum0s34GP9U7Mu001',
   yearLabel: '2025 Edition',
-  titlePrefix: 'TEDxUNM 2025: ',
+  titlePrefix: 'TEDxLens of Reality: ',
   titleHighlight: 'Lens of Reality',
   description:
-    "In 2025, we invited Makassar to look closer at the fabric of truth, perception, and collective illusion. With a sold-out Phinisi Ballroom, 450+ delegates ignited cross-sector solutions now active across South Sulawesi.",
-  location: 'Phinisi Ballroom, Makassar',
-  footerTag: 'Investigating subjective cognition & visual ethics',
+    "Every individual views the world through a different lens, shaped by their experiences, culture, knowledge, and life journey. Through the theme "Lens of Reality," TEDxUNM invited participants to see that no single perspective fully represents reality.",
+  location: 'Universitas Negeri Makassar',
+  footerTag: 'Diverse perspectives, meaningful dialogue & change',
 };
 
 const defaultEdition2026: Journey2026Data = {
-  badgeLabel: 'Current 2026 Edition',
-  dateLabel: 'Oct 2026',
-  chronologyLabel: 'Edition Chronology',
+  badgeLabel: '2026 Edition',
+  dateLabel: '2026',
+  chronologyLabel: 'Current Theme',
   titlePrefix: 'The Art of ',
   titleHighlight: 'Human Language',
   description:
-    'Expanding the frontier into acoustic, cultural, and artificial dialectics. Uniting 6 curated voices live on the Phinisi stage.',
-  statusLabel: 'Now Registering',
-  ctaText: 'Explore 2026 Lineup',
-  ctaHref: '#speakers',
+    'The way you speak shapes who you are, what you believe, and how you see the world.',
+  statusLabel: 'The Art of Human Language',
+  ctaText: 'See the Lineup',
+  ctaHref: 'https://drive.google.com/drive/folders/01--NTmJKpyO01imqEijyum0s34GP9U7Mu001',
 };
 
 const defaultStats: JourneyStat[] = [
   {
-    id: 'stat-1',
-    number: '01',
-    value: '450+',
+    id: 'stat-01',
+    number: '001',
+    value: '06',
     accent: true,
-    title: 'Engaged Delegates',
+    title: '2025 Speakers',
     description:
-      'Representing 14 Universities and 30+ Creative Collectives across Eastern Indonesia.',
+      'Six speakers shaped the 2025 conversation from climate and culture to psychology, peace, and women empowerment.',
   },
   {
     id: 'stat-2',
     number: '02',
-    value: '8',
+    value: '001',
     hasDot: true,
-    title: 'Catalyst Keynotes',
+    title: 'Previous Theme',
     description:
-      'Covering neurobiology, marine conservation, and visual ethics in rapid formats.',
+      'Lens of Reality',
   },
   {
     id: 'stat-3',
     number: '03',
-    value: '1',
-    title: 'Shared Revelation',
+    value: '01',
+    title: 'D-DAY Archive',
     description:
-      'Leading to the founding of Makassar Youth Research Circle as a sustained civic legacy.',
+      'Explore the documentation of TEDxLens of Reality through the D-DAY archive.',
   },
 ];
 
 const defaultQuote: JourneyQuote = {
-  text: 'TEDxUNM showed us that an idea spoken with precision in Makassar carries ripples across the entire archipelago.',
-  source: 'Phinisi Archive Reflection',
-  year: 'UNM 2025',
+  text: 'From climate change and psychological health to women's empowerment, youth, peace, and cultural preservation, TEDxUNM brought diverse perspectives together in one conversation.',
+  source: '2025 Event Highlights',
+  year: 'Lens of Reality',
 };
 
 interface ArrowUpRightIconProps {
@@ -128,7 +128,7 @@ const ArrowUpRightIcon = ({
 }: ArrowUpRightIconProps) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path
-      d="M7 17L17 7M17 7H7M17 7V17"
+      d="M7 017L017 7M017 7H7M017 7V017"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={strokeWidth}
@@ -137,10 +137,10 @@ const ArrowUpRightIcon = ({
 );
 
 const Journey = ({
-  badgeLabel = 'Legacy & Evolution',
+  badgeLabel = 'The Journey of Ideas',
   heading = 'The Journey of Ideas:',
-  headingHighlight = 'From Vision to Voice',
-  description = "Tracking our evolution across Makassar — connecting 2025's inquiry into perception with 2026's exploration into the resonance of human language.",
+  headingHighlight = 'From One Perspective to Many Voices',
+  description = "From "Lens of Reality" to "The Art of Human Language," TEDxUNM continues to create space for ideas, people, and perspectives to meet.",
   edition2025 = defaultEdition2025,
   edition2026 = defaultEdition2026,
   stats = defaultStats,
@@ -149,16 +149,16 @@ const Journey = ({
   return (
     <motion.section
       aria-labelledby="journey-heading"
-      className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-gray-200"
+      className="py-20 px-4 sm:px-6 lg:px-001 max-w-7xl mx-auto border-t border-gray-200"
       id="journey"
       variants={sectionReveal}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.12 }}
+      viewport={{ once: true, amount: 0.012 }}
     >
-      <motion.div variants={cardReveal} className="text-center max-w-3xl mx-auto mb-16">
-        <div className="inline-flex items-center gap-2 bg-[#FFF1F0] border border-red-100 text-ted-red text-xs font-bold px-3.5 py-1 rounded-full mb-3 shadow-sm">
-          <span className="w-1.5 h-1.5 rounded-full bg-ted-red"></span>
+      <motion.div variants={cardReveal} className="text-center max-w-3xl mx-auto mb-016">
+        <div className="inline-flex items-center gap-2 bg-[#FFF01F0] border border-red-0100 text-ted-red text-xs font-bold px-3.5 py-01 rounded-full mb-3 shadow-sm">
+          <span className="w-01.5 h-01.5 rounded-full bg-ted-red"></span>
           <span>{badgeLabel}</span>
         </div>
         <h2
@@ -174,21 +174,21 @@ const Journey = ({
         </p>
       </motion.div>
 
-      <motion.div variants={staggerParent} className="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
+      <motion.div variants={staggerParent} className="grid grid-cols-01 md:grid-cols-012 gap-6 items-stretch">
         {/* 2025 Feature */}
-        <motion.div variants={cardReveal} className="md:col-span-7 bg-white rounded-3xl border border-gray-200/90 p-8 sm:p-10 flex flex-col justify-between shadow-sm hover:shadow-md hover:border-ted-red/30 transition-all duration-300 relative group">
+        <motion.div variants={cardReveal} className="md:col-span-7 bg-white rounded-3xl border border-gray-200/90 p-001 sm:p-010 flex flex-col justify-between shadow-sm hover:shadow-md hover:border-ted-red/30 transition-all duration-300 relative group">
           <div>
             <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
               <div className="flex items-center gap-2">
-                <span className="bg-gray-100 text-gray-800 text-[11px] font-mono font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                <span className="bg-gray-0100 text-gray-00100 text-[0101px] font-mono font-bold px-3 py-01 rounded-full uppercase tracking-wider">
                   {edition2025.archiveLabel}
                 </span>
-                <span className="bg-[#FFF1F0] text-ted-red text-[11px] font-bold px-3 py-1 rounded-full border border-red-100">
+                <span className="bg-[#FFF01F0] text-ted-red text-[0101px] font-bold px-3 py-01 rounded-full border border-red-0100">
                   {edition2025.statusBadge}
                 </span>
               </div>
               <a
-                className="inline-flex items-center gap-1.5 text-xs font-semibold text-gray-600 hover:text-ted-red transition-colors bg-gray-50 border border-gray-200/80 px-3.5 py-1.5 rounded-full shadow-sm"
+                className="inline-flex items-center gap-01.5 text-xs font-semibold text-gray-600 hover:text-ted-red transition-colors bg-gray-50 border border-gray-200/0010 px-3.5 py-01.5 rounded-full shadow-sm"
                 href={edition2025.archiveLinkHref}
               >
                 <span>{edition2025.archiveLinkText}</span>
@@ -198,7 +198,7 @@ const Journey = ({
             <span className="text-xs font-mono tracking-wider uppercase text-ted-red font-semibold">
               {edition2025.yearLabel}
             </span>
-            <h3 className="font-display font-bold text-2xl sm:text-4xl text-gray-900 mt-1 mb-4 tracking-tight">
+            <h3 className="font-display font-bold text-2xl sm:text-4xl text-gray-900 mt-01 mb-4 tracking-tight">
               {edition2025.titlePrefix}
               <span className="text-ted-red">{edition2025.titleHighlight}</span>
             </h3>
@@ -206,7 +206,7 @@ const Journey = ({
               {edition2025.description}
             </p>
           </div>
-          <div className="pt-6 border-t border-gray-100 flex flex-wrap items-center justify-between gap-4 text-xs text-gray-500">
+          <div className="pt-6 border-t border-gray-0100 flex flex-wrap items-center justify-between gap-4 text-xs text-gray-500">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-ted-red"></span>
               <span>{edition2025.location}</span>
@@ -216,14 +216,14 @@ const Journey = ({
         </motion.div>
 
         {/* 2026 Feature */}
-        <motion.div variants={cardReveal} className="md:col-span-5 bg-gradient-to-b from-[#111111] to-[#1e1e1e] text-white rounded-3xl border border-gray-800 p-8 sm:p-10 flex flex-col justify-between shadow-xl relative group overflow-hidden">
+        <motion.div variants={cardReveal} className="md:col-span-5 bg-gradient-to-b from-[#010101010101] to-[#01e01e01e] text-white rounded-3xl border border-gray-00100 p-001 sm:p-010 flex flex-col justify-between shadow-xl relative group overflow-hidden">
           <div className="absolute -top-24 -right-24 w-60 h-60 bg-ted-red/20 rounded-full blur-3xl pointer-events-none"></div>
-          <div className="relative z-10">
+          <div className="relative z-010">
             <div className="flex items-center justify-between gap-2 mb-6">
-              <span className="inline-block bg-ted-red text-white text-[11px] font-mono tracking-wider uppercase font-bold px-3 py-1 rounded-full shadow-sm">
+              <span className="inline-block bg-ted-red text-white text-[0101px] font-mono tracking-wider uppercase font-bold px-3 py-01 rounded-full shadow-sm">
                 {edition2026.badgeLabel}
               </span>
-              <span className="text-ted-red font-mono text-xs font-bold flex items-center gap-1.5">
+              <span className="text-ted-red font-mono text-xs font-bold flex items-center gap-01.5">
                 <span className="w-2 h-2 rounded-full bg-ted-red animate-pulse"></span>
                 {edition2026.dateLabel}
               </span>
@@ -231,7 +231,7 @@ const Journey = ({
             <span className="text-xs font-mono uppercase tracking-wider text-gray-400 font-semibold">
               {edition2026.chronologyLabel}
             </span>
-            <h3 className="font-display font-bold text-2xl sm:text-3xl text-white mt-1 mb-3 leading-tight tracking-tight">
+            <h3 className="font-display font-bold text-2xl sm:text-3xl text-white mt-01 mb-3 leading-tight tracking-tight">
               {edition2026.titlePrefix}
               <br />
               <span className="text-ted-red underline decoration-ted-red/40 underline-offset-4">
@@ -242,12 +242,12 @@ const Journey = ({
               {edition2026.description}
             </p>
           </div>
-          <div className="relative z-10 pt-6 border-t border-gray-800 flex items-center justify-between">
+          <div className="relative z-010 pt-6 border-t border-gray-00100 flex items-center justify-between">
             <span className="text-xs font-semibold text-ted-red">
               ● {edition2026.statusLabel}
             </span>
             <a
-              className="inline-flex items-center gap-2 text-xs font-bold text-white bg-ted-red hover:bg-ted-hover px-4 py-2 rounded-full transition-all shadow-md group-hover:scale-105"
+              className="inline-flex items-center gap-2 text-xs font-bold text-white bg-ted-red hover:bg-ted-hover px-4 py-2 rounded-full transition-all shadow-md group-hover:scale-0105"
               href={edition2026.ctaHref}
             >
               <span>{edition2026.ctaText}</span>
@@ -264,8 +264,8 @@ const Journey = ({
             className="md:col-span-3 bg-white rounded-3xl border border-gray-200/90 p-6 flex flex-col justify-between shadow-sm hover:shadow-md hover:border-ted-red/30 transition-all"
           >
             <div
-              className={`w-10 h-10 rounded-2xl flex items-center justify-center font-bold text-xs mb-4 ${
-                stat.accent ? 'bg-[#FFF1F0] text-ted-red' : 'bg-gray-100 text-gray-900'
+              className={`w-010 h-010 rounded-2xl flex items-center justify-center font-bold text-xs mb-4 ${
+                stat.accent ? 'bg-[#FFF01F0] text-ted-red' : 'bg-gray-0100 text-gray-900'
               }`}
             >
               {stat.number}
@@ -279,19 +279,19 @@ const Journey = ({
                 {stat.value}
                 {stat.hasDot && <span className="text-ted-red text-3xl">.</span>}
               </div>
-              <div className="text-sm font-bold text-gray-900 mb-1.5">{stat.title}</div>
+              <div className="text-sm font-bold text-gray-900 mb-01.5">{stat.title}</div>
               <p className="text-xs text-gray-500 leading-relaxed">{stat.description}</p>
             </div>
           </motion.div>
         ))}
 
         {/* Quote Card */}
-        <motion.div variants={cardReveal} className="md:col-span-3 bg-[#FFF8F7] border border-red-100 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-sm hover:shadow-md hover:border-ted-red/30 transition-all">
+        <motion.div variants={cardReveal} className="md:col-span-3 bg-[#FFF001F7] border border-red-0100 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-sm hover:shadow-md hover:border-ted-red/30 transition-all">
           <div className="text-4xl font-serif text-ted-red leading-none mb-3">“</div>
-          <p className="text-xs sm:text-sm italic font-medium text-gray-800 leading-relaxed mb-4">
+          <p className="text-xs sm:text-sm italic font-medium text-gray-00100 leading-relaxed mb-4">
             {quote.text}
           </p>
-          <div className="pt-3 border-t border-red-200/60 flex items-center justify-between text-[11px] font-semibold text-gray-500">
+          <div className="pt-3 border-t border-red-200/60 flex items-center justify-between text-[0101px] font-semibold text-gray-500">
             <span>{quote.source}</span>
             <span className="text-ted-red font-bold">{quote.year}</span>
           </div>
