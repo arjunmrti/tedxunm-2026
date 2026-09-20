@@ -29,7 +29,7 @@ interface MerchandiseCardStyle {
 const cardStyles: Record<MerchandiseVariant, MerchandiseCardStyle> = {
   starter: {
     frame:
-      'w-full sm:w-80 lg:w-[275px] bg-[#FFFFFF] border-2 border-gray-200/90 rounded-3xl shadow-xl relative transition-all duration-300 hover:scale-105 hover:z-30 lg:-rotate-3 lg:translate-y-4 group',
+      'w-full sm:w-80 lg:w-[275px] bg-[#FFFFFF] border-2 border-gray-200/90 rounded-3xl flex flex-col justify-between shadow-xl relative transition-all duration-300 hover:scale-105 hover:z-30 lg:-rotate-3 lg:translate-y-4 group',
     frontInner: 'p-6 sm:p-7 flex flex-col justify-between',
     ribbonWrapper:
       'absolute -top-3.5 left-8 bg-[#F3F3F3] text-gray-700 border border-gray-300 px-3.5 py-0.5 rounded-sm text-[10px] font-mono tracking-wider shadow-sm uppercase -rotate-2',
@@ -49,7 +49,7 @@ const cardStyles: Record<MerchandiseVariant, MerchandiseCardStyle> = {
   },
   popular: {
     frame:
-      'w-full sm:w-80 lg:w-[280px] bg-[#FAF9F6] border-2 border-gray-200 rounded-3xl shadow-xl relative transition-all duration-300 hover:scale-105 hover:z-30 lg:rotate-1 lg:-translate-y-2 group z-10',
+      'w-full sm:w-80 lg:w-[280px] bg-[#FAF9F6] border-2 border-gray-200 rounded-3xl flex flex-col justify-between shadow-xl relative transition-all duration-300 hover:scale-105 hover:z-30 lg:rotate-1 lg:-translate-y-2 group z-10',
     frontInner: 'p-6 sm:p-7 flex flex-col justify-between',
     ribbonWrapper:
       'absolute -top-4 right-6 bg-[#FFF4D9] text-[#8C5D00] border border-[#FFE7A8] px-3 py-1 rounded-full text-[10px] font-black tracking-wide shadow-sm rotate-6 flex items-center gap-1',
@@ -70,7 +70,7 @@ const cardStyles: Record<MerchandiseVariant, MerchandiseCardStyle> = {
   },
   featured: {
     frame:
-      'w-full sm:w-84 lg:w-[305px] bg-[#FFFFFF] border-2 border-ted-red rounded-3xl shadow-2xl relative transition-all duration-300 hover:scale-105 hover:z-40 lg:-translate-y-6 group z-20',
+      'w-full sm:w-84 lg:w-[305px] bg-[#FFFFFF] border-2 border-ted-red rounded-3xl flex flex-col justify-between shadow-2xl relative transition-all duration-300 hover:scale-105 hover:z-40 lg:-translate-y-6 group z-20',
     frontInner: 'p-7 sm:p-8 flex flex-col justify-between',
     ribbonWrapper:
       'absolute -top-4 left-1/2 -translate-x-1/2 bg-ted-red text-white text-[10px] font-black px-4 py-1 rounded-full uppercase tracking-wider shadow-md flex items-center gap-1.5',
@@ -92,7 +92,7 @@ const cardStyles: Record<MerchandiseVariant, MerchandiseCardStyle> = {
   },
   collector: {
     frame:
-      'w-full sm:w-80 lg:w-[285px] bg-[#111111] text-white border-2 border-gray-800 rounded-3xl shadow-2xl relative transition-all duration-300 hover:scale-105 hover:z-30 lg:rotate-3 lg:translate-y-3 group z-10',
+      'w-full sm:w-80 lg:w-[285px] bg-[#111111] text-white border-2 border-gray-800 rounded-3xl flex flex-col justify-between shadow-2xl relative transition-all duration-300 hover:scale-105 hover:z-30 lg:rotate-3 lg:translate-y-3 group z-10',
     frontInner: 'p-6 sm:p-7 flex flex-col justify-between',
     ribbonWrapper:
       'absolute -top-3.5 right-8 bg-ted-red text-white border border-white/20 px-3 py-0.5 rounded-sm text-[10px] font-mono tracking-wider shadow-md uppercase rotate-3',
@@ -136,11 +136,11 @@ const MerchandiseCard = ({ bundle, onSelect }: MerchandiseCardProps) => {
       tabIndex={0}
     >
       <motion.div
-        className="relative w-full [transform-style:preserve-3d] will-change-transform"
+        className="relative w-full h-full flex-1 [transform-style:preserve-3d] will-change-transform"
         animate={{ rotateY: isFlipped ? 180 : 0 }}
         transition={{ type: "spring", stiffness: 280, damping: 24, mass: 0.7 }}
       >
-        <div className={`relative w-full [backface-visibility:hidden] ${s.frontInner}`}>
+        <div className={`relative w-full h-full [backface-visibility:hidden] ${s.frontInner}`}>
           <div className={s.ribbonWrapper}>
             {s.ribbonIcon === 'sparkle' && (
               <>
