@@ -24,6 +24,7 @@ interface MerchandiseCardStyle {
   price: string;
   button: string;
   backGradient: string;
+  backImage: string;
 }
 
 const cardStyles: Record<MerchandiseVariant, MerchandiseCardStyle> = {
@@ -46,6 +47,8 @@ const cardStyles: Record<MerchandiseVariant, MerchandiseCardStyle> = {
       'mt-6 w-full py-3 bg-gray-900 hover:bg-black text-white text-xs font-semibold rounded-full shadow-sm hover:shadow transition-all',
     backGradient:
       'radial-gradient(120% 90% at 50% -10%, rgba(225,6,0,0.45) 0%, rgba(20,17,17,0.92) 48%, #141111 100%)',
+    backImage:
+      'mx-4 mt-4 h-[45%] min-h-0 overflow-hidden rounded-[1.15rem] border border-white/15 bg-white/10',
   },
   popular: {
     frame:
@@ -67,6 +70,8 @@ const cardStyles: Record<MerchandiseVariant, MerchandiseCardStyle> = {
       'mt-6 w-full py-3 bg-gray-900 hover:bg-black text-white text-xs font-semibold rounded-full shadow-sm hover:shadow transition-all',
     backGradient:
       'radial-gradient(120% 90% at 50% -10%, rgba(255,168,0,0.4) 0%, rgba(20,17,17,0.92) 48%, #141111 100%)',
+    backImage:
+      'mx-4 mt-4 h-[45%] min-h-0 overflow-hidden rounded-[1.15rem] border border-white/15 bg-white/10',
   },
   featured: {
     frame:
@@ -89,6 +94,8 @@ const cardStyles: Record<MerchandiseVariant, MerchandiseCardStyle> = {
       'mt-6 w-full py-3.5 bg-ted-red hover:bg-ted-hover text-white text-xs font-bold rounded-full shadow-lg shadow-ted-red/25 transition-all',
     backGradient:
       'radial-gradient(120% 90% at 50% -10%, rgba(225,6,0,0.65) 0%, rgba(17,17,17,0.94) 46%, #0d0d0d 100%)',
+    backImage:
+      'mx-2.5 mt-2.5 h-[56%] min-h-0 overflow-hidden rounded-[1.15rem] border border-white/15 bg-white/10',
   },
   collector: {
     frame:
@@ -109,6 +116,8 @@ const cardStyles: Record<MerchandiseVariant, MerchandiseCardStyle> = {
       'mt-6 w-full py-3 bg-ted-red hover:bg-ted-hover text-white text-xs font-bold rounded-full shadow-md transition-all',
     backGradient:
       'radial-gradient(120% 90% at 50% -10%, rgba(225,6,0,0.5) 0%, rgba(0,0,0,0.94) 46%, #000000 100%)',
+    backImage:
+      'mx-2.5 mt-2.5 h-[56%] min-h-0 overflow-hidden rounded-[1.15rem] border border-white/15 bg-white/10',
   },
 };
 
@@ -187,7 +196,7 @@ const MerchandiseCard = ({ bundle, onSelect }: MerchandiseCardProps) => {
           style={{ background: s.backGradient }}
           aria-hidden={!isFlipped}
         >
-          <div className="relative z-0 mx-2.5 mt-2.5 h-[56%] min-h-[170px] overflow-hidden rounded-[1.15rem] border border-white/15 bg-white/10">
+          <div className={`relative z-0 ${s.backImage}`}>
             {bundle.imageSrc ? (
               <img
                 src={bundle.imageSrc}
