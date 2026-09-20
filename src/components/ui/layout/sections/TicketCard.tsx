@@ -1,9 +1,12 @@
+import { motion } from "motion/react";
 import type { Ticket } from '../../../../types/Ticket'
 
 export default function TicketCard({ ticket, onSelect }: { ticket: Ticket; onSelect: (ticket: Ticket) => void }) {
   if (ticket.variant === 'featured') {
     return (
-      <div className="bg-[#111111] text-white rounded-[24px] border border-white/10 p-6 sm:p-7 flex flex-col justify-between shadow-[0_20px_40px_-8px_rgba(17,17,17,0.25)] relative z-10 md:-translate-y-3 md:scale-[1.02] transition-all">
+      <motion.div
+        whileHover={{ y: -8, scale: 1.015, transition: { type: "spring", stiffness: 320, damping: 24 } }}
+        className="bg-[#111111] text-white rounded-[24px] border border-white/10 p-6 sm:p-7 flex flex-col justify-between shadow-[0_20px_40px_-8px_rgba(17,17,17,0.25)] relative z-10 md:-translate-y-3 md:scale-[1.02] transition-all">
         <div>
           <div className="flex items-center justify-between mb-3">
             <span className="text-[10px] font-bold uppercase tracking-wider text-[#FFA800]">{ticket.category}</span>
@@ -33,20 +36,25 @@ export default function TicketCard({ ticket, onSelect }: { ticket: Ticket; onSel
             ))}
           </ul>
         </div>
-        <button
+        <motion.button
+          whileHover={{ y: -2, scale: 1.01 }}
+          whileTap={{ scale: 0.97 }}
+          transition={{ type: "spring", stiffness: 400, damping: 22 }}
           type="button"
           onClick={() => onSelect(ticket)}
           className="mt-6 w-full py-3 bg-[#E10600] hover:bg-[#c70500] text-white text-center font-bold text-sm rounded-full shadow-lg shadow-[#E10600]/30 transition-all tracking-wide cursor-pointer"
         >
           {ticket.buttonText}
-        </button>
-      </div>
+        </motion.button>
+      </motion.div>
     )
   }
 
   if (ticket.variant === 'soldout') {
     return (
-      <div className="bg-[#FFFFFF] rounded-[20px] border border-[#E5E5E5] p-6 flex flex-col justify-between shadow-[0_8px_24px_-4px_rgba(17,17,17,0.06)] relative">
+      <motion.div
+      whileHover={{ y: -6, transition: { type: "spring", stiffness: 320, damping: 24 } }}
+      className="bg-[#FFFFFF] rounded-[20px] border border-[#E5E5E5] p-6 flex flex-col justify-between shadow-[0_8px_24px_-4px_rgba(17,17,17,0.06)] relative">
         <div>
           <div className="flex items-center justify-between mb-3">
             <span className="text-[10px] font-bold uppercase tracking-wider text-gray-400">{ticket.category}</span>
@@ -73,15 +81,17 @@ export default function TicketCard({ ticket, onSelect }: { ticket: Ticket; onSel
             ))}
           </ul>
         </div>
-        <button disabled className="mt-6 w-full py-3 bg-[#F5F5F5] border border-[#DCDCDC] text-[#888888] font-semibold text-xs rounded-full cursor-not-allowed tracking-wide">
+        <motion.button whileTap={{ scale: 0.99 }} disabled className="mt-6 w-full py-3 bg-[#F5F5F5] border border-[#DCDCDC] text-[#888888] font-semibold text-xs rounded-full cursor-not-allowed tracking-wide">
           {ticket.buttonText}
-        </button>
-      </div>
+        </motion.button>
+      </motion.div>
     )
   }
 
   return (
-    <div className="bg-[#FFFFFF] rounded-[20px] border border-[#E5E5E5] p-6 flex flex-col justify-between shadow-[0_8px_24px_-4px_rgba(17,17,17,0.06)] relative">
+    <motion.div
+    whileHover={{ y: -6, transition: { type: "spring", stiffness: 320, damping: 24 } }}
+    className="bg-[#FFFFFF] rounded-[20px] border border-[#E5E5E5] p-6 flex flex-col justify-between shadow-[0_8px_24px_-4px_rgba(17,17,17,0.06)] relative">
       <div>
         <div className="flex items-center justify-between mb-3">
           <span className="text-[10px] font-bold uppercase tracking-wider text-[#7B3FE4]">{ticket.category}</span>
@@ -108,13 +118,16 @@ export default function TicketCard({ ticket, onSelect }: { ticket: Ticket; onSel
           ))}
         </ul>
       </div>
-      <button
+      <motion.button
+        whileHover={{ y: -2, scale: 1.01 }}
+        whileTap={{ scale: 0.97 }}
+        transition={{ type: "spring", stiffness: 400, damping: 22 }}
         type="button"
         onClick={() => onSelect(ticket)}
         className="mt-6 w-full py-3 bg-[#111111] hover:bg-[#252525] text-white text-center font-semibold text-sm rounded-full transition-colors tracking-wide cursor-pointer"
       >
         {ticket.buttonText}
-      </button>
-    </div>
+      </motion.button>
+    </motion.div>
   )
 }
