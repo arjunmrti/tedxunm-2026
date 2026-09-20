@@ -38,7 +38,7 @@ export default function About() {
               <span>Interdisciplinary Dialogues</span>
               <span>01</span>
             </div>
-          </div>
+          </motion.div>
 
           {/* Card 2: Meaningful Connections */}
           <motion.div variants={cardReveal} className="bg-white rounded-3xl border border-[#E5E5E5] p-6 sm:p-7 shadow-[0_8px_24px_-4px_rgba(17,17,17,0.06)] hover:shadow-md transition-shadow flex flex-col justify-between">
@@ -56,7 +56,7 @@ export default function About() {
               <span>Community Cross-Pollination</span>
               <span>02</span>
             </div>
-          </div>
+          </motion.div>
 
           {/* Card 3: Action Beyond Inspiration */}
           <motion.div variants={cardReveal} className="bg-white rounded-3xl border border-[#E5E5E5] p-6 sm:p-7 shadow-[0_8px_24px_-4px_rgba(17,17,17,0.06)] hover:shadow-md transition-shadow flex flex-col justify-between">
@@ -74,7 +74,7 @@ export default function About() {
               <span>Sustainable Legacy</span>
               <span>03</span>
             </div>
-          </div>
+          </motion.div>
         </motion.div>
 
         {/* Core Pillars Row */}
@@ -87,28 +87,28 @@ export default function About() {
               <div className="w-8 h-8 rounded-full bg-[#E10600]/10 text-[#E10600] flex items-center justify-center font-mono font-bold text-xs mb-3">01</div>
               <div className="font-display font-semibold text-base text-[#111111] mb-1.5">Curiosity</div>
               <div className="text-xs text-[#5e3f3a] leading-relaxed">Relentless pursuit of unexplored inquiries.</div>
-            </div>
+            </motion.div>
 
             {/* Pillar 02 */}
             <motion.div variants={cardReveal} className="bg-white p-5 rounded-2xl border border-[#E5E5E5] shadow-[0_8px_24px_-4px_rgba(17,17,17,0.06)]">
               <div className="w-8 h-8 rounded-full bg-[#7B3FE4]/10 text-[#7B3FE4] flex items-center justify-center font-mono font-bold text-xs mb-3">02</div>
               <div className="font-display font-semibold text-base text-[#111111] mb-1.5">Openness</div>
               <div className="text-xs text-[#5e3f3a] leading-relaxed">Embracing nuances across diverse voices.</div>
-            </div>
+            </motion.div>
 
             {/* Pillar 03 */}
             <motion.div variants={cardReveal} className="bg-white p-5 rounded-2xl border border-[#E5E5E5] shadow-[0_8px_24px_-4px_rgba(17,17,17,0.06)]">
               <div className="w-8 h-8 rounded-full bg-[#FFA800]/10 text-[#FFA800] flex items-center justify-center font-mono font-bold text-xs mb-3">03</div>
               <div className="font-display font-semibold text-base text-[#111111] mb-1.5">Authenticity</div>
               <div className="text-xs text-[#5e3f3a] leading-relaxed">Honest narratives rooted in experience.</div>
-            </div>
+            </motion.div>
 
             {/* Pillar 04 */}
             <motion.div variants={cardReveal} className="bg-white p-5 rounded-2xl border border-[#E5E5E5] shadow-[0_8px_24px_-4px_rgba(17,17,17,0.06)]">
               <div className="w-8 h-8 rounded-full bg-[#2ECF7A]/10 text-[#2ECF7A] flex items-center justify-center font-mono font-bold text-xs mb-3">04</div>
               <div className="font-display font-semibold text-base text-[#111111] mb-1.5">Collaboration</div>
               <div className="text-xs text-[#5e3f3a] leading-relaxed">Collective intelligence over isolation.</div>
-            </div>
+            </motion.div>
 
             {/* Pillar 05 */}
             <motion.div variants={cardReveal} className="bg-white p-5 rounded-2xl border border-[#E5E5E5] shadow-[0_8px_24px_-4px_rgba(17,17,17,0.06)] col-span-1 sm:col-span-2 lg:col-span-1">
