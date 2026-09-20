@@ -12,8 +12,8 @@ export const speakers: Speaker[] = [
       'Illustrator and musician from Makassar with a background in architecture.',
       'She turns lines and boundaries into playful visual and musical works shaped by her inner journey.'
     ],
-    painPoint: ["Shifting perspective on life's barriers", 'Messy internal document storage'],
-    needs: ['Take a break from anxiety', 'See limitations as guides, not obstacles'],
+    painPoint: ["Shifting perspective on life's barriers"],
+    needs: ['Take a break from anxiety and start seeing limitations as guides, not obstacles.'],
     cardImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCQYNCIw73Dk0MsesesfLkyqz1YFVZnvq5lCgSt0jQcx7LJODfTJwtRJZkLzeyS6mXLzyCepLPyvr8VwTQ6p_bgkTnIXSVFM6RrneGZhS8iZAPGrG7lG56vtQDXUTXniEUofVuOxHsM5mSHmLK63782qAwnFFrE1xBPtOhBIrFFFlqp3IBiyNcVldGylVekpytr0XT8AUd90V51olDMWbXD0Y7yzmsLt7XdiX-1AXaSdOpD9vZu8gNnI7A6IAUPuL--gohSSMPYyOtfb5w',
     modalImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB9fAjCXdXOQB5LxQlNg_INQ3qzR6iGSFtERIbNJAhlljUe0QKPuW0wvjT7xB41TeciSt6hm_tSG3di6njclyZfzv5_cr0PJHfwW2fGHNAV5_-gs4pkSUWoa0_FHHAdjUOTdL1vZVwqrhl30wgXNnoY6g86239P9TjBNYUO0Q3KdJlEXGYoby9ONzyJcTjArq5CJIWWq1NzI3vVYjy-ibIZqrb4Fze8o9xlLF4PtoxSjraiPiVv6aLdpw',
     colors: {
@@ -34,8 +34,8 @@ export const speakers: Speaker[] = [
       'A Gen Z leader, entrepreneur, law graduate, and humanitarian dedicated to community empowerment and sustainable impact.',
       'His work spans education, innovation, humanitarian causes, and leadership across multiple ventures and platforms.'
     ],
-    painPoint: ['Loss of localized identity in algorithmic platforms', 'Rapid obsolescence of native nuances'],
-    needs: ['Decentralized digital storytelling archives', 'Youth-led preservation of colloquial idioms'],
+    painPoint: ['External expectations and public validation'],
+    needs: ['Stop letting society script your life, break free from external expectations, and choose a path that honors your authentic self.'],
     cardImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA8WcWCRPZmKlM833vJmFE1z77XGHRMZSnQyYbJoY3jKkS7DJ8-LI02RgLQNSpw49NSEV3cVi1zuHLM5CFFsDetEl7DdSt2gSgJ3qawNh4-r91ZDvFvPLyYIctBD36RbiAfSyXpMONIndcgc7ERp7dISuvhj6RVfxSEl9CZmVANgI-e02nw9GoWsYSaG5ZedvUfOvj2J5r0URu6xy6bQ2E80q-2j5u67snhsMd3nqClQRspATcvhpbXjaAfcWfRpPz6W1i-3ODRQMlZIlk',
     modalImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB-CG71Xn9-ZoVVt2gMyD379XM0XLs8VRDHqfDqtOHMCIaZgFhqZQFWiiOmAKgHS7KDidERccYXo7gzY34xdOa-6cXA7nx2KYA8sl3v5k6j_mDKGM8cHvfKzZ1pk6FbqYgYKRY31qytMpEJOMHvOnNbb4ouBEmbfCx8u1k7XeuMvqOBtIxS7xvMfoiBcBSTfSCLltyjzZ0zPKFz9b5m7u6m1dkp8_hE-e5B1Hz7OmPERGWFlO0thy4M_g',
     colors: {
@@ -56,8 +56,8 @@ export const speakers: Speaker[] = [
       'Founder of JEDA.ID, a youth-led initiative supporting children in conflict with the law, social reintegration, and meaningful opportunities.',
       'His work explores how social stigma and labeling can shape trust, identity, opportunities, and a young person\'s future.'
     ],
-    painPoint: ['Generational disconnect in traditional oration', 'Lack of tactile sonic archives for youth'],
-    needs: ['Preserve oral cadence beyond printed transcriptions', 'Community intergenerational chanting circles'],
+    painPoint: ['Labels, stigma, and social perception'],
+    needs: ['Labels are not just words; they can shape how society sees us, how we see ourselves, and who we believe we can become.'],
     cardImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDuQfhKsFqJ557KfFq26zmZWolV8HGBwLEjED-DTY9dsa6c9MtOce52Xkob8QejaycLEFvvj4dSIyySI49dG1gJsAMJI21KhSTlgmSLSLnIl1gEypgmxUQs1ldeGU2Jepylqr5TMw5up9JxbrKV-JTf-CI1rzhcwH9hzpCtTXPD2y80Mwe-py2AV-2h_XPlLXirva2EQ5f5KYnLJfwHnxLD7wT095-ONZ07WzTCjwMQxnwBb7g0HDOR2StI32oKyRVzDYG9IOzZocjJxCg',
     modalImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBJ3BDhQqWeP3tm6YjGcbDnKBHgVQyJB2UwP8fXVBjUWnGkxqudopzvc323ZEokFslVtWF2s4NbIVgVMbA-HUj88Gn4Fc_aTbirV_ezpWWl2k2WKCyXmZlX7xn9AJmmFeOixszxtOJgWXbNs5jDoaqBu84keb8AvL0p2klz8c_1uarxSIj42y15FbIjZrvT736sA1BYsCidzb8IQ9QskAJe41otzqc1StrLn-ez8Kekj-luqw2bDHGv5Q',
     colors: {
@@ -78,8 +78,8 @@ export const speakers: Speaker[] = [
       'An interdisciplinary educator specializing in ICT and Chemistry, focused on digital learning transformation and inclusivity.',
       'He combines science, computational logic, AI, and a humanistic approach to make learning more accessible.'
     ],
-    painPoint: ['Mechanistic flattening of poetic human intent', 'Misinterpretations in generative sentiment models'],
-    needs: ['Culturally-anchored natural language datasets', 'Subtle context integration in assistive tools'],
+    painPoint: ['Barriers to inclusive learning'],
+    needs: ['Technology, science, and AI can become a new language when combined with empathy and art to democratize access to learning.'],
     cardImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBaVmo8Ghc9uWyuaTBaL9cFK5wZslRyL7y5k9TpuUQkbznhKQaOK_rrGHAz5RNPNuBboTE9DqWp64fdV2uZeRfAtoiy91KlRxT1GzpTQaqs5u-iMjb3nKU3QPCzRKyzw4knk59P8MZjaYqAqrGYRmfynZMzBddltB4lH80hi_-i-fPjKyctDf3kBY7mV6aFGNR-NODbLqCjI8UMPh90zwdUwiPkgvgx5GoMeWS3owbZrOVqBZc3PJYO3kozoFNIZnHfwAN3wKyQdceUNDg',
     modalImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBo5FZmnI800MtARyX1Owzf9ktTPBGnCEOchnuTfglrbMReECR0NAEW_RT7Qk9hNJ7X9TEdgv6dcGDnT1xWClX-Equ1iRA45smvnqvsnnLs4cgMbNgiIcSkO7s5t5-J9zIhSlnQ70K7_76WfbH3FqtIL5PsA2rTTleZtc52Ukt0pa0s3U_Po7sdR9IEf7vLAOSxEVQ_3y5sx1bnTgbJtvYKVBk7gRh1SLoNezVt8lMga73ylH1fhLKjnw',
     colors: {
@@ -100,8 +100,8 @@ export const speakers: Speaker[] = [
       'A social entrepreneur focused on plastic waste management, recycling, and community empowerment, with roots in coastal Makassar.',
       'His background in journalism and television shaped his approach to building impactful communication, connections, and collaboration.'
     ],
-    painPoint: ['Institutional deaf-blind spots in public discourse', 'Exclusion from mainstream civic dialogues'],
-    needs: ['Universal gestural literacy across university hubs', 'Embodied communication spaces without friction'],
+    painPoint: ['Building communication and connections for social collaboration'],
+    needs: ['Communication is more than how we speak; when our words align with our actions, trust grows and people become more confident to collaborate.'],
     cardImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA9JZyPTmh5nn6gC8kPwDyMDOfTz8mfRvR5mepbria74AVMthKwGmutuRxVDSKFfMCgEO2rS6tCGPX49eGy7L43ybMoMijng0R9eT5YHQYByQE48Po3QiHqfzNQuHOu3QuGIhamcFRDr9kARbhTi_90zTuI7Vhxpli-zXNbqbP3aWj-jlyG7fgANhZgeUZNHhsSM-tVCs3gcP2_gkbmvmmxYXurCC_GFKm5jYKVdBg8oy45ZapkJkpaKAuepf6XwZF9kUznY8pbZ2u8ZPg',
     modalImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDvJ2hh-ikrotGmIxmCmfXJuSQX_BAd1PqjNfar0hob5Aq3yvwUW2EZ51VWc1cWmC6VDG6JuGqRJCp3otVnKJDsyKFBsSxcMOhWCSQ_wS9mHiPfRDQi30CvP8ppVvxOrc4rSTV_N2dNrr1fiwBjJSALwnUhN4YLqsDhSRnB96cIvq9Q78v0TU3_keXxuLDqXY5KXE4VkWjWk-trKdJzaD0ppMCbd6MhIYUz0zNN6xCB9Q20BDFlmjH_jg',
     colors: {
@@ -122,8 +122,8 @@ export const speakers: Speaker[] = [
       'A career officer with the Department of Foreign Affairs and Trade with experience across Indonesia, Nigeria, Mongolia, and Timor-Leste.',
       'She has also studied International Relations at Gadjah Mada University and speaks Indonesian and Japanese.'
     ],
-    painPoint: ['Rhetorical polarization that blocks dialogue', 'Weaponization of emotionally-charged words'],
-    needs: ['Concise frameworks for cross-cultural conflict', 'Safe micro-spaces for unfiltered truth-telling'],
+    painPoint: ['Diplomatic relations between Indigenous Australians and Makassar'],
+    needs: ['True diplomacy goes beyond politics and is deeply rooted in historical and cultural connections between people.'],
     cardImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDcoxts53OsUO_bvOMovyYeOUfa0Tmg7UOm49F4arrs7Ps8Bd7ERj_5GyJxNGEWRAhlc0M7b47dd1dWnYesj_Cd1Az_fZsTOtgMLU5njprwpq6S-bE9kTjFpgJ4VFbE_gBTRGDnuySUJ984YgfR2RnsKtXKDMIBGjtVLIVGu0M6IDTVzcfKSl--tkdQhGBjYQslXtmxeFJO_yLfznQjQ6Onptsb-fiUqUBRqC9yhaw3LVh1WXX4Bdk-MQXXcL0C7r6FX9BIk74B3xNaYRA',
     modalImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAB-DAgTg-n0jIkeBnTGRE1PVvF929EXbKWcNTiBlFk_rudfKwCNU6ZI5xjkP12kmAX5gYqAg9HNEPH-8FgCC3hcfsgGNUbHpjzaEHh2USGDO71xLNMi40-uhn2cULhoH9H4cpWDWNAZn439Q3jJsN3vQulndxUiOqKOlGpKLzv5Yr1lh0OAI7VxKDH-jEV0nUK-IQw16oPyC39dWBX5fD4HwA_QBI_AJnBOuKikvXxAst0qF1SSnKX1g',
     colors: {
