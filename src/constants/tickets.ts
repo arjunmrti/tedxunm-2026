@@ -20,7 +20,7 @@ export const tickets: Ticket[] = [
   },
   {
     variant: 'featured',
-    category: '22 Sep – 1 Oct 2026',
+    category: '15 Sep – 1 Oct 2026',
     badge: 'REGULAR',
     title: 'Regular',
     description: 'Get your ticket now. Join the conversation.',
@@ -37,7 +37,7 @@ export const tickets: Ticket[] = [
   },
   {
     variant: 'standard',
-    category: '22 Sep – 1 Oct 2026',
+    category: '15 Sep – 1 Oct 2026',
     badge: '2 TICKETS',
     title: 'Bundling',
     description: 'Get 2 tickets for less and experience TEDxUNM 2026 together.',

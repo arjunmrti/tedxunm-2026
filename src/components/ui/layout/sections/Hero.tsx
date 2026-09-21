@@ -131,7 +131,7 @@ export default function Hero() {
               <motion.img
                 alt="TEDxUNM Speaker & Cultural Dialogue"
                 className="w-full h-full object-cover"
-                src="https://lh3.googleusercontent.com/aida/AEtjO1W5CZ2n3VLLr3ujOpDkfTatJrP74IMQ-F6j4eHQbJZNP0LEQfxRkEbNyay7bsKozrPKpLaDJB1EPSa07z580ASzKBOCA4LxNvBf1lNvE1QRVRQq5VrWjHTmniiwRY67-MybKlRCmouLkh9gWa3-B6rJisnm70IUhUTTp_uWkSt5sp6SyjqXbsxhsdGC14IZRtgq-P-Y7iaKPB9ITwm_ffGtFYgYt6t3JHIoMJE81jnbP730UO4RVPy8ygmW"
+                src="https://res.cloudinary.com/c4wbxcmp/image/upload/v1789944437/WhatsApp_Image_2026-09-21_at_06.45.20.jpg"
                 whileHover={imageHover}
                 transition={{
                   duration: 0.7,
@@ -191,7 +191,7 @@ export default function Hero() {
               <motion.img
                 alt="3D Soundwave Emblem"
                 className="w-full h-full object-cover rounded-xl"
-                src="https://lh3.googleusercontent.com/aida/AEtjO1Wg95A4IHQj7mIYePuu4HwCVfCgv2W4Uzo44v7yGbLbq0z0BT7cbfs29BCwij-cmnpBP6g0dPnXoUY1q8ZkeyZqMz6UHZftmKhVKw831qroR-lWNo7RWvJQMn5u_41qVQSx23rWJggCEvHm4aNrJa4UZYLiJ26mTx7JLCAEzfUqFNfSP0uA8tnRrZLcGS32qXhjffjbEsoVBwEuJOf6FycWh4nFJabeuApFsMddF44O09QIVUPw8n5NZyoE"
+                src="https://res.cloudinary.com/c4wbxcmp/image/upload/v1789944502/WhatsApp_Image_2026-09-21_at_06.45.18.jpg"
                 whileHover={imageHover}
                 transition={{
                   duration: 0.7,
@@ -242,7 +242,7 @@ export default function Hero() {
               <motion.img
                 alt="TEDx Community Attendees"
                 className="w-full h-full object-cover"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvJ2hh-ikrotGmIxmCmfXJuSQX_BAd1PqjNfar0hob5Aq3yvwUW2EZ51VWc1cWmC6VDG6JuGqRJCp3otVnKJDsyKFBsSxcMOhWCSQ_wS9mHiPfRDQi30CvP8ppVvxOrc4rSTV_N2dNrr1fiwBjJSALwnUhN4YLqsDhSRnB96cIvq9Q78v0TU3_keXxuLDqXY5KXE4VkWjWk-trKdJzaD0ppMCbd6MhIYUz0zNN6xCB9Q20BDFlmjH_jg"
+                src="https://res.cloudinary.com/c4wbxcmp/image/upload/v1789944462/WhatsApp_Image_2026-09-21_at_06.45.19.jpg"
                 whileHover={imageHover}
                 transition={{
                   duration: 0.7,
