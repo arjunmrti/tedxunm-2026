@@ -5,6 +5,7 @@ import Hero from './components/ui/layout/sections/Hero'
 import About from './components/ui/layout/sections/About'
 import Speakers from './components/ui/layout/sections/Speakers'
 import Journey from './components/ui/layout/sections/Journey'
+import Sponsors from './components/ui/layout/sections/Sponsors'
 import Merchandise from './components/ui/layout/sections/Merchandise'
 import Ticketing from './components/ui/layout/sections/Ticketing'
 import FAQ from './components/ui/layout/sections/FAQ'
@@ -48,6 +49,7 @@ function App() {
         <About />
         <Speakers onSelectSpeaker={setSelectedSpeaker} />
         <Journey />
+        <Sponsors />
         <Merchandise />
         <Ticketing onSelectTicket={setSelectedTicket} />
         <FAQ />
