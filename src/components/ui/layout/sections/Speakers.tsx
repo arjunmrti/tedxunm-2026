@@ -27,48 +27,6 @@ export default function Speakers({ onSelectSpeaker }: { onSelectSpeaker: (speake
         ))}
       </motion.div>
 
-      {/* Full-Width Secret Keynote Card */}
-      <motion.div variants={cardReveal} className="bg-white border border-[#E5E5E5] rounded-3xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-[0_8px_24px_-4px_rgba(17,17,17,0.06)] hover:shadow-md transition-shadow relative overflow-hidden">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 w-full md:w-auto">
-          <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-[#111111] text-white flex flex-col items-center justify-center shrink-0 shadow-inner relative overflow-hidden">
-            <svg className="w-7 h-7 mb-1.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path>
-            </svg>
-            <span className="text-[10px] font-mono tracking-widest uppercase font-bold text-gray-400">LINEUP</span>
-          </div>
-
-          <div>
-            <div className="flex flex-wrap items-center gap-2 mb-2">
-              <span className="bg-ted-purple/10 text-ted-purple text-[11px] font-mono font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-                MORE VOICES
-              </span>
-              <span className="bg-gray-100 text-gray-600 text-[11px] font-mono font-semibold px-2.5 py-0.5 rounded-full">
-                Coming Soon
-              </span>
-            </div>
-            <h3 className="font-display font-bold text-2xl sm:text-3xl text-[#111111] tracking-tight leading-tight mb-1">
-              More Speakers Coming Soon
-            </h3>
-            <p className="text-xs font-semibold text-gray-500 mb-2">Additional voices will be announced as the lineup develops.</p>
-            <p className="text-xs text-gray-600 leading-relaxed max-w-xl mb-3">
-              The speaker lineup will be updated as additional voices are finalized.
-            </p>
-            <div className="flex items-center gap-2 text-xs text-gray-500 font-mono">
-              <span className="w-2 h-2 rounded-full bg-ted-purple animate-pulse"></span>
-              <span>Lineup Update Soon</span>
-            </div>
-          </div>
-        </div>
-
-        <div className="w-full md:w-auto shrink-0 flex justify-end">
-          <button className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#111111] hover:bg-black text-white text-xs sm:text-sm font-semibold px-6 py-3.5 rounded-full shadow-sm hover:shadow transition-all">
-            <svg className="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path>
-            </svg>
-            <span>See What's Coming</span>
-          </button>
-        </div>
-      </motion.div>
     </motion.section>
   )
 }
