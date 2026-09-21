@@ -127,15 +127,15 @@ export default function Sponsors() {
           variants={cardReveal}
           className="mt-10 border-t border-gray-200 pt-8 sm:mt-12 sm:pt-9"
         >
-          <div className="flex flex-col gap-7 sm:flex-row sm:items-center sm:justify-between sm:gap-10">
-            <div className="shrink-0">
+          <div className="flex flex-col items-center gap-7 sm:gap-8">
+            <div className="text-center">
               <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-gray-400">
                 Other Partners
               </p>
             </div>
 
-            <div className="flex flex-1 flex-col gap-6 sm:flex-row sm:items-center sm:justify-end sm:gap-12">
-              <div className="flex items-center gap-4">
+            <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-center sm:justify-center sm:gap-12">
+              <div className="flex items-center justify-center gap-4">
                 <span className="text-[9px] font-semibold uppercase tracking-[0.16em] text-gray-400">
                   Media
                 </span>
@@ -146,7 +146,7 @@ export default function Sponsors() {
 
               <div className="hidden h-7 w-px bg-gray-200 sm:block" aria-hidden="true" />
 
-              <div className="flex items-center gap-4">
+              <div className="flex items-center justify-center gap-4">
                 <span className="text-[9px] font-semibold uppercase tracking-[0.16em] text-gray-400">
                   Community
                 </span>
