@@ -48,7 +48,10 @@ function SponsorCarousel() {
       />
 
       <motion.div style={{ x }} className="flex w-max">
-        <div ref={setRef} className="flex shrink-0 items-center gap-10 pr-10 sm:gap-14 sm:pr-14 lg:gap-16 lg:pr-16">
+        <div
+          ref={setRef}
+          className="flex shrink-0 items-center gap-10 pr-10 sm:gap-14 sm:pr-14 lg:gap-16 lg:pr-16"
+        >
           {sponsorLogos.map((logo) => (
             <div
               key={logo.name}
@@ -64,7 +67,10 @@ function SponsorCarousel() {
           ))}
         </div>
 
-        <div aria-hidden="true" className="flex shrink-0 items-center gap-10 pr-10 sm:gap-14 sm:pr-14 lg:gap-16 lg:pr-16">
+        <div
+          aria-hidden="true"
+          className="flex shrink-0 items-center gap-10 pr-10 sm:gap-14 sm:pr-14 lg:gap-16 lg:pr-16"
+        >
           {sponsorLogos.map((logo) => (
             <div
               key={"duplicate-" + logo.name}
@@ -117,39 +123,43 @@ export default function Sponsors() {
           </div>
         </motion.div>
 
-        <div className="mt-12 grid gap-5 md:grid-cols-2">
-          <motion.div
-            variants={cardReveal}
-            className="rounded-[1.75rem] border border-gray-200/80 bg-gray-50/60 p-6 sm:p-8"
-          >
-            <p className="mb-5 text-[10px] font-bold uppercase tracking-[0.18em] text-gray-400">
-              Media Partner
-            </p>
-            <div className="flex min-h-28 items-center justify-between gap-6">
-              <span className="font-display text-4xl font-black tracking-[-0.04em] text-gray-900 sm:text-5xl">
-                MND
-              </span>
-              <span className="h-2 w-2 rounded-full bg-ted-red" aria-hidden="true" />
+        <motion.div
+          variants={cardReveal}
+          className="mt-10 border-t border-gray-200 pt-8 sm:mt-12 sm:pt-9"
+        >
+          <div className="flex flex-col gap-7 sm:flex-row sm:items-center sm:justify-between sm:gap-10">
+            <div className="shrink-0">
+              <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-gray-400">
+                Other Partners
+              </p>
             </div>
-          </motion.div>
 
-          <motion.div
-            variants={cardReveal}
-            className="rounded-[1.75rem] border border-gray-200/80 bg-gray-50/60 p-6 sm:p-8"
-          >
-            <p className="mb-5 text-[10px] font-bold uppercase tracking-[0.18em] text-gray-400">
-              Community Partner
-            </p>
-            <div className="flex min-h-28 items-center">
-              <img
-                src="/sponsors/mager_logo.svg"
-                alt="Mager"
-                className="max-h-12 max-w-[13rem] object-contain sm:max-h-14"
-                loading="lazy"
-              />
+            <div className="flex flex-1 flex-col gap-6 sm:flex-row sm:items-center sm:justify-end sm:gap-12">
+              <div className="flex items-center gap-4">
+                <span className="text-[9px] font-semibold uppercase tracking-[0.16em] text-gray-400">
+                  Media
+                </span>
+                <span className="font-display text-2xl font-black tracking-[-0.04em] text-gray-800 sm:text-3xl">
+                  MND
+                </span>
+              </div>
+
+              <div className="hidden h-7 w-px bg-gray-200 sm:block" aria-hidden="true" />
+
+              <div className="flex items-center gap-4">
+                <span className="text-[9px] font-semibold uppercase tracking-[0.16em] text-gray-400">
+                  Community
+                </span>
+                <img
+                  src="/sponsors/mager_logo.svg"
+                  alt="Mager"
+                  className="max-h-9 max-w-[8rem] object-contain opacity-80 sm:max-h-10"
+                  loading="lazy"
+                />
+              </div>
             </div>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
       </div>
     </motion.section>
   );
