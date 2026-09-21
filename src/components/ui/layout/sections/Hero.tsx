@@ -259,20 +259,6 @@ export default function Hero() {
         </div>
       </motion.div>
 
-      {/* Partner / Institutional Supporters Strip */}
-      <motion.div
-        variants={heroItem}
-        className="mt-16 pt-8 border-t border-gray-200"
-      >
-        <p className="text-xs uppercase tracking-widest text-gray-400 font-semibold mb-6">Community & Support</p>
-        <div className="flex flex-wrap items-center justify-center gap-8 md:gap-14 opacity-75 grayscale hover:grayscale-0 transition-all duration-300">
-          <span className="font-display font-bold text-lg text-gray-800 tracking-tight">UNIVERSITAS NEGERI MAKASSAR</span>
-          <span className="font-display font-bold text-lg text-gray-800 tracking-tight">Official Sponsor</span>
-          <span className="font-display font-bold text-lg text-gray-800 tracking-tight">Media Partner @mnd</span>
-          <span className="font-display font-bold text-lg text-gray-800 tracking-tight">Community Partner @mager.gamedev</span>
-          <span className="font-display font-bold text-lg text-gray-800 tracking-tight">Universitas Negeri Makassar</span>
-        </div>
-      </motion.div>
     </motion.section>
   )
 }
